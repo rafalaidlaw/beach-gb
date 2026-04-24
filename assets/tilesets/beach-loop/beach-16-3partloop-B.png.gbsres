@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "631c3191-9ae2-4724-8cea-c4968f5fdf51",
+  "name": "beach-loop/beach-16-3partloop-B",
+  "symbol": "tileset_beach_loop_beach_16",
+  "width": 32,
+  "height": 2,
+  "imageWidth": 256,
+  "imageHeight": 16,
+  "filename": "beach-loop/beach-16-3partloop-B.png"
+}

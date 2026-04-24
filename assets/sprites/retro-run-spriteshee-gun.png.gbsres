@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "0e027c6e-62b8-4e0b-8852-fd3776e59a62",
+  "name": "retro-run-spriteshee-gun",
+  "symbol": "sprite_retro_run_spriteshee",
+  "states": [
+    {
+      "id": "926e67fb-135c-4ab8-8d69-8214c180d7b9",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "d8deb8fd-c1a4-400a-b81d-97566a29369b",
+          "frames": [
+            {
+              "id": "c49bc076-5a5d-47e3-8de3-6f52cdce6696",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b7142aa6-5716-4c46-85fc-b5502abb4852",
+          "frames": [
+            {
+              "id": "35252c42-0569-49c0-bb8b-f2758a3c9f72",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a322a303-21e6-4c2c-b093-f8df0f02d10c",
+          "frames": [
+            {
+              "id": "c3e8a9f5-ab34-4811-a135-f28a5ba330b8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f6129509-bcfc-4c78-ab0c-d79ae26fa08b",
+          "frames": [
+            {
+              "id": "a553310c-dd57-4fb4-9fe5-d46364654d08",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8f77a875-e7e8-4b48-b1c0-4e4f82e0f995",
+          "frames": [
+            {
+              "id": "8be4093e-cd15-4ad3-8470-4224ca0fc223",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a9d169a0-ea34-4db1-b7b8-0af23e0942d8",
+          "frames": [
+            {
+              "id": "7c283cec-2a70-4f80-9c47-a60549ae6db7",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c67926a0-7292-4ad1-bd3a-631dd8ee0e81",
+          "frames": [
+            {
+              "id": "21080ebc-cd57-4794-b90b-a138ab915d0a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "020d863a-3971-465b-8b73-3de42bdbc721",
+          "frames": [
+            {
+              "id": "61db3875-4a57-48b8-b141-5a01bb9eb724",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "retro-run-spriteshee-gun.png",
+  "width": 91,
+  "height": 32,
+  "checksum": "d44cd8971e61b877a8244876ea278a3a8778cd51"
+}

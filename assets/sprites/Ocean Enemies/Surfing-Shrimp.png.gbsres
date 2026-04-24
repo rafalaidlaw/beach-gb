@@ -1,0 +1,194 @@
+{
+  "_resourceType": "sprite",
+  "id": "16ba9a7d-2fb2-4c24-a340-5d6ef36ab4ed",
+  "name": "Ocean Enemies/Surfing-Shrimp",
+  "symbol": "sprite_surfing_shrimp",
+  "states": [
+    {
+      "id": "cf8a1eb5-7f9a-43a9-a0ae-1e1dadb3a6b2",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "b44fa129-09e8-4a90-b57a-ae1677e52cad",
+          "frames": [
+            {
+              "id": "2ed52cec-4d95-45f3-a7e9-ce61aabcb7f3",
+              "tiles": [
+                {
+                  "id": "1fbd4a05-36f6-4382-980c-02b55d7ef8dc",
+                  "x": -8,
+                  "y": 16,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "8e2c52e3-681e-45bf-b36c-46ad328cfc41",
+                  "x": -8,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "c1e5070e-cc5c-46ec-a970-6cb51473e8b1",
+                  "x": 0,
+                  "y": 16,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "2e273060-af3d-424f-8fc5-f3ff54ae070e",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "0ef60d59-fcec-4176-a668-c30d12a1e3d3",
+                  "x": 8,
+                  "y": 16,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "1ae5dc49-0ce7-4c71-a6c8-6ef119961a99",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "ad53de34-8fdf-47cb-8b99-f5fe0478cf26",
+                  "x": 16,
+                  "y": 16,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "36c63475-a874-491c-94ed-5a1dd5fcbf02",
+          "frames": [
+            {
+              "id": "4cfcd158-af6a-4321-b773-7627c126fc9b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4a640ae0-235d-4d6d-a894-338377618f9d",
+          "frames": [
+            {
+              "id": "16ca47e1-43b1-43d4-864a-8fcbe80c0c0e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "475d16b8-0762-48e8-8059-00aa5be6aeff",
+          "frames": [
+            {
+              "id": "14e0abea-6481-440e-ba6c-3c86e3ac7589",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "dc99e707-2195-4f92-8bf2-af7f133e04b6",
+          "frames": [
+            {
+              "id": "36c36423-2a12-4bec-856b-21e796803aad",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a33e8ba9-c266-4009-9758-4e3eecb0038b",
+          "frames": [
+            {
+              "id": "e83b931b-6202-40b2-bdad-58160b433971",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "95e2fe35-e328-439d-b458-d36fc5313e82",
+          "frames": [
+            {
+              "id": "7d79a02b-bc62-4bad-9e17-3859cbd1d911",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cdbf8d59-29a2-4638-b24f-722952928468",
+          "frames": [
+            {
+              "id": "315b4df0-15bd-4354-8e7f-f9d33bf0eea8",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 6,
+  "canvasOriginX": -8,
+  "canvasOriginY": -24,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Ocean Enemies/Surfing-Shrimp.png",
+  "width": 54,
+  "height": 32,
+  "checksum": "f43d4f20d8cf9e8ca26239ffb580dc1712191054"
+}

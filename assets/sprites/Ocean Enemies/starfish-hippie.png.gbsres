@@ -1,0 +1,207 @@
+{
+  "_resourceType": "sprite",
+  "id": "d1fda301-7847-42ad-939e-9dfb6b1df446",
+  "name": "starfish-hippie",
+  "symbol": "sprite_starfish_hippie",
+  "states": [
+    {
+      "id": "bdc17f84-102d-4c24-922d-13ae160d78a3",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "ee247e25-fdea-4257-96d5-565c26ce73eb",
+          "frames": [
+            {
+              "id": "4396c58e-51fc-4b15-9815-e6a56a0a5fe7",
+              "tiles": [
+                {
+                  "id": "aea65f26-629c-4aab-988e-336707d6577e",
+                  "x": -8,
+                  "y": 16,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "0fa351d2-3340-4b89-8d26-a189b825c359",
+                  "x": -8,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "9105f513-fa63-489a-94cc-ad230608288f",
+                  "x": 0,
+                  "y": 16,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "352c9614-6802-4128-b6f5-c1b220c85dd5",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "84a847a3-aa16-4243-8018-8842f7656a91",
+                  "x": 8,
+                  "y": 16,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "c9bb9bcd-217d-4d0e-93d6-30295ad99490",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "44935e21-ed32-430a-b2a8-b49d46d716e6",
+                  "x": 16,
+                  "y": 16,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "42231b2d-77e8-48a1-bf83-3d2d62ecee29",
+                  "x": 16,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "95464327-005c-487f-97f7-13ee6911a3d3",
+          "frames": [
+            {
+              "id": "05376fdf-180f-42e0-bbd1-7f606fc91aae",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a85ff8cd-6777-4adc-8006-12828978f93c",
+          "frames": [
+            {
+              "id": "4870d322-ba32-467e-bbf9-f824c061577e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7b912788-d706-4efe-8bfa-a2474a9674e7",
+          "frames": [
+            {
+              "id": "6ed2c234-1934-4f55-9969-d55b12a53c69",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "638379b8-d94a-4ef8-bb06-5ae796cefa5c",
+          "frames": [
+            {
+              "id": "0d956476-3aae-4783-8d50-1f70cacef85d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a5c7fae4-0bc8-4a0e-b94b-56fc4912c448",
+          "frames": [
+            {
+              "id": "ffd1c988-c253-4f31-bcd6-2c57f42d469f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "eb548144-2ed1-46e1-b252-915f13ab9e5f",
+          "frames": [
+            {
+              "id": "33851a5f-ffc6-47c2-9a09-d6b2b101a0e3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ad8c3219-59a1-4755-aebc-0b6b07ce7486",
+          "frames": [
+            {
+              "id": "d5e4dd9a-dd92-4a9d-b4a5-22c4f9f760df",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 8,
+  "canvasOriginX": -8,
+  "canvasOriginY": -24,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Ocean Enemies/starfish-hippie.png",
+  "width": 32,
+  "height": 32,
+  "checksum": "15e9af65a76f93940be997a0ac621c88f41497d9"
+}

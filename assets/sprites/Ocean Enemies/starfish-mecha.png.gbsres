@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "f506755e-be0d-421c-94ef-66b7bfab791e",
+  "name": "starfish-mecha",
+  "symbol": "sprite_starfish_mecha",
+  "states": [
+    {
+      "id": "b3dfa701-5819-4340-833f-359b9f4dae01",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "8d6a5428-36ea-4c2c-bb26-1ff5b199cb74",
+          "frames": [
+            {
+              "id": "f1e9273a-1b40-4042-bc40-f8334c7e1f10",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cc2893bf-e25c-42bc-a6f8-d7b9e654d2b6",
+          "frames": [
+            {
+              "id": "3b2d85dc-7323-4a19-b228-4911319645c0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "98de9c8f-2b78-483f-b379-512da7472200",
+          "frames": [
+            {
+              "id": "a23779ca-3949-40f0-81c5-b0a9002f93ad",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5e02d979-4bd4-47ee-8ad0-81383ce90374",
+          "frames": [
+            {
+              "id": "4b404ab5-b6b7-49c9-b55d-49c1dd5852d5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6aa3ad2c-00bb-40ab-ae0f-62e1f8f88a43",
+          "frames": [
+            {
+              "id": "69ecd1db-988c-4f43-be48-b8bbbb81ba11",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5c4797df-64eb-4047-9e39-89986bb3e9a5",
+          "frames": [
+            {
+              "id": "68cb2d25-1a55-475b-bc03-03ca1d57c2f4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6c126521-290a-4ed9-a6fc-76299b516111",
+          "frames": [
+            {
+              "id": "9e88cd7c-e6e0-4a99-b585-c335fd7e0f6a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "558082cd-1688-4db7-be76-41fc5df72657",
+          "frames": [
+            {
+              "id": "66a579b4-b979-487a-962b-9da4b061516c",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 48,
+  "canvasHeight": 48,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Ocean Enemies/starfish-mecha.png",
+  "width": 64,
+  "height": 64,
+  "checksum": "c2c1c5c436758b9369900070fce660ec50d13fe3"
+}

@@ -1,0 +1,20 @@
+{
+  "_resourceType": "script",
+  "id": "d2259e59-5681-4a61-a473-890dcdf79550",
+  "name": "platformXY",
+  "description": "Stores players x and y ",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_4",
+  "script": [
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "player",
+        "vectorX": "1",
+        "vectorY": "2"
+      },
+      "id": "b8a3accb-1b33-461d-9b8e-fffad84696f5"
+    }
+  ]
+}

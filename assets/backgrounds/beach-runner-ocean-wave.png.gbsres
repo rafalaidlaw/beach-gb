@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "3814b87a-52aa-49cf-88b2-86e9c13a6bb9",
+  "name": "beach-runner-ocean-wave",
+  "symbol": "bg_beach_runner_ocean_wave",
+  "tileColors": "",
+  "filename": "beach-runner-ocean-wave.png",
+  "width": 160,
+  "height": 18,
+  "imageWidth": 1280,
+  "imageHeight": 144
+}

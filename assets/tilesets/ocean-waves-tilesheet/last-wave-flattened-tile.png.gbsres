@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "16b895e1-b69c-4b66-be73-dc5f38d1811b",
+  "name": "ocean-waves-tilesheet/last-wave-flattened-tile",
+  "symbol": "tileset_ocean_waves_tileshe_9",
+  "width": 16,
+  "height": 2,
+  "imageWidth": 128,
+  "imageHeight": 16,
+  "filename": "ocean-waves-tilesheet/last-wave-flattened-tile.png"
+}

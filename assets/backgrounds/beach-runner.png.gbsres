@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "83097032-04b8-4fb5-afd7-723c0f79d4fb",
+  "name": "beach-runner",
+  "symbol": "bg_beach_runner",
+  "tileColors": "002d0+",
+  "filename": "beach-runner.png",
+  "width": 40,
+  "height": 18,
+  "imageWidth": 320,
+  "imageHeight": 144
+}

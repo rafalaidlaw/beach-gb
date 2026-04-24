@@ -1,0 +1,181 @@
+{
+  "_resourceType": "sprite",
+  "id": "dc45708e-ca5b-4983-a00c-36432c906915",
+  "name": "brain-jelly",
+  "symbol": "sprite_brain_jelly",
+  "states": [
+    {
+      "id": "3e8a0a12-e6de-4e69-b528-4a63028efbe8",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "b65dae07-cfa8-42fb-bc2e-636b295566d1",
+          "frames": [
+            {
+              "id": "d9b98d10-1476-4818-85ea-efc27c0692a6",
+              "tiles": [
+                {
+                  "id": "6ac13c6a-dfd9-427b-a1d0-581e1d3f7670",
+                  "x": -8,
+                  "y": 16,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "a09bc2cc-1215-48e0-9400-80d69d252ec9",
+                  "x": -8,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "4cc11fba-fa06-4670-af8f-87950194c1de",
+                  "x": 0,
+                  "y": 16,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "a70c07bf-87c2-471f-b71e-bb4751ab6458",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "7dde2130-0244-49ac-a530-376c8166cc83",
+                  "x": 8,
+                  "y": 16,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "d61d81c0-c61a-4370-9b69-d56b48dfabff",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "17411dc9-f162-4e54-869d-3455999996f8",
+          "frames": [
+            {
+              "id": "5d8bf205-02f1-49a4-8129-2fe89d43f8a1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a757ce00-ff96-4c7f-b0f1-17905e638eaf",
+          "frames": [
+            {
+              "id": "d0f38ab8-181d-46e3-a5d2-4c66dcc2cc48",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5972ad35-7e22-4968-804f-306b8ce94633",
+          "frames": [
+            {
+              "id": "e3d1eff9-6f2d-4ab2-9097-9683bc007d23",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ad71e333-38fb-4ed7-8e32-df06482895cc",
+          "frames": [
+            {
+              "id": "c34c40a2-2024-4a25-86af-c3925aed7a1a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "55b30d85-e76d-4540-9e72-61178404d390",
+          "frames": [
+            {
+              "id": "84e5d5c1-bfd5-4a90-bc7d-19bb05eaa4d7",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3f82292e-05a3-4623-8471-561bbae976fd",
+          "frames": [
+            {
+              "id": "a25acd95-83ec-4027-8956-c29b14b4ad51",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7470fd43-3568-4c02-8c1b-686f1e22a14b",
+          "frames": [
+            {
+              "id": "3b9453d1-d245-43da-ae45-ad3b181a993f",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 6,
+  "canvasOriginX": -8,
+  "canvasOriginY": -24,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Ocean Enemies/brain-jelly.png",
+  "width": 24,
+  "height": 32,
+  "checksum": "a93698f07806359774cfa9134ae9a29ea7ad1234"
+}

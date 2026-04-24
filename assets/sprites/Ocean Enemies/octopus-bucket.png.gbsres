@@ -1,0 +1,181 @@
+{
+  "_resourceType": "sprite",
+  "id": "5b8f49c5-c349-4ad2-9add-274ceb3461c6",
+  "name": "Ocean Enemies/octopus-bucket",
+  "symbol": "sprite_ocean_enemies_octopu",
+  "states": [
+    {
+      "id": "b9e4580c-b579-4f1a-a051-3e83c66b203c",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "b81e1845-541b-4c6b-a91a-6af79f5f977e",
+          "frames": [
+            {
+              "id": "46cd891e-775b-4f5b-8e72-a8621f74648f",
+              "tiles": [
+                {
+                  "id": "432d4c49-04a4-4ff4-ad85-1817f32776a3",
+                  "x": -8,
+                  "y": 16,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "ce71f1bd-7fe7-42e6-bd0d-f72674d6b16e",
+                  "x": -8,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "24dd8f88-05d6-4a04-adeb-b80bb706757e",
+                  "x": 0,
+                  "y": 16,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "87399ad0-39d0-4ecb-ae4a-9ac037e4d560",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "8d085660-07d5-4558-b978-db9708af2605",
+                  "x": 8,
+                  "y": 16,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "f9ee59d8-bbf3-44df-9b1e-bd62837851a0",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "09ada0fd-14c0-45a8-9e8b-af33ce2dd7e8",
+          "frames": [
+            {
+              "id": "24445713-e569-442b-87cc-eb35c2706ee4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e580fd7a-667e-4f1a-9ea1-4d8eba6251ac",
+          "frames": [
+            {
+              "id": "83ea43a7-8441-4601-9902-498163561192",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "65e5ff25-1df7-4c5d-b98a-2e7f2142b4a9",
+          "frames": [
+            {
+              "id": "d0cc4f62-c17a-4c01-9454-2f29ba292527",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7250622b-f2d2-4f67-9002-0358a950355e",
+          "frames": [
+            {
+              "id": "6518c1e2-d686-4788-8d02-544d2eb48eff",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "94ef3e4c-e8f4-413d-bc4e-929ca77c2bd7",
+          "frames": [
+            {
+              "id": "bc1f5b22-577d-478c-8ef7-43e5ec60de2c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "26721c62-1a83-4f4c-b2bf-58d40f010be7",
+          "frames": [
+            {
+              "id": "df4d3791-53b9-4e38-98ec-3ee052b353e8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "adc419c8-5dbc-4765-91c4-c45abc799acb",
+          "frames": [
+            {
+              "id": "931bd3a5-5f77-4b26-bfb2-9526d88140ae",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": -8,
+  "canvasOriginY": -24,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Ocean Enemies/octopus-bucket.png",
+  "width": 24,
+  "height": 30,
+  "checksum": "260b1444a4c56f9551eda7ab93be16c265a39df3"
+}

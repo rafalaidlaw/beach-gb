@@ -1,0 +1,83 @@
+{
+  "_resourceType": "trigger",
+  "id": "d7f0fb54-aa1d-4b65-ba4f-1ed1999e3189",
+  "name": "LANE-TOP",
+  "prefabId": "",
+  "x": 1,
+  "y": 11,
+  "symbol": "trigger_4",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "id": "e1496061-c44c-4107-a843-0c387daad8af",
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": false,
+        "__label": "Retro Movement"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "up"
+              ],
+              "override": true,
+              "__scriptTabs": "press",
+              "__collapse": false,
+              "__label": "Up button"
+            },
+            "children": {
+              "true": []
+            },
+            "id": "2ec89ce9-5126-4f48-8a8c-ae35890f1bae"
+          },
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "down"
+              ],
+              "override": true,
+              "__scriptTabs": "press",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 2
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 13
+                    }
+                  },
+                  "id": "944f509a-b8d9-4e7c-9843-02d8a35ab553"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "552498ac-7c85-49e4-8242-10f8704bafb5",
+                    "__collapse": true
+                  },
+                  "id": "19b5797a-071e-4758-b166-e0e9b229a7fe"
+                }
+              ]
+            },
+            "id": "698b0ad4-5c23-4f59-9b1e-1162ecf522e1"
+          }
+        ]
+      }
+    }
+  ],
+  "leaveScript": [],
+  "_index": 1
+}

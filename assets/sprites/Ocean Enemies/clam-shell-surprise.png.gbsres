@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "db7f8753-17de-4a6a-ac2e-9c202655a92f",
+  "name": "Ocean Enemies/clam-shell-surprise",
+  "symbol": "sprite_ocean_enemies_clam_s",
+  "states": [
+    {
+      "id": "edbb4694-183e-47f8-8048-cd8e05973818",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "b2d7fe34-0c57-475e-b0cd-bd82532ed416",
+          "frames": [
+            {
+              "id": "63002d5f-7ea1-4bfe-8f31-037529cdb297",
+              "tiles": [
+                {
+                  "id": "e7eeb4f2-8050-4999-8b05-b438258b5532",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "8be85fc0-c48a-4f7d-8058-25b3318cd869",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "984b746f-9cfa-425c-a284-3087d02736b5",
+          "frames": [
+            {
+              "id": "34275647-aef4-493b-a029-f1d93f433e75",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "bb912bac-8e74-4940-a60e-e5e18049a55a",
+          "frames": [
+            {
+              "id": "0aa4aad6-a40c-4430-ab4e-d66156e6bb28",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ef72ce7e-1aaf-46cf-b98b-25b2f02e53ff",
+          "frames": [
+            {
+              "id": "ddce8e26-a5a5-444c-9ec3-84e4cb16f84e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f9270e32-15ea-4f83-b59f-ee1e6507dbd5",
+          "frames": [
+            {
+              "id": "28861b3f-f671-47f4-b0cb-a7dc08a8f298",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0145453b-0de8-48eb-ad3a-12a8af822be3",
+          "frames": [
+            {
+              "id": "350d39c8-73f4-45e1-9f0a-294ca1c89e1d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b0ebfe3c-c729-43e4-a9ea-5fd9f0bc46c1",
+          "frames": [
+            {
+              "id": "84e948cf-a90e-461b-89d7-24eadbf9b7ef",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "16cf2c47-8d1a-4726-8756-a75e4b281673",
+          "frames": [
+            {
+              "id": "829cd299-4287-4dc4-9fc7-ebf81e3cd0ea",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Ocean Enemies/clam-shell-surprise.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "5b626c2e1ebdd0aed832358fb06450ce8636eb36"
+}

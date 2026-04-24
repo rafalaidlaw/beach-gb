@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "ac362138-49d0-4896-9ba1-54821835d990",
+  "name": "ocean-waves-tilesheet/row03-col02",
+  "symbol": "tileset_ocean_waves_tileshe_4",
+  "width": 16,
+  "height": 2,
+  "imageWidth": 128,
+  "imageHeight": 16,
+  "filename": "ocean-waves-tilesheet/row03-col02.png"
+}
