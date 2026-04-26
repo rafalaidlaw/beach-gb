@@ -1,0 +1,104 @@
+{
+  "_resourceType": "actor",
+  "id": "ae8c683e-87f5-4751-88b4-d88fdc30de1c",
+  "name": "PlatformA",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "9cf3991f-77bd-40c6-b4e9-d45080ace09c",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "3",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_0",
+  "script": [],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+      "args": {
+        "actorId": "player",
+        "operation": "right",
+        "otherActorId": "$self$",
+        "__collapseElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": {
+                "type": "number",
+                "value": 2.5
+              },
+              "frames": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "88ff0cbe-64b1-42ed-8ef2-322b71dc6f1c"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 30
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "797ac730-6fc6-442d-88c5-14a947f5e08b"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 42
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "units": "tiles",
+              "__comment": true
+            },
+            "id": "a1351f4e-2938-4608-95f0-5001d3f8c235"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "5",
+              "value": {
+                "type": "number",
+                "value": 1
+              },
+              "__comment": true
+            },
+            "id": "bfac3ac2-a2c6-43fe-b13f-4df66b3e2d15"
+          }
+        ],
+        "false": []
+      },
+      "id": "600d80f2-2b0c-4aeb-85fa-0323492c0478"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 13,
+  "y": 12,
+  "_index": 2
+}

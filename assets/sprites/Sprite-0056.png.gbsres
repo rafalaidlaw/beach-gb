@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "0cd80b54-6d0d-49e2-a027-630af0391027",
+  "name": "Sprite-0056",
+  "symbol": "sprite_sprite_0056",
+  "states": [
+    {
+      "id": "79477cee-c568-4b37-9352-2d2ceac83309",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "022a7d45-1a6b-4780-b84c-b2b18b5d2b55",
+          "frames": [
+            {
+              "id": "6c75e9c8-d2cd-4441-8ab0-09536dbb0e5e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0e50fc4c-69d2-4bff-9cc7-1fd49f7f8216",
+          "frames": [
+            {
+              "id": "edaca883-0462-4d79-8176-4c12f161bed9",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a1f4560d-5a19-4bab-a604-991eb5822db4",
+          "frames": [
+            {
+              "id": "1e55f30c-78ea-4822-ac3b-57e2ac0fb8fd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "833f9347-9240-4410-8293-bb8c4351a40f",
+          "frames": [
+            {
+              "id": "07214d0e-c3a4-41b3-a9b6-fa1655a44272",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9eb74c61-7a0c-431b-b107-9ec33ca2174c",
+          "frames": [
+            {
+              "id": "70866316-b36f-4972-b527-3722ee31fcb8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "df22e439-8ce9-4b7f-9b89-43753390ace1",
+          "frames": [
+            {
+              "id": "460bfd35-7a76-4b82-99c2-08a0a92f0567",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b1587928-a619-4417-ae80-072da74cfbe9",
+          "frames": [
+            {
+              "id": "e7c826e5-57cd-48c6-9908-d7b8d64faefd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "89cdcde7-dff8-45f2-872d-e3d4571636ec",
+          "frames": [
+            {
+              "id": "703b2342-c7c0-45ef-a966-c8da997c8249",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Sprite-0056.png",
+  "width": 41,
+  "height": 29,
+  "checksum": "223c26abb959cb2289e58c19a9a4392364ec8501"
+}

@@ -1,37 +1,47 @@
 {
   "_resourceType": "trigger",
-  "id": "c5b13f3f-d201-4938-81f8-0c4d89a6548f",
+  "id": "ec2a8b08-cb3e-4645-9347-4e8bc65e697d",
   "name": "",
   "prefabId": "",
-  "x": 0,
-  "y": 14,
-  "symbol": "trigger_0",
+  "x": 24,
+  "y": 10,
+  "symbol": "trigger_6",
   "prefabScriptOverrides": {},
-  "width": 160,
+  "width": 1,
   "height": 1,
   "script": [
     {
-      "command": "EVENT_SET_VALUE",
+      "command": "EVENT_IF",
       "args": {
-        "variable": "7",
-        "value": {
-          "type": "true"
-        }
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true
       },
-      "id": "3c7d4651-df7a-42a8-82ba-628c9fd05fdd"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ENGINE_FIELD_SET",
+            "args": {
+              "engineFieldKey": "plat_grav",
+              "__collapse": true
+            },
+            "id": "2ac51632-41fd-4624-8b19-a6d7fc2132b5"
+          }
+        ],
+        "false": []
+      },
+      "id": "a2a81de3-8b79-43ee-8126-fad40e34449b"
     }
   ],
-  "leaveScript": [
-    {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "7",
-        "value": {
-          "type": "false"
-        }
-      },
-      "id": "4e639f62-0279-4db3-8699-16cdb0c3b15d"
-    }
-  ],
-  "_index": 0
+  "leaveScript": [],
+  "_index": 7
 }

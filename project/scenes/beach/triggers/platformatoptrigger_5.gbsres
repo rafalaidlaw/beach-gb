@@ -1,0 +1,100 @@
+{
+  "_resourceType": "trigger",
+  "id": "d54eaa5c-0b1d-4d0a-a078-b5f096745c97",
+  "name": "platformATopTrigger",
+  "prefabId": "",
+  "x": 13,
+  "y": 13,
+  "symbol": "trigger_10",
+  "prefabScriptOverrides": {},
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "engineField",
+                  "value": "plat_vel_y"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "6",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "d304f288-14ec-4f70-9e94-f9a7e6b2d9a6"
+                },
+                {
+                  "command": "EVENT_ENGINE_FIELD_SET",
+                  "args": {
+                    "engineFieldKey": "plat_vel_y"
+                  },
+                  "id": "8e574791-b129-4e58-90f9-b880c11529c3"
+                },
+                {
+                  "command": "EVENT_ENGINE_FIELD_SET",
+                  "args": {
+                    "engineFieldKey": "plat_grav",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "134f7f17-1a2f-47c6-b455-40c96460bbbb"
+                }
+              ],
+              "false": []
+            },
+            "id": "3669a4b2-9235-4c6b-98f1-c3d594fed159"
+          }
+        ],
+        "false": []
+      },
+      "id": "6390e056-cf05-4431-b378-e0c2b017e209"
+    }
+  ],
+  "leaveScript": [
+    {
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "plat_grav"
+      },
+      "id": "be07b507-a3a0-48be-8b7a-7745df107932"
+    }
+  ],
+  "_index": 11
+}

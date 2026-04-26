@@ -51,7 +51,7 @@
     },
     {
       "id": "plat_jump_vel",
-      "value": 16384
+      "value": 21053
     },
     {
       "id": "plat_hold_grav",
@@ -63,7 +63,7 @@
     },
     {
       "id": "plat_jump_reduction",
-      "value": 2539
+      "value": 8192
     },
     {
       "id": "plat_jump_buffer_frames",
@@ -92,6 +92,22 @@
     {
       "id": "plat_walk_acc",
       "value": 81
+    },
+    {
+      "id": "plat_air_control",
+      "value": 0
+    },
+    {
+      "id": "INPUT_PLATFORM_INTERACT",
+      "value": "INPUT_A"
+    },
+    {
+      "id": "plat_grav",
+      "value": 8192
+    },
+    {
+      "id": "FEAT_PLATFORM_RUN",
+      "value": 0
     }
   ]
 }

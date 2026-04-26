@@ -1,0 +1,23 @@
+{
+  "_resourceType": "trigger",
+  "id": "0219a7e5-a7c0-4376-beb0-081237f38f85",
+  "name": "",
+  "prefabId": "",
+  "x": 114,
+  "y": 10,
+  "symbol": "trigger_9",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "plat_grav"
+      },
+      "id": "64282c87-936b-4ebe-9720-622bb4159140"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 10
+}

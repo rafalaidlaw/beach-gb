@@ -1,0 +1,92 @@
+{
+  "_resourceType": "trigger",
+  "id": "9dc9598a-7653-412d-9d6b-71b5751cef6c",
+  "name": "platformATopTrigger",
+  "prefabId": "",
+  "x": 50,
+  "y": 11,
+  "symbol": "trigger_0",
+  "prefabScriptOverrides": {},
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "engineField",
+                  "value": "plat_vel_y"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "6",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "8c5bd531-cb0c-4548-8e76-22f09e6cc8b7"
+                },
+                {
+                  "command": "EVENT_ENGINE_FIELD_SET",
+                  "args": {
+                    "engineFieldKey": "plat_vel_y"
+                  },
+                  "id": "a171768f-d4bf-4a55-a3e0-92cf67410d3d"
+                },
+                {
+                  "command": "EVENT_ENGINE_FIELD_SET",
+                  "args": {
+                    "engineFieldKey": "plat_grav",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "3ee00264-c7d4-4e00-8f0e-1f40883c9e8d"
+                }
+              ],
+              "false": []
+            },
+            "id": "e535718e-7f16-417c-8454-70ea5707ad4d"
+          }
+        ],
+        "false": []
+      },
+      "id": "6a3e98ff-2cb5-4d5c-9cc2-6e901ccb1b7c"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 4
+}

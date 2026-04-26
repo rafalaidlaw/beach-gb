@@ -1,0 +1,130 @@
+{
+  "_resourceType": "trigger",
+  "id": "f0170017-0000-4000-8000-000000000001",
+  "name": "rowTrigger0",
+  "prefabId": "",
+  "x": 0,
+  "y": 17,
+  "symbol": "trigger_row_0",
+  "prefabScriptOverrides": {},
+  "width": 160,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "engineField",
+            "value": "plat_vel_y"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "0"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_GET_POSITION",
+                  "args": {
+                    "actorId": "player",
+                    "vectorX": "L0",
+                    "vectorY": "L1",
+                    "units": "pixels"
+                  },
+                  "id": "f0170017-0000-4000-8000-000000000010"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "player",
+                    "x": {
+                      "type": "variable",
+                      "value": "L0"
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 128
+                    },
+                    "units": "pixels"
+                  },
+                  "id": "f0170017-0000-4000-8000-000000000011"
+                },
+                {
+                  "command": "EVENT_ENGINE_FIELD_SET",
+                  "args": {
+                    "engineFieldKey": "plat_vel_y",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f0170017-0000-4000-8000-000000000012"
+                },
+                {
+                  "command": "EVENT_ENGINE_FIELD_SET",
+                  "args": {
+                    "engineFieldKey": "plat_grav",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f0170017-0000-4000-8000-000000000013"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "6",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f0170017-0000-4000-8000-000000000014"
+                },
+                {
+                  "command": "EVENT_ENGINE_FIELD_SET",
+                  "args": {
+                    "engineFieldKey": "plat_next_state",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "f0170017-0000-4000-8000-000000000015"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0170017-0000-4000-8000-000000000016"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0170017-0000-4000-8000-000000000017"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 0
+}

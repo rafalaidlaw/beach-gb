@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(xargs grep *)",
+      "Bash(python update_scene.py)",
+      "Bash(python update_healthui.py)",
+      "Bash(python -c \"import json; [json.load\\(open\\(p,encoding='utf-8'\\)\\) for p in ['project/scenes/beach/scene.gbsres','project/scenes/beach/actors/healthui.gbsres','project/scenes/beach/actors/platforma.gbsres','project/scenes/beach/triggers/platformatrigger.gbsres','project/scenes/beach/triggers/rowtrigger0.gbsres','project/scenes/beach/triggers/rowtrigger1.gbsres']]; print\\('All JSON files valid'\\)\")"
+    ]
+  }
+}

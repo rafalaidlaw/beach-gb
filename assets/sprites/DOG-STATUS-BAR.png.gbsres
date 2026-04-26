@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "0cf4792e-d6b8-4743-846c-e27c700f2523",
+  "name": "DOG-STATUS-BAR",
+  "symbol": "sprite_dog_status_bar",
+  "states": [
+    {
+      "id": "688804ce-4863-48c9-8cc0-e1459f7bab56",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "8359c83f-1a97-4809-bb43-88b0df047091",
+          "frames": [
+            {
+              "id": "c30ff16c-a380-4932-9a41-f89e51cec4f4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ba6a0af3-8973-4cbe-9ca7-bffd107366e9",
+          "frames": [
+            {
+              "id": "d49a4333-ca21-4bae-a3cc-f53084c0dd3b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "15f3888e-d6cf-4bd4-9a7d-52e1bc7e935f",
+          "frames": [
+            {
+              "id": "ea03ef24-4bcc-4171-8cc2-941fe15d02ba",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fe8f03d0-dc0a-4bfe-a387-3007b393719d",
+          "frames": [
+            {
+              "id": "a6e15f9a-e308-49a0-939f-813bd3a87a9c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "806235cb-e3d8-4a56-a0c3-c5f1d7c75ffd",
+          "frames": [
+            {
+              "id": "45a67997-d615-4445-b6bd-3e5917eeb91b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fd06e73e-43c3-42ba-bb79-499e3adb647f",
+          "frames": [
+            {
+              "id": "95218d30-6120-4b68-ae25-5e4f075ed509",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ebc3f7d1-77e3-43fa-875e-2eed4a04a97e",
+          "frames": [
+            {
+              "id": "a79c7ff3-f5c1-4bb9-b811-c559f1eb01e7",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ba3217d5-7fcb-4a42-94ee-af25735c2e51",
+          "frames": [
+            {
+              "id": "a6f0e363-cb76-4bc0-97c1-3b88e9f6be8b",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "DOG-STATUS-BAR.png",
+  "width": 35,
+  "height": 21,
+  "checksum": "add6decbf13f2dc59b77c3671a27b6010e143a50"
+}

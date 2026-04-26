@@ -2,6 +2,11 @@
   "_resourceType": "variables",
   "variables": [
     {
+      "id": "0",
+      "name": "Player3partPosition",
+      "symbol": "var_player3partposition"
+    },
+    {
       "id": "3",
       "name": "CX",
       "symbol": "var_cx"
@@ -17,6 +22,16 @@
       "symbol": "var_cb"
     },
     {
+      "id": "6",
+      "name": "isJumping",
+      "symbol": "var_isjumping"
+    },
+    {
+      "id": "7",
+      "name": "grounded03",
+      "symbol": "var_grounded03"
+    },
+    {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",
       "name": "notJumping",
       "symbol": "var_notjumping_1"
@@ -25,11 +40,6 @@
       "id": "6576563c-2ba2-4caa-a7dc-9c919d89ecd1__L0",
       "name": "notJumping",
       "symbol": "var_notjumping_0"
-    },
-    {
-      "id": "0",
-      "name": "Player3partPosition",
-      "symbol": "var_player3partposition"
     },
     {
       "id": "4dcb5495-88d3-4e6d-9f2e-3e006bdefb5e__L0",
@@ -72,19 +82,29 @@
       "symbol": "var_platform_01_y"
     },
     {
-      "id": "6",
-      "name": "isJumping",
-      "symbol": "var_isjumping"
-    },
-    {
       "id": "c5b13f3f-d201-4938-81f8-0c4d89a6548f__L0",
       "name": "Local 0",
       "symbol": "var_local_0"
     },
     {
-      "id": "7",
-      "name": "grounded03",
-      "symbol": "var_grounded03"
+      "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L0",
+      "name": "platform-01-X",
+      "symbol": "var_platform_x_1"
+    },
+    {
+      "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L5",
+      "name": "playerX",
+      "symbol": "var_playerx_1"
+    },
+    {
+      "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L4",
+      "name": "playerY",
+      "symbol": "var_playery_1"
+    },
+    {
+      "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L1",
+      "name": "platform-01-Y",
+      "symbol": "var_platform_y_1"
     }
   ],
   "constants": []
