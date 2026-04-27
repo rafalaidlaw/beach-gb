@@ -1,92 +1,15 @@
 {
   "_resourceType": "trigger",
-  "id": "9fa5659d-45d0-47f5-b269-a4b1061c468e",
+  "id": "06e083b6-0006-463a-8da1-a200e5abf45e",
   "name": "platformATopTrigger",
   "prefabId": "",
-  "x": 110,
+  "x": 80,
   "y": 11,
-  "symbol": "trigger_1",
+  "symbol": "trigger_2",
   "prefabScriptOverrides": {},
   "width": 4,
   "height": 1,
-  "script": [
-    {
-      "command": "EVENT_IF",
-      "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "0"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 2
-          }
-        },
-        "__collapseElse": true,
-        "__collapse": true
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_IF",
-            "args": {
-              "condition": {
-                "type": "gt",
-                "valueA": {
-                  "type": "engineField",
-                  "value": "plat_vel_y"
-                },
-                "valueB": {
-                  "type": "number",
-                  "value": 0
-                }
-              },
-              "__collapse": true
-            },
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "6",
-                    "value": {
-                      "type": "number",
-                      "value": 0
-                    }
-                  },
-                  "id": "7769231f-ba6c-4c62-bb35-a450fb5ecc2e"
-                },
-                {
-                  "command": "EVENT_ENGINE_FIELD_SET",
-                  "args": {
-                    "engineFieldKey": "plat_vel_y"
-                  },
-                  "id": "cdb33802-478c-4af7-a401-20c7dda7e7a9"
-                },
-                {
-                  "command": "EVENT_ENGINE_FIELD_SET",
-                  "args": {
-                    "engineFieldKey": "plat_grav",
-                    "value": {
-                      "type": "number",
-                      "value": 0
-                    }
-                  },
-                  "id": "77ab5c02-3a87-4437-aa97-364d36a2d755"
-                }
-              ],
-              "false": []
-            },
-            "id": "1ff5e796-d581-4466-8677-a619597d7703"
-          }
-        ],
-        "false": []
-      },
-      "id": "c3e8ef55-81da-449b-8f37-13a876a36a6d"
-    }
-  ],
+  "script": [],
   "leaveScript": [],
   "_index": 5
 }

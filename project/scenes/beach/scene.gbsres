@@ -2,27 +2,42 @@
   "_resourceType": "scene",
   "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc",
   "_index": 0,
+  "type": "PLATFORM",
   "name": "Beach",
-  "backgroundId": "3814b87a-52aa-49cf-88b2-86e9c13a6bb9",
-  "tilesetId": "",
+  "symbol": "scene_1",
+  "x": 64,
+  "y": 32,
   "width": 160,
   "height": 18,
-  "type": "PLATFORM",
+  "backgroundId": "3814b87a-52aa-49cf-88b2-86e9c13a6bb9",
+  "tilesetId": "",
   "colorModeOverride": "none",
   "paletteIds": [
     "dmg",
-    null,
-    null,
+    "",
+    "",
     ""
   ],
   "spritePaletteIds": [
     "default-bg-5"
   ],
-  "collisions": "00b40+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_1",
-  "x": 64,
-  "y": 32,
+  "autoFadeEventCollapse": true,
+  "parallax": [
+    {
+      "height": 14,
+      "speed": 2
+    },
+    {
+      "height": 2,
+      "speed": 1
+    },
+    {
+      "height": 0,
+      "speed": 0
+    }
+  ],
+  "playerSpriteSheetId": "31595d9e-45f1-4e34-928b-2fd2eb508320",
   "script": [
     {
       "command": "EVENT_SET_INPUT_SCRIPT",
@@ -952,20 +967,5 @@
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],
-  "autoFadeEventCollapse": true,
-  "playerSpriteSheetId": "31595d9e-45f1-4e34-928b-2fd2eb508320",
-  "parallax": [
-    {
-      "height": 14,
-      "speed": 2
-    },
-    {
-      "height": 2,
-      "speed": 1
-    },
-    {
-      "height": 0,
-      "speed": 0
-    }
-  ]
+  "collisions": "00b40+"
 }

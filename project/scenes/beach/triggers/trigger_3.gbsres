@@ -1,23 +1,15 @@
 {
   "_resourceType": "trigger",
-  "id": "134f580a-3e2b-45b9-8439-cbd91cc57a0b",
+  "id": "0219a7e5-a7c0-4376-beb0-081237f38f85",
   "name": "",
   "prefabId": "",
-  "x": 84,
+  "x": 114,
   "y": 10,
-  "symbol": "trigger_8",
+  "symbol": "trigger_9",
   "prefabScriptOverrides": {},
   "width": 1,
   "height": 1,
-  "script": [
-    {
-      "command": "EVENT_ENGINE_FIELD_SET",
-      "args": {
-        "engineFieldKey": "plat_grav"
-      },
-      "id": "524c067c-3543-4534-806c-73908097e940"
-    }
-  ],
+  "script": [],
   "leaveScript": [],
-  "_index": 9
+  "_index": 8
 }

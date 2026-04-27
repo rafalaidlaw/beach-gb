@@ -216,13 +216,13 @@
       ]
     }
   ],
-  "numTiles": 7,
+  "numTiles": 6,
   "canvasOriginX": -8,
   "canvasOriginY": -24,
   "canvasWidth": 40,
   "canvasHeight": 32,
   "boundsX": 0,
-  "boundsY": 0,
+  "boundsY": 2,
   "boundsWidth": 29,
   "boundsHeight": 16,
   "animSpeed": 15,

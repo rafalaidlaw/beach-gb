@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/rafal/OneDOpen/Desktop/GumpyFunction/lbap v2.2 - full/Lessons/Beginner Lessons \\(1 & 2\\)/beginner-project/Tile-Swap/project/scenes/beach/triggers/**)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s \"https://api.github.com/search/code?q=EVENT_ACTOR_COLLISIONS+repo:chrismaltby/gb-studio\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/master/src/lib/events/eventActorCollisionsEnable.ts\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/main/src/lib/events/eventActorCollisionsEnable.ts\")",
+      "Bash(curl -s \"https://api.github.com/repos/chrismaltby/gb-studio/contents/src/lib/events\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/develop/src/lib/events/eventActorCollisionsDisable.js\")"
+    ]
+  }
+}
