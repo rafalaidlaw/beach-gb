@@ -7,7 +7,18 @@
       "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/master/src/lib/events/eventActorCollisionsEnable.ts\")",
       "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/main/src/lib/events/eventActorCollisionsEnable.ts\")",
       "Bash(curl -s \"https://api.github.com/repos/chrismaltby/gb-studio/contents/src/lib/events\")",
-      "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/develop/src/lib/events/eventActorCollisionsDisable.js\")"
+      "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/develop/src/lib/events/eventActorCollisionsDisable.js\")",
+      "WebFetch(domain:gbstudiocentral.com)",
+      "Read(//c/Users/rafal/OneDrive/Desktop/GumpyFunction/lbap v2.2 - full/**)",
+      "WebFetch(domain:www.gbstudio.dev)",
+      "WebFetch(domain:hauntology.itch.io)",
+      "Bash(curl -s \"https://api.github.com/repos/Y0UR-U5ERNAME/gbs-plugin-collection/contents/\")",
+      "Bash(curl -s \"https://api.github.com/repos/Y0UR-U5ERNAME/gbs-plugin-collection/contents/plugins\")",
+      "Bash(curl -s \"https://api.github.com/repos/Y0UR-U5ERNAME/gbs-plugin-collection/contents/plugins/getSystimePlugin\")",
+      "Bash(curl -s \"https://api.github.com/repos/Y0UR-U5ERNAME/gbs-plugin-collection/contents/plugins/getSystimePlugin/events\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Y0UR-U5ERNAME/gbs-plugin-collection/main/plugins/getSystimePlugin/events/eventGetSystime.js\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/develop/src/lib/events/eventSwitch.ts\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/chrismaltby/gb-studio/v4.2.0/src/lib/events/eventSwitch.ts\")"
     ]
   }
 }

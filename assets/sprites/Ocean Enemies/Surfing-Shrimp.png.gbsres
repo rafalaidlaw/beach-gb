@@ -175,9 +175,168 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ca609476-58e8-4020-905b-277fd21fbbb1",
+      "name": "HeadBump",
+      "animations": [
+        {
+          "id": "2e978a4b-7dfb-4f81-bf60-3fea8fd22b63",
+          "frames": [
+            {
+              "id": "a6ad7758-e8da-4b2e-a9a7-9231f95cc535",
+              "tiles": [
+                {
+                  "id": "a37a79fe-b43e-4818-bd85-31888c724b5f",
+                  "x": -8,
+                  "y": 16,
+                  "sliceX": 48,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "e9b6605f-8911-4caa-8303-7b293680e4c7",
+                  "x": -8,
+                  "y": 0,
+                  "sliceX": 48,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "7a01e0dc-6695-4c5b-ae5d-b3ebaf2f71fc",
+                  "x": 0,
+                  "y": 16,
+                  "sliceX": 56,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "e2a9588b-fe9c-4452-b9d8-48421d4df3b5",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 56,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "e350c1e6-b372-4040-938d-aa6e5210b285",
+                  "x": 8,
+                  "y": 16,
+                  "sliceX": 64,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "28088c38-8e2d-4ace-ab15-3c5d72fb6cb3",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 64,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "63373417-b454-41b4-bd1e-dc06efaed148",
+          "frames": [
+            {
+              "id": "5f86098b-0efb-4164-8a11-d5978a93d825",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "84c54e87-faf4-4244-9bc4-db1be4a7721a",
+          "frames": [
+            {
+              "id": "0b754734-a46d-48bb-a561-9f6237264b91",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7d36529c-0bf5-41a2-945c-63de60149a09",
+          "frames": [
+            {
+              "id": "a6b8259c-47dd-4952-b1bb-e19c0fea31b5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "27f3821d-7b60-4377-b7cd-502c687c6b75",
+          "frames": [
+            {
+              "id": "aeadf42c-c82e-431a-bed0-bb9e85f7357a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "01290f32-7efa-46be-a240-88f39c50144a",
+          "frames": [
+            {
+              "id": "0222bdf3-ee8c-4d73-be94-87280d43c4ed",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1d3c3f4f-5ced-491a-8d8a-9ba1adab7566",
+          "frames": [
+            {
+              "id": "ed011806-223f-4e88-a25a-fb56ae5760fa",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5aa89079-0911-414a-90c3-94b9627e2310",
+          "frames": [
+            {
+              "id": "12fb4111-ae4c-4b37-970c-e49975fba8db",
+              "tiles": []
+            }
+          ]
+        }
+      ],
+      "animationType": "fixed",
+      "flipLeft": true
     }
   ],
-  "numTiles": 6,
+  "numTiles": 12,
   "canvasOriginX": -8,
   "canvasOriginY": -24,
   "canvasWidth": 32,
@@ -188,7 +347,7 @@
   "boundsHeight": 16,
   "animSpeed": 15,
   "filename": "Ocean Enemies/Surfing-Shrimp.png",
-  "width": 54,
+  "width": 108,
   "height": 32,
-  "checksum": "f43d4f20d8cf9e8ca26239ffb580dc1712191054"
+  "checksum": "7cec2ebb1256729fae9dbd3c3a5f2db6a7c5b30e"
 }

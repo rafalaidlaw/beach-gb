@@ -19,7 +19,15 @@
   "prefabScriptOverrides": {},
   "symbol": "actor_platform_a",
   "script": [],
-  "startScript": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "cdc24879-ec25-4f1b-99ab-83a06a581ad8"
+    }
+  ],
   "updateScript": [
     {
       "command": "EVENT_IF",
@@ -173,6 +181,6 @@
   "hit3Script": [],
   "coordinateType": "tiles",
   "x": 20,
-  "y": 11,
+  "y": 9,
   "_index": 1
 }

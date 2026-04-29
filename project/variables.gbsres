@@ -7,6 +7,16 @@
       "symbol": "var_player3partposition"
     },
     {
+      "id": "1",
+      "name": "playerHealth",
+      "symbol": "var_playerhealth"
+    },
+    {
+      "id": "2",
+      "name": "shrimpyEngaged",
+      "symbol": "var_shrimpyengaged"
+    },
+    {
       "id": "3",
       "name": "CX",
       "symbol": "var_cx"
@@ -30,6 +40,26 @@
       "id": "7",
       "name": "grounded03",
       "symbol": "var_grounded03"
+    },
+    {
+      "id": "8",
+      "name": "tick",
+      "symbol": "var_tick"
+    },
+    {
+      "id": "9",
+      "name": "shrimpyPhase",
+      "symbol": "var_shrimpyphase"
+    },
+    {
+      "id": "10",
+      "name": "shrimpyTimer",
+      "symbol": "var_shrimpytimer"
+    },
+    {
+      "id": "11",
+      "name": "shrimpyTargetY",
+      "symbol": "var_shrimpytargety"
     },
     {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",
