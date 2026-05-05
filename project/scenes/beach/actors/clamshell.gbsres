@@ -1,10 +1,10 @@
 {
   "_resourceType": "actor",
-  "id": "560492ee-eb20-417c-8801-28c0feae000c",
+  "id": "dce3a362-787b-415f-ab86-80390c03b1a8",
   "name": "ClamShell",
   "frame": 0,
-  "animate": false,
-  "spriteSheetId": "db7f8753-17de-4a6a-ac2e-9c202655a92f",
+  "animate": true,
+  "spriteSheetId": "c69f7dcd-a9a6-452a-9242-c67f75f70831",
   "prefabId": "",
   "direction": "down",
   "moveSpeed": 1,
@@ -12,18 +12,261 @@
   "paletteId": "",
   "isPinned": false,
   "persistent": false,
-  "collisionGroup": "",
+  "collisionGroup": "1",
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
-  "symbol": "actor_5",
-  "script": [],
+  "symbol": "actor_1",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "engineField",
+                  "value": "plat_vel_y"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f0400040-0000-4000-8000-000000000001",
+                    "__name": "Enemy/BouncyStomp"
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-bouncy-stomp"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "Open",
+                    "loopAnim": false
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-set-open"
+                },
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-spent"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "12",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-alive-clear"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_CANCEL",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-stop-motion"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f0b000b0-0000-4000-8000-000000000001",
+                    "__name": "Player/TakeDamage",
+                    "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-take-damage"
+                },
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-side-spent"
+                }
+              ]
+            },
+            "id": "f0410041-0000-4000-8000-clam-hit-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0410041-0000-4000-8000-clam-row-gate"
+    }
+  ],
   "startScript": [],
-  "updateScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "13"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "f0440044-0000-4000-8000-clam-roll-flag-clear"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "12"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                  "args": {
+                    "actorId": "$self$",
+                    "speed": 2
+                  },
+                  "id": "f0440044-0000-4000-8000-clam-roll-speed"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "Rolling",
+                    "loopAnim": true
+                  },
+                  "id": "f0440044-0000-4000-8000-clam-roll-state"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 20
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "moveType": "horizontal",
+                    "units": "tiles",
+                    "collideWith": []
+                  },
+                  "id": "f0440044-0000-4000-8000-clam-roll-move"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "",
+                    "loopAnim": false
+                  },
+                  "id": "f0440044-0000-4000-8000-clam-roll-default"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0440044-0000-4000-8000-clam-alive-recheck"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0440044-0000-4000-8000-clam-roll-gate"
+    }
+  ],
   "hit1Script": [],
-  "hit2Script": [],
+  "hit2Script": [
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "$self$",
+        "spriteStateId": "Open",
+        "loopAnim": false
+      },
+      "id": "f0c000c0-0000-4000-8000-clam-bullet-open"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "f0c000c0-0000-4000-8000-clam-bullet-spent"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "12",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f0c000c0-0000-4000-8000-clam-bullet-alive-clear"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_CANCEL",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "f0c000c0-0000-4000-8000-clam-bullet-stop-motion"
+    }
+  ],
   "hit3Script": [],
   "coordinateType": "tiles",
-  "x": 9,
-  "y": 16,
-  "_index": 4
+  "x": 20,
+  "y": 13,
+  "_index": 3
 }

@@ -1,0 +1,27 @@
+{
+  "_resourceType": "trigger",
+  "id": "f0430043-0000-4000-8000-000000000150",
+  "name": "PlayerCheckpoint150",
+  "prefabId": "",
+  "x": 150,
+  "y": 8,
+  "symbol": "trigger_player_checkpoint_14",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 10,
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "14",
+        "value": {
+          "type": "number",
+          "value": 150
+        }
+      },
+      "id": "f0430043-0000-4000-8000-checkpoint-mark-150"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 17
+}

@@ -12,7 +12,7 @@
   "paletteId": "",
   "isPinned": false,
   "persistent": true,
-  "collisionGroup": "",
+  "collisionGroup": "1",
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
   "symbol": "actor_shrimpy",
@@ -372,10 +372,138 @@
     }
   ],
   "hit1Script": [],
-  "hit2Script": [],
+  "hit2Script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "25",
+        "value": {
+          "type": "variable",
+          "value": "0"
+        }
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-die-killrow"
+    },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "args": {
+        "actorId": "f0150018-0000-4000-8000-000000000008"
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-show"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "vectorX": "18",
+        "vectorY": "11",
+        "units": "tiles"
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-die-getpos"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "25",
+        "choices": 3,
+        "value0": {
+          "type": "number",
+          "value": 0
+        },
+        "value1": {
+          "type": "number",
+          "value": 1
+        },
+        "value2": {
+          "type": "number",
+          "value": 2
+        },
+        "__disableElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "f0150018-0000-4000-8000-000000000008",
+              "x": {
+                "type": "variable",
+                "value": "18"
+              },
+              "y": {
+                "type": "number",
+                "value": 15
+              },
+              "units": "tiles"
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row0"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "f0150018-0000-4000-8000-000000000008",
+              "x": {
+                "type": "variable",
+                "value": "18"
+              },
+              "y": {
+                "type": "number",
+                "value": 13
+              },
+              "units": "tiles"
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row1"
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "f0150018-0000-4000-8000-000000000008",
+              "x": {
+                "type": "variable",
+                "value": "18"
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "units": "tiles"
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row2"
+          }
+        ],
+        "false": []
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-switch"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-die-hide"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-die-coll-off"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_CANCEL",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-die-move-cancel"
+    }
+  ],
   "hit3Script": [],
   "coordinateType": "tiles",
   "x": 33,
   "y": 11,
-  "_index": 3
+  "_index": 2
 }

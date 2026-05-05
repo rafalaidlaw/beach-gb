@@ -1,0 +1,84 @@
+{
+  "_resourceType": "trigger",
+  "id": "f0430043-0000-4000-8000-000000000020",
+  "name": "PlayerCheckpoint20",
+  "prefabId": "",
+  "x": 20,
+  "y": 8,
+  "symbol": "trigger_player_checkpoint_2",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 10,
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "14",
+        "value": {
+          "type": "number",
+          "value": 20
+        }
+      },
+      "id": "f0430043-0000-4000-8000-checkpoint-mark-20"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "12"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "ne",
+                "valueA": {
+                  "type": "variable",
+                  "value": "0"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "13",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "f0430043-0000-4000-8000-clam-roll-request"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0430043-0000-4000-8000-clam-row-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0430043-0000-4000-8000-clam-alive-gate"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 3
+}

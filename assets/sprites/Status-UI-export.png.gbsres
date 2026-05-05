@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "69a3ab89-fc07-4d4e-832f-ceaaf43e6b69",
+  "name": "Status-UI-export",
+  "symbol": "sprite_status_ui_export",
+  "states": [
+    {
+      "id": "139f5a29-3923-4406-9157-a8b915f75844",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "9865d700-a5b1-4414-b37c-ffe2fef5aa6b",
+          "frames": [
+            {
+              "id": "3475192e-6e8e-429c-956c-e6cacde35f8d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ff562f3b-fd98-42c1-903b-42b730bf39f9",
+          "frames": [
+            {
+              "id": "e0b354d4-d2e2-4c26-85de-2a53293daedb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4d431cd3-6722-4f56-b226-daaa313af6d3",
+          "frames": [
+            {
+              "id": "05ae6c40-db8f-47f7-ba83-02c2cb8ad682",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "525bfc83-ad4c-4a0a-9814-6df93e795ef6",
+          "frames": [
+            {
+              "id": "bec26fc6-c94f-47d9-950e-760ba946c40c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "64759a4d-de86-4ec1-8064-82f10c1ab9e4",
+          "frames": [
+            {
+              "id": "bf270600-3c10-4597-acae-aa60376b35ed",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b6262277-b1e9-4d72-b1f4-f2f645bd76ea",
+          "frames": [
+            {
+              "id": "112d557b-8efa-46bb-a93a-e6a20a28fc9b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "40b93a84-0d85-4133-8bf5-9f47d2c58745",
+          "frames": [
+            {
+              "id": "7bf8bf72-0784-42e0-9ccd-d74dc072ac48",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "dfd505cb-c62e-44f6-940b-dda92493ec28",
+          "frames": [
+            {
+              "id": "6c8adc17-558f-4d5b-ba05-cdcb3de6455b",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Status-UI-export.png",
+  "width": 35,
+  "height": 21,
+  "checksum": "fb31f542d9c1173d61747e94b00256f0b42803dd"
+}

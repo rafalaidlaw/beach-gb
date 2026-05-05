@@ -1,0 +1,253 @@
+{
+  "_resourceType": "script",
+  "id": "f0900090-0000-4000-8000-000000000001",
+  "name": "Player/UpdateHealthbar",
+  "description": "Updates the Healthbar actor's displayed frame based on var_1 (playerHealth). Called from damage sources after DEC var_1. Avoids per-frame polling by being event-driven.",
+  "variables": {},
+  "actors": {
+    "ddcbc746-fcee-46a6-a433-0478415320c3": {
+      "id": "ddcbc746-fcee-46a6-a433-0478415320c3",
+      "name": "Actor \u0000"
+    }
+  },
+  "symbol": "script_update_healthbar",
+  "script": [
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "1",
+        "choices": 12,
+        "value0": {
+          "type": "number",
+          "value": 12
+        },
+        "value1": {
+          "type": "number",
+          "value": 11
+        },
+        "value2": {
+          "type": "number",
+          "value": 10
+        },
+        "value3": {
+          "type": "number",
+          "value": 9
+        },
+        "value4": {
+          "type": "number",
+          "value": 8
+        },
+        "value5": {
+          "type": "number",
+          "value": 7
+        },
+        "value6": {
+          "type": "number",
+          "value": 6
+        },
+        "value7": {
+          "type": "number",
+          "value": 5
+        },
+        "value8": {
+          "type": "number",
+          "value": 4
+        },
+        "value9": {
+          "type": "number",
+          "value": 3
+        },
+        "value10": {
+          "type": "number",
+          "value": 2
+        },
+        "value11": {
+          "type": "number",
+          "value": 1
+        },
+        "__disableElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-12"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-11"
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-10"
+          }
+        ],
+        "true3": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-09"
+          }
+        ],
+        "true4": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-08"
+          }
+        ],
+        "true5": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 5
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-07"
+          }
+        ],
+        "true6": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 6
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-06"
+          }
+        ],
+        "true7": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 7
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-05"
+          }
+        ],
+        "true8": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 8
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-04"
+          }
+        ],
+        "true9": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "frame": {
+                "type": "number",
+                "value": 9
+              }
+            },
+            "id": "f0900090-0000-4000-8000-hb-frame-03"
+          }
+        ],
+        "true10": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "spriteStateId": "Flash2",
+              "loopAnim": true
+            },
+            "id": "f0900090-0000-4000-8000-hb-state-flash2"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "speed": 15
+            },
+            "id": "f0900090-0000-4000-8000-hb-flash2-cycle-on"
+          }
+        ],
+        "true11": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "spriteStateId": "Flash1",
+              "loopAnim": true
+            },
+            "id": "f0900090-0000-4000-8000-hb-state-flash1"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "speed": 15
+            },
+            "id": "f0900090-0000-4000-8000-hb-flash1-cycle-on"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_HIDDEN",
+            "args": {
+              "actorId": "ddcbc746-fcee-46a6-a433-0478415320c3",
+              "hidden": true
+            },
+            "id": "f0900090-0000-4000-8000-hb-hide"
+          }
+        ]
+      },
+      "id": "f0900090-0000-4000-8000-hb-switch"
+    }
+  ]
+}

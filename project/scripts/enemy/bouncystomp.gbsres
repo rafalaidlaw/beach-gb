@@ -1,0 +1,22 @@
+{
+  "_resourceType": "script",
+  "id": "f0400040-0000-4000-8000-000000000001",
+  "name": "Enemy/BouncyStomp",
+  "description": "Stomp response: launches the player upward. Air-swap-as-double-jump is the project's double-jump system, so we no longer enable engine-level extra jumps here.",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_bouncy_stomp",
+  "script": [
+    {
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "plat_vel_y",
+        "value": {
+          "type": "number",
+          "value": -25000
+        }
+      },
+      "id": "f0400040-0000-4000-8000-000000000010"
+    }
+  ]
+}

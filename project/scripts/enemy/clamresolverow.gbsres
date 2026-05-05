@@ -1,0 +1,83 @@
+{
+  "_resourceType": "script",
+  "id": "f0430043-0000-4000-8000-000000000001",
+  "name": "Enemy/ClamResolveRow",
+  "description": "Reads the clam's current y in tiles and writes its row index into var_19 enemyRowResolved (0=bot, 1=mid, 2=top). Mapping for the clam's sprite origin: y=11 -> top (2), y=13 -> mid (1), y=15 -> bot (0). Call this immediately before any row gate check on the clam, so the gate compares against var_19 instead of a literal. Works correctly even after the clam is repositioned (e.g. respawning on a new row when it rolls off-screen).",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_clam_resolve_row",
+  "script": [
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "dce3a362-787b-415f-ab86-80390c03b1a8",
+        "vectorX": "20",
+        "vectorY": "19",
+        "units": "tiles"
+      },
+      "id": "f0430043-0000-4000-8000-resolve-getpos"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "19",
+        "choices": 3,
+        "value0": {
+          "type": "number",
+          "value": 11
+        },
+        "value1": {
+          "type": "number",
+          "value": 13
+        },
+        "value2": {
+          "type": "number",
+          "value": 15
+        },
+        "__disableElse": true
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "19",
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "f0430043-0000-4000-8000-row-top"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "19",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "f0430043-0000-4000-8000-row-mid"
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "19",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "f0430043-0000-4000-8000-row-bot"
+          }
+        ]
+      },
+      "id": "f0430043-0000-4000-8000-resolve-switch"
+    }
+  ]
+}

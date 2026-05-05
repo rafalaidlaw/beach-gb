@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "37b6d9a8-03ed-4b20-b5e7-640994387712",
+  "name": "FX/pixelFadefx",
+  "symbol": "sprite_fx_pixelfadefx",
+  "states": [
+    {
+      "id": "9010b0a2-4e42-4869-8f14-493ccae6a481",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "73992215-78fb-4cd8-a49b-d1f28e49e111",
+          "frames": [
+            {
+              "id": "2162e8da-fe16-482d-85a4-e41e57b6d167",
+              "tiles": [
+                {
+                  "id": "addea3bc-c673-497e-b3e3-442429a5f966",
+                  "x": -1,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "cf6318ca-9d19-4681-b19d-24eac1b52553",
+                  "x": 7,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "d8199c6a-080e-4de1-bbde-45b1ea9bfe08",
+          "frames": [
+            {
+              "id": "b37319dd-c4eb-49e1-a29d-ef0a9d125b4a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3d580a5b-0d4a-47d0-848d-a09b32b4b09a",
+          "frames": [
+            {
+              "id": "052b0470-8c99-470c-af75-d748e089bcfc",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e5a5daac-d673-4318-a89b-010b429bab81",
+          "frames": [
+            {
+              "id": "94694e76-51ee-4fb9-9cf5-a5dda30f73c3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "845c87a3-a984-4c6d-8fa6-11b1154c0add",
+          "frames": [
+            {
+              "id": "92adef9e-3829-4106-a3a8-4a4a9a14e924",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "002afe1a-a6f8-4c84-996e-c4d1f76ebbe7",
+          "frames": [
+            {
+              "id": "06ec7757-9187-432f-88fa-98779657047f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3b9b5e41-b581-47d5-8400-7c176de62d27",
+          "frames": [
+            {
+              "id": "7fdb8b38-f3e4-4eab-9468-a3d80dfff940",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0ed186a2-fa17-4c67-a01e-af70b8830933",
+          "frames": [
+            {
+              "id": "02999f7d-a75e-4797-aaba-f863687a5615",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "FX/pixelFadefx.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "c8dc6b99b4bcc080b2201888207ccc0ed7c433d4"
+}

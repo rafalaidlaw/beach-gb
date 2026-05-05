@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "a94ad6d8-2cd0-408e-8519-bad503ac84a0",
+  "name": "claw",
+  "symbol": "sprite_claw",
+  "states": [
+    {
+      "id": "70e4c62e-b616-46fc-8b90-4e18f5d1d11c",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "f58252a3-8026-4df0-a151-ba3a108257ec",
+          "frames": [
+            {
+              "id": "bab997fb-7d73-4ec3-a622-0c84ef60f860",
+              "tiles": [
+                {
+                  "id": "2333181f-1608-44af-91b8-8963ce5479de",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "fa0fee7e-059a-4f70-ae34-88509fa574ca",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "d0827759-2276-4147-ae8f-0e165334011c",
+          "frames": [
+            {
+              "id": "4a308f00-bc68-43ed-a0d8-a3633d69cda6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "30d04ce4-c9d5-403f-b3f8-6ef59274888d",
+          "frames": [
+            {
+              "id": "f7f1b4d9-48d3-4f7e-8708-cd5c4886c9bf",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4a41f16d-57e0-4fd9-b8b3-4a5e6d148c20",
+          "frames": [
+            {
+              "id": "affa6f4c-9032-4cf1-9640-36b11147f8d3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "39fdc351-cb38-4a59-9288-cf091c709533",
+          "frames": [
+            {
+              "id": "82c2cdfd-0119-43e0-943d-c7a8c073d858",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "04b90541-300e-4e79-9cab-b4b8415132d3",
+          "frames": [
+            {
+              "id": "fac1a21e-4c0c-427b-be2d-a48ab8a7bc89",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2a4a5c3b-125c-4576-a429-8abb906cc988",
+          "frames": [
+            {
+              "id": "89315b88-de59-496a-a605-f2e6cc74ba13",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b6281ccb-4552-4a79-a654-1d6edf28d9da",
+          "frames": [
+            {
+              "id": "bc5952b0-c3ec-445d-8f09-8489d8d6f0a6",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": -8,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": 8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "claw.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "142322e50f04b406eb04ea8850285b1c24e776e1"
+}

@@ -1,0 +1,100 @@
+{
+  "_resourceType": "script",
+  "id": "f0b000b0-0000-4000-8000-000000000001",
+  "name": "Player/TakeDamage",
+  "description": "Standard hit response: gates on i-frame timer (no double damage). DECs playerHealth, sets i-frame timer to 60 frames (~1 sec), resets strobe tick, knocks player back 3 tiles, and updates the Healthbar via Player/UpdateHealthbar. The Healthbar actor monitors var_21 (iframeTimer) per-frame and toggles player visibility for the strobe + auto-restores when timer expires.",
+  "variables": {},
+  "actors": {
+    "ddcbc746-fcee-46a6-a433-0478415320c3": {
+      "id": "ddcbc746-fcee-46a6-a433-0478415320c3",
+      "name": "Actor \u0000"
+    }
+  },
+  "symbol": "script_take_damage",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "21"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "24"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_DEC_VALUE",
+                  "args": {
+                    "variable": "1"
+                  },
+                  "id": "f0b000b0-0000-4000-8000-td-dec-hp"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "21",
+                    "value": {
+                      "type": "number",
+                      "value": 60
+                    }
+                  },
+                  "id": "f0b000b0-0000-4000-8000-td-set-iframe"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "22",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f0b000b0-0000-4000-8000-td-reset-strobe"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f0900090-0000-4000-8000-000000000001",
+                    "__name": "Player/UpdateHealthbar",
+                    "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+                  },
+                  "id": "f0b000b0-0000-4000-8000-td-call-update-hb"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0b000b0-0000-4000-8000-td-swap-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0b000b0-0000-4000-8000-td-iframe-gate"
+    }
+  ]
+}

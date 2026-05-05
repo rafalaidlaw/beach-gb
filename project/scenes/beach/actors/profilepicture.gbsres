@@ -1,0 +1,474 @@
+{
+  "_resourceType": "actor",
+  "id": "b6e5019b-73e8-462c-8c09-4e692c65add8",
+  "name": "ProfilePicture",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "8d29be5d-4ab7-486e-87af-85e212f2c0f6",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.25,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": true,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [
+    "platform"
+  ],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_7",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_SET_TIMER_SCRIPT",
+      "args": {
+        "timer": 1,
+        "duration": 0.1,
+        "frames": 30,
+        "__scriptTabs": "end",
+        "units": "frames",
+        "__collapse": true,
+        "__label": "OceanWave-Tile-Update-Tick",
+        "__comment": false
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 6
+              },
+              "tilesetId": "8206490d-99b3-4558-9c56-74aa1fbd8e1a",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "frames": {
+                "type": "number",
+                "value": 7
+              },
+              "variable": "L0",
+              "tileSize": "16px",
+              "__collapse": false,
+              "__comment": true
+            },
+            "id": "3df4eef9-b1ea-4539-8c3a-c7c3f2e1f031"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": {
+                "type": "number",
+                "value": 6
+              },
+              "tilesetId": "8b42fc45-84b2-4054-b44d-f97c7f2d0826",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "frames": {
+                "type": "number",
+                "value": 7
+              },
+              "variable": "L0",
+              "tileSize": "16px",
+              "__comment": true,
+              "__collapse": false
+            },
+            "id": "cf8df11d-705e-47bd-9d3f-4af6a52884cf"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "tilesetId": "6b62b07a-8c07-458f-b20f-ef817fc2cd9e",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "frames": {
+                "type": "number",
+                "value": 7
+              },
+              "variable": "L0",
+              "tileSize": "16px",
+              "__comment": false,
+              "__collapse": false
+            },
+            "id": "fca8912b-9358-4d04-aba8-a6ba9e7f2f61"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "tilesetId": "6b62b07a-8c07-458f-b20f-ef817fc2cd9e",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "frames": {
+                "type": "number",
+                "value": 7
+              },
+              "variable": "L0",
+              "tileSize": "16px",
+              "__comment": true,
+              "__collapse": false
+            },
+            "id": "b7b3d2df-cb5d-45a7-9ca5-d019cf8dcef1"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "tilesetId": "ac362138-49d0-4896-9ba1-54821835d990",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "frames": {
+                "type": "number",
+                "value": 7
+              },
+              "variable": "L0",
+              "tileSize": "16px",
+              "__comment": false,
+              "__collapse": false
+            },
+            "id": "6fd36657-25e5-4dfe-be51-17bc2ab2c93e"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "tilesetId": "c222655a-6af8-4ddf-8e69-5922106a6321",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "frames": {
+                "type": "number",
+                "value": 7
+              },
+              "variable": "L0",
+              "tileSize": "16px",
+              "__comment": false,
+              "__collapse": false
+            },
+            "id": "c31616c7-528d-462e-98cc-ce045b0d70da"
+          }
+        ]
+      },
+      "id": "d0df263a-efb1-4e67-b187-9d1c5dd1cd50"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "6"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "player",
+              "spriteStateId": "",
+              "loopAnim": true
+            },
+            "id": "f1180000-0000-4000-8000-grounded-state-default"
+          }
+        ],
+        "false": []
+      },
+      "id": "f1180000-0000-4000-8000-grounded-state-gate"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "player",
+        "vectorX": "17",
+        "vectorY": "18",
+        "units": "pixels"
+      },
+      "id": "f0a000a0-0000-4000-8000-cache-player-pos"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "0",
+        "choices": 3,
+        "value0": {
+          "type": "number",
+          "value": 0
+        },
+        "value1": {
+          "type": "number",
+          "value": 1
+        },
+        "value2": {
+          "type": "number",
+          "value": 2
+        },
+        "__disableElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "engineField",
+                  "value": "plat_vel_y"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "18"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 116
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "player",
+                          "spriteStateId": "",
+                          "loopAnim": true
+                        },
+                        "id": "f1230000-0000-4000-8000-anticipate-set-0"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f1230000-0000-4000-8000-anticipate-y-row0"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1230000-0000-4000-8000-anticipate-falling-row0"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "engineField",
+                  "value": "plat_vel_y"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "18"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 100
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "player",
+                          "spriteStateId": "",
+                          "loopAnim": true
+                        },
+                        "id": "f1230000-0000-4000-8000-anticipate-set-1"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f1230000-0000-4000-8000-anticipate-y-row1"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1230000-0000-4000-8000-anticipate-falling-row1"
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "engineField",
+                  "value": "plat_vel_y"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "18"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 84
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "player",
+                          "spriteStateId": "",
+                          "loopAnim": true
+                        },
+                        "id": "f1230000-0000-4000-8000-anticipate-set-2"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f1230000-0000-4000-8000-anticipate-y-row2"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1230000-0000-4000-8000-anticipate-falling-row2"
+          }
+        ],
+        "false": []
+      },
+      "id": "f1190000-0000-4000-8000-anticipate-row-switch"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "__section": "movement",
+        "actorId": "player",
+        "x": {
+          "type": "number",
+          "value": 1
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "collideWith": [
+          "walls"
+        ],
+        "lockDirection": [],
+        "moveType": "horizontal",
+        "units": "tiles",
+        "__collapse": false,
+        "__comment": false
+      },
+      "id": "8ac93137-ed31-4fd6-9f63-812294769558"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 0,
+  "y": 0,
+  "_index": 1
+}

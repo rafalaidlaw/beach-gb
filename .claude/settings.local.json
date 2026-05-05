@@ -5,7 +5,12 @@
       "Bash(xargs grep *)",
       "Bash(python update_scene.py)",
       "Bash(python update_healthui.py)",
-      "Bash(python -c \"import json; [json.load\\(open\\(p,encoding='utf-8'\\)\\) for p in ['project/scenes/beach/scene.gbsres','project/scenes/beach/actors/healthui.gbsres','project/scenes/beach/actors/platforma.gbsres','project/scenes/beach/triggers/platformatrigger.gbsres','project/scenes/beach/triggers/rowtrigger0.gbsres','project/scenes/beach/triggers/rowtrigger1.gbsres']]; print\\('All JSON files valid'\\)\")"
+      "Bash(python -c \"import json; [json.load\\(open\\(p,encoding='utf-8'\\)\\) for p in ['project/scenes/beach/scene.gbsres','project/scenes/beach/actors/healthui.gbsres','project/scenes/beach/actors/platforma.gbsres','project/scenes/beach/triggers/platformatrigger.gbsres','project/scenes/beach/triggers/rowtrigger0.gbsres','project/scenes/beach/triggers/rowtrigger1.gbsres']]; print\\('All JSON files valid'\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(t['path']\\) for t in d.get\\('tree',[]\\)]\")",
+      "Bash(curl -sL -w \"\\\\nHTTP:%{http_code}\\\\n\" \"https://api.github.com/repos/becomingplural/GBS_PlatformerPlus/git/trees/main?recursive=1\")",
+      "Bash(curl -sL \"https://github.com/becomingplural/GBS_PlatformerPlus\")",
+      "WebFetch(domain:nokotin.itch.io)",
+      "Read(//c/Users/rafal/OneDrive/Desktop/GumpyFunction/**)"
     ]
   }
 }

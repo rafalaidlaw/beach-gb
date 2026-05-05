@@ -62,6 +62,66 @@
       "symbol": "var_shrimpytargety"
     },
     {
+      "id": "12",
+      "name": "clamAlive",
+      "symbol": "var_clamalive"
+    },
+    {
+      "id": "13",
+      "name": "clamRollPending",
+      "symbol": "var_clamrollpending"
+    },
+    {
+      "id": "14",
+      "name": "playerCheckpoint",
+      "symbol": "var_playercheckpoint"
+    },
+    {
+      "id": "15",
+      "name": "healthDirty",
+      "symbol": "var_healthdirty"
+    },
+    {
+      "id": "16",
+      "name": "healthFlashTick",
+      "symbol": "var_healthflashtick"
+    },
+    {
+      "id": "17",
+      "name": "playerX",
+      "symbol": "var_playerx_global"
+    },
+    {
+      "id": "18",
+      "name": "playerY",
+      "symbol": "var_playery_global"
+    },
+    {
+      "id": "21",
+      "name": "iframeTimer",
+      "symbol": "var_iframetimer"
+    },
+    {
+      "id": "22",
+      "name": "strobeTick",
+      "symbol": "var_strobetick"
+    },
+    {
+      "id": "23",
+      "name": "velYStash",
+      "symbol": "var_velystash"
+    },
+    {
+      "id": "24",
+      "name": "swapInvuln",
+      "symbol": "var_swapinvuln"
+    },
+    {
+      "id": "25",
+      "name": "shrimpyKillRow",
+      "symbol": "var_shrimpykillrow"
+    },
+    {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",
       "name": "notJumping",
       "symbol": "var_notjumping_1"

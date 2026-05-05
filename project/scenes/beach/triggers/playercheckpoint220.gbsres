@@ -1,0 +1,27 @@
+{
+  "_resourceType": "trigger",
+  "id": "7baf23d2-f30b-4213-b08c-b014d6729c9c",
+  "name": "PlayerCheckpoint220",
+  "prefabId": "",
+  "x": 220,
+  "y": 8,
+  "symbol": "trigger_9",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 10,
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "14",
+        "value": {
+          "type": "number",
+          "value": 150
+        }
+      },
+      "id": "3d3e5821-2be7-4e2b-abb8-bb4fea190a6c"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 24
+}

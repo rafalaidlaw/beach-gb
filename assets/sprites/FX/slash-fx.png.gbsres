@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "e30cd0f6-0d55-487a-9410-4e11a48919f0",
+  "name": "FX/slash-fx",
+  "symbol": "sprite_fx_slash_fx",
+  "states": [
+    {
+      "id": "71254c2a-dae1-4488-a091-e4b0aaeb5a84",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "1fec201c-5583-4696-ad47-e92345acddd7",
+          "frames": [
+            {
+              "id": "5ac2a841-9f6e-491b-add5-302fee7d644d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b930e207-da1e-4851-937b-a453f7040f40",
+          "frames": [
+            {
+              "id": "dc344e96-dda3-4bc4-89e7-64205df2142c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "950cd798-4062-479c-9e4a-7a6ce4042e02",
+          "frames": [
+            {
+              "id": "115fdb73-8cf9-44a6-b5b0-36595d96f6c6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cfd0bb8e-c8c9-47fa-a7ae-ffa7a27173a8",
+          "frames": [
+            {
+              "id": "e8bdbf0b-33b6-4610-ab86-b4f7509fd13b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "26a7983c-2417-4ed2-906c-b1b364fa271e",
+          "frames": [
+            {
+              "id": "fd0a2b9b-45cd-4c07-9811-a87fdc37f6cf",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "10956056-b33f-4465-9416-5038843ebf9b",
+          "frames": [
+            {
+              "id": "8279e745-fdff-4724-a714-502f01dc6e9a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "78af9f1c-d6f9-4e49-8448-f9c2e2b7bd9c",
+          "frames": [
+            {
+              "id": "7ea5ac14-6eb9-4e55-a13c-7811c0916a11",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e445dc91-e01a-4527-837c-05c8408b5150",
+          "frames": [
+            {
+              "id": "7dc99146-651b-4acc-85da-b0f157403f51",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "FX/slash-fx.png",
+  "width": 512,
+  "height": 81,
+  "checksum": "f91e269de0a9bfe0dd6ebb6d65bac997941cf20c"
+}

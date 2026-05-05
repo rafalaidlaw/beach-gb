@@ -26,6 +26,17 @@
         "actorId": "$self$"
       },
       "id": "cdc24879-ec25-4f1b-99ab-83a06a581ad8"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "19",
+        "value": {
+          "type": "number",
+          "value": 20
+        }
+      },
+      "id": "f0a000a0-0000-4000-8000-pa-init-x"
     }
   ],
   "updateScript": [
@@ -53,6 +64,45 @@
               "actorId": "$self$"
             },
             "id": "f0270027-0000-4000-8000-pa-row-enable"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "engineField",
+                  "value": "plat_is_actor_attached"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "6",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f0280028-0000-4000-8000-pa-attach-var6"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": { "actorId": "6f6f6f6f-0000-4000-8000-000000000007" },
+                  "id": "f1070707-0000-4000-8000-pa-attach-shadow-hide"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0280028-0000-4000-8000-pa-attach-gate"
           }
         ],
         "false": [
@@ -71,44 +121,17 @@
       "command": "EVENT_IF",
       "args": {
         "condition": {
-          "type": "eq",
+          "type": "gt",
           "valueA": {
-            "type": "engineField",
-            "value": "plat_is_actor_attached"
+            "type": "variable",
+            "value": "17"
           },
           "valueB": {
-            "type": "number",
-            "value": 1
+            "type": "variable",
+            "value": "19"
           }
         },
         "__collapseElse": true
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "6",
-              "value": {
-                "type": "number",
-                "value": 0
-              }
-            },
-            "id": "f0280028-0000-4000-8000-pa-attach-var6"
-          }
-        ],
-        "false": []
-      },
-      "id": "f0280028-0000-4000-8000-pa-attach-gate"
-    },
-    {
-      "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
-      "args": {
-        "actorId": "player",
-        "operation": "right",
-        "otherActorId": "$self$",
-        "__collapseElse": true,
-        "__collapse": false
       },
       "children": {
         "true": [
@@ -142,33 +165,15 @@
             "id": "da7feb25-b8d6-4692-ad55-3201f62d16ac"
           },
           {
-            "command": "EVENT_ACTOR_SET_POSITION",
+            "command": "EVENT_VARIABLE_MATH",
             "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 42
-              },
-              "y": {
-                "type": "number",
-                "value": 11
-              },
-              "units": "tiles",
-              "__comment": true
+              "vectorX": "19",
+              "operation": "add",
+              "other": "val",
+              "value": 30,
+              "clamp": false
             },
-            "id": "32c2bcfc-b5ae-4306-97f0-9cef6ae9bccf"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "5",
-              "value": {
-                "type": "number",
-                "value": 1
-              },
-              "__comment": true
-            },
-            "id": "08a20d68-a3eb-46a9-8740-58e218d025d5"
+            "id": "f0a000a0-0000-4000-8000-pa-x-add-30"
           }
         ],
         "false": []

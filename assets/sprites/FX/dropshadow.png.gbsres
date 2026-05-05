@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "32838cf9-7e71-4e37-90a3-3b8f459e0849",
+  "name": "FX/dropshadow",
+  "symbol": "sprite_fx_dropshadow",
+  "states": [
+    {
+      "id": "89c2f6f9-32bf-4a8d-8d19-5a78520c02fc",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "7800aa81-e9ea-467c-b3ea-27fb1793218d",
+          "frames": [
+            {
+              "id": "a935d079-bb8a-4fbb-954a-94c1ba31e792",
+              "tiles": [
+                {
+                  "id": "468c51fd-6e31-493d-87a2-7d7c840a502d",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": -9,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "a32cdebd-0897-415f-863f-9f7bd1f2d923",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": -9,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4c02b176-860f-43f0-8c76-21b6be48b058",
+          "frames": [
+            {
+              "id": "0d16db2d-7e47-4bcb-ba88-77b69c4c87a8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1a6cce0c-3b6b-4598-815a-aeffe7ae20d8",
+          "frames": [
+            {
+              "id": "ac371920-ba15-43c4-8ee0-05ea554f0706",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d7ebffa2-19a7-40da-ac08-a4a2519f1a01",
+          "frames": [
+            {
+              "id": "50a746fe-a579-4a80-a51e-c833de49ce31",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6f13fdfa-6c15-4c11-bc20-8144135c49a0",
+          "frames": [
+            {
+              "id": "3d206d1c-bdc6-4779-a2c1-1a738982a11a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9d8d9e68-792d-459c-a922-48234cafded0",
+          "frames": [
+            {
+              "id": "65a6734a-6c1a-4a7e-92c8-7ebd96da8562",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b07749b1-e06d-44d6-9c8c-090a83c00d6c",
+          "frames": [
+            {
+              "id": "4a2b58dd-aa0d-4250-aaa1-51a81a0af58e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2ba470e8-0c43-43bc-b6a1-34265f84b81c",
+          "frames": [
+            {
+              "id": "9af9e287-6024-4e40-ac9c-5d52658daf5f",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "FX/dropshadow.png",
+  "width": 16,
+  "height": 7,
+  "checksum": "6360958360184a4e08230072c133fea9dd5dd23c"
+}

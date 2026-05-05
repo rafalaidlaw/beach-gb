@@ -1,0 +1,106 @@
+{
+  "_resourceType": "script",
+  "id": "f0420042-0000-4000-8000-000000000001",
+  "name": "Enemy/ClamRowCheck",
+  "description": "Called by checkpoint triggers along the player's path. If the clam is still alive (var_12) and the player is not on the clam's row (var_0 != 0, since clam is on row 0), play the rolling animation and slide the clam +12 tiles right. The clam stays static if alive+same-row (player will hit it) or if dead (already stomped).",
+  "variables": {},
+  "actors": {
+    "dce3a362-787b-415f-ab86-80390c03b1a8": {
+      "id": "dce3a362-787b-415f-ab86-80390c03b1a8",
+      "name": "Actor \u0000"
+    }
+  },
+  "symbol": "script_clam_row_check",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "12"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "ne",
+                "valueA": {
+                  "type": "variable",
+                  "value": "0"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                  "args": {
+                    "actorId": "dce3a362-787b-415f-ab86-80390c03b1a8",
+                    "speed": 2
+                  },
+                  "id": "f0420042-0000-4000-8000-clam-roll-speed"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "dce3a362-787b-415f-ab86-80390c03b1a8",
+                    "spriteStateId": "Rolling",
+                    "loopAnim": true
+                  },
+                  "id": "f0420042-0000-4000-8000-clam-roll-state"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "dce3a362-787b-415f-ab86-80390c03b1a8",
+                    "x": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "moveType": "horizontal",
+                    "units": "tiles",
+                    "collideWith": []
+                  },
+                  "id": "f0420042-0000-4000-8000-clam-roll-move"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "dce3a362-787b-415f-ab86-80390c03b1a8",
+                    "spriteStateId": "",
+                    "loopAnim": false
+                  },
+                  "id": "f0420042-0000-4000-8000-clam-roll-default"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0420042-0000-4000-8000-clam-row-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0420042-0000-4000-8000-clam-alive-gate"
+    }
+  ]
+}
