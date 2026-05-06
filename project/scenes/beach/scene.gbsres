@@ -7,7 +7,7 @@
   "symbol": "scene_1",
   "x": 64,
   "y": 32,
-  "width": 160,
+  "width": 255,
   "height": 18,
   "backgroundId": "3814b87a-52aa-49cf-88b2-86e9c13a6bb9",
   "tilesetId": "",
@@ -528,6 +528,17 @@
       "id": "f0360036-0000-4000-8000-init-targety-switch"
     },
     {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "26",
+        "value": {
+          "type": "variable",
+          "value": "0"
+        }
+      },
+      "id": "f0360036-0000-4000-8000-init-shrimpyrow"
+    },
+    {
       "command": "EVENT_SET_INPUT_SCRIPT",
       "args": {
         "input": [
@@ -733,6 +744,17 @@
                                 "false": []
                               },
                               "id": "f0370037-0000-4000-8000-down-targety-switch"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "26",
+                                "value": {
+                                  "type": "variable",
+                                  "value": "0"
+                                }
+                              },
+                              "id": "f0370037-0000-4000-8000-down-shrimpyrow"
                             }
                           ],
                           "false": []
@@ -800,7 +822,7 @@
                                       "spriteStateId": "",
                                       "actorId": "player",
                                       "x": -40,
-                                      "y": 28,
+                                      "y": -20,
                                       "directionType": "direction",
                                       "direction": "right",
                                       "speed": 0,
@@ -911,6 +933,17 @@
                                       "false": []
                                     },
                                     "id": "f1120000-0000-4000-8000-air-down-targety-switch"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "26",
+                                      "value": {
+                                        "type": "variable",
+                                        "value": "0"
+                                      }
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-down-shrimpyrow"
                                   },
                                   {
                                     "command": "EVENT_SWITCH",
@@ -1040,7 +1073,7 @@
                                       "engineFieldKey": "plat_vel_y",
                                       "value": {
                                         "type": "number",
-                                        "value": -15790
+                                        "value": -20000
                                       }
                                     },
                                     "id": "f1120000-0000-4000-8000-air-down-vel-y"
@@ -1286,6 +1319,17 @@
                                 "false": []
                               },
                               "id": "f0380038-0000-4000-8000-up-targety-switch"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "26",
+                                "value": {
+                                  "type": "variable",
+                                  "value": "0"
+                                }
+                              },
+                              "id": "f0380038-0000-4000-8000-up-shrimpyrow"
                             }
                           ],
                           "false": []
@@ -1464,6 +1508,17 @@
                                       "false": []
                                     },
                                     "id": "f1120000-0000-4000-8000-air-up-targety-switch"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "26",
+                                      "value": {
+                                        "type": "variable",
+                                        "value": "0"
+                                      }
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-up-shrimpyrow"
                                   },
                                   {
                                     "command": "EVENT_SWITCH",
@@ -1910,14 +1965,37 @@
   "playerHit2Script": [],
   "playerHit3Script": [
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "command": "EVENT_IF",
       "args": {
-        "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-        "__name": "Player/TakeDamage",
-        "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "27"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true
       },
-      "id": "f0c000c0-0000-4000-8000-player-hit3-take-damage"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "f0b000b0-0000-4000-8000-000000000001",
+              "__name": "Player/TakeDamage",
+              "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+            },
+            "id": "f0c000c0-0000-4000-8000-player-hit3-take-damage"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0c000c0-0000-4000-8000-player-hit3-active-gate"
     }
   ],
-  "collisions": "00b40+"
+  "collisions": "0023dc+"
 }

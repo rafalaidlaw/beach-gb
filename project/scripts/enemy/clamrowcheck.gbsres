@@ -2,7 +2,7 @@
   "_resourceType": "script",
   "id": "f0420042-0000-4000-8000-000000000001",
   "name": "Enemy/ClamRowCheck",
-  "description": "Called by checkpoint triggers along the player's path. If the clam is still alive (var_12) and the player is not on the clam's row (var_0 != 0, since clam is on row 0), play the rolling animation and slide the clam +12 tiles right. The clam stays static if alive+same-row (player will hit it) or if dead (already stomped).",
+  "description": "Called by checkpoint triggers along the player's path. If the clam is still alive (var_12) and the player is not on the clam's current row, play the rolling animation and slide the clam +12 tiles right. The clam stays static if alive+same-row (player will hit it) or if dead (already stomped). Row is resolved at call time from the clam's y via Enemy/ClamResolveRow (writes row index to var_19), so this works after the clam respawns on a different row.",
   "variables": {},
   "actors": {
     "dce3a362-787b-415f-ab86-80390c03b1a8": {
@@ -16,20 +16,28 @@
       "command": "EVENT_IF",
       "args": {
         "condition": {
-          "type": "eq",
+          "type": "gt",
           "valueA": {
             "type": "variable",
             "value": "12"
           },
           "valueB": {
             "type": "number",
-            "value": 1
+            "value": 0
           }
         },
         "__collapseElse": true
       },
       "children": {
         "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "f0430043-0000-4000-8000-000000000001",
+              "__name": "Enemy/ClamResolveRow"
+            },
+            "id": "f0420042-0000-4000-8000-clam-rowcheck-resolve"
+          },
           {
             "command": "EVENT_IF",
             "args": {
@@ -40,8 +48,8 @@
                   "value": "0"
                 },
                 "valueB": {
-                  "type": "number",
-                  "value": 0
+                  "type": "variable",
+                  "value": "19"
                 }
               },
               "__collapseElse": true

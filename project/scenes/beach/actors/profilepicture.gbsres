@@ -28,7 +28,7 @@
         "frames": 30,
         "__scriptTabs": "end",
         "units": "frames",
-        "__collapse": true,
+        "__collapse": false,
         "__label": "OceanWave-Tile-Update-Tick",
         "__comment": false
       },
@@ -216,7 +216,8 @@
             "value": 0
           }
         },
-        "__collapseElse": true
+        "__collapseElse": true,
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -240,7 +241,8 @@
         "actorId": "player",
         "vectorX": "17",
         "vectorY": "18",
-        "units": "pixels"
+        "units": "pixels",
+        "__collapse": true
       },
       "id": "f0a000a0-0000-4000-8000-cache-player-pos"
     },
@@ -261,7 +263,8 @@
           "type": "number",
           "value": 2
         },
-        "__disableElse": false
+        "__disableElse": false,
+        "__collapse": true
       },
       "children": {
         "true0": [
@@ -458,17 +461,127 @@
         "lockDirection": [],
         "moveType": "horizontal",
         "units": "tiles",
-        "__collapse": false,
+        "__collapse": true,
         "__comment": false
       },
       "id": "8ac93137-ed31-4fd6-9f63-812294769558"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "32"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "21"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 30
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "Take Damage",
+                    "loopAnim": false
+                  },
+                  "id": "f1700000-0000-4000-8000-pp-set-takedamage"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "32",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "f1700000-0000-4000-8000-pp-mark-hit"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1700000-0000-4000-8000-pp-enter-takedamage"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "lte",
+                "valueA": {
+                  "type": "variable",
+                  "value": "21"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 30
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "",
+                    "loopAnim": false
+                  },
+                  "id": "f1700000-0000-4000-8000-pp-set-default"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "32",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f1700000-0000-4000-8000-pp-clear-hit"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1700000-0000-4000-8000-pp-exit-takedamage"
+          }
+        ]
+      },
+      "id": "f1700000-0000-4000-8000-pp-takedamage-gate"
     }
   ],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "coordinateType": "tiles",
-  "x": 0,
-  "y": 0,
+  "coordinateType": "pixels",
+  "x": 3,
+  "y": 2,
   "_index": 1
 }

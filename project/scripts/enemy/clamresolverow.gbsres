@@ -4,7 +4,12 @@
   "name": "Enemy/ClamResolveRow",
   "description": "Reads the clam's current y in tiles and writes its row index into var_19 enemyRowResolved (0=bot, 1=mid, 2=top). Mapping for the clam's sprite origin: y=11 -> top (2), y=13 -> mid (1), y=15 -> bot (0). Call this immediately before any row gate check on the clam, so the gate compares against var_19 instead of a literal. Works correctly even after the clam is repositioned (e.g. respawning on a new row when it rolls off-screen).",
   "variables": {},
-  "actors": {},
+  "actors": {
+    "dce3a362-787b-415f-ab86-80390c03b1a8": {
+      "id": "dce3a362-787b-415f-ab86-80390c03b1a8",
+      "name": "Actor \u0000"
+    }
+  },
   "symbol": "script_clam_resolve_row",
   "script": [
     {

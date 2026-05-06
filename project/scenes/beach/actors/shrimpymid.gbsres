@@ -16,8 +16,85 @@
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
   "symbol": "actor_shrimpy",
-  "script": [],
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "34"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "vectorX": "28",
+              "vectorY": "29",
+              "units": "tiles"
+            },
+            "id": "f1500000-0000-4000-8000-shrimpy-touch-getpos"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "29"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "11"
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f0b000b0-0000-4000-8000-000000000001",
+                    "__name": "Player/TakeDamage",
+                    "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+                  },
+                  "id": "f1500000-0000-4000-8000-shrimpy-take-damage"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1500000-0000-4000-8000-shrimpy-touch-row-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f1500000-0000-4000-8000-shrimpy-touch-alive-gate"
+    }
+  ],
   "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "34",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "f1110000-0000-4000-8000-shrimpy-init-health"
+    },
     {
       "command": "EVENT_ACTOR_SET_POSITION",
       "args": {
@@ -72,6 +149,172 @@
         "__collapse": true
       },
       "id": "792dd62c-540f-4da1-9feb-18d43d481144"
+    },
+    {
+      "command": "EVENT_LAUNCH_PROJECTILE",
+      "args": {
+        "spriteSheetId": "7fc8611b-5f75-4b20-919d-df584353375c",
+        "spriteStateId": "",
+        "actorId": "$self$",
+        "x": -18,
+        "y": -2,
+        "directionType": "direction",
+        "direction": "left",
+        "speed": 0,
+        "animSpeed": 7,
+        "lifeTime": 0.25,
+        "initialOffset": 0,
+        "collisionGroup": "",
+        "collisionMask": [],
+        "loopAnim": false,
+        "destroyOnHit": false,
+        "__section": "source"
+      },
+      "id": "f1130000-0000-4000-8000-shrimpy-slash-fx"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "6"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "21"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "24"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 0
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_DEC_VALUE",
+                              "args": {
+                                "variable": "1"
+                              },
+                              "id": "f1130000-0000-4000-8000-slash-dec1"
+                            },
+                            {
+                              "command": "EVENT_DEC_VALUE",
+                              "args": {
+                                "variable": "1"
+                              },
+                              "id": "f1130000-0000-4000-8000-slash-dec2"
+                            },
+                            {
+                              "command": "EVENT_DEC_VALUE",
+                              "args": {
+                                "variable": "1"
+                              },
+                              "id": "f1130000-0000-4000-8000-slash-dec3"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "21",
+                                "value": {
+                                  "type": "number",
+                                  "value": 60
+                                }
+                              },
+                              "id": "f1130000-0000-4000-8000-slash-iframe"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "22",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "f1130000-0000-4000-8000-slash-strobe"
+                            },
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "f0900090-0000-4000-8000-000000000001",
+                                "__name": "Player/UpdateHealthbar",
+                                "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+                              },
+                              "id": "f1130000-0000-4000-8000-slash-update-hb"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f1130000-0000-4000-8000-slash-swap-gate"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-iframe-gate"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1130000-0000-4000-8000-slash-grounded-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f1130000-0000-4000-8000-slash-row-gate"
     },
     {
       "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
@@ -176,6 +419,108 @@
       "id": "bdb3d8f6-5254-4e31-8463-e514c6e76486"
     },
     {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "vectorX": "28",
+        "vectorY": "29",
+        "units": "tiles"
+      },
+      "id": "f0220022-0000-4000-8000-bmrg-trigA-getpos"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "29"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "11"
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "25"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH",
+                  "args": {
+                    "variable": "29",
+                    "choices": 2,
+                    "value0": {
+                      "type": "number",
+                      "value": 13
+                    },
+                    "value1": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true0": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "27",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot"
+                      }
+                    ],
+                    "true1": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "27",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigA-row-switch"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0220022-0000-4000-8000-bmrg-trigA-alive-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0220022-0000-4000-8000-bmrg-trigA-row-gate"
+    },
+    {
       "command": "EVENT_ACTOR_MOVE_TO",
       "args": {
         "__section": "movement",
@@ -244,6 +589,108 @@
         "__collapse": true
       },
       "id": "b2e14256-e243-419e-a0b8-03aec2943755"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "vectorX": "28",
+        "vectorY": "29",
+        "units": "tiles"
+      },
+      "id": "f0220022-0000-4000-8000-bmrg-trigB-getpos"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "29"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "11"
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "25"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH",
+                  "args": {
+                    "variable": "29",
+                    "choices": 2,
+                    "value0": {
+                      "type": "number",
+                      "value": 13
+                    },
+                    "value1": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true0": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "27",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot"
+                      }
+                    ],
+                    "true1": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "27",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigB-row-switch"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0220022-0000-4000-8000-bmrg-trigB-alive-gate"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0220022-0000-4000-8000-bmrg-trigB-row-gate"
     },
     {
       "command": "EVENT_ACTOR_MOVE_TO",
@@ -374,131 +821,161 @@
   "hit1Script": [],
   "hit2Script": [
     {
-      "command": "EVENT_SET_VALUE",
+      "command": "EVENT_DEC_VALUE",
       "args": {
-        "variable": "25",
-        "value": {
-          "type": "variable",
-          "value": "0"
-        }
+        "variable": "34"
       },
-      "id": "f1110000-0000-4000-8000-shrimpy-die-killrow"
+      "id": "f1110000-0000-4000-8000-shrimpy-bullet-dec-hp"
     },
     {
-      "command": "EVENT_ACTOR_SHOW",
+      "command": "EVENT_IF",
       "args": {
-        "actorId": "f0150018-0000-4000-8000-000000000008"
-      },
-      "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-show"
-    },
-    {
-      "command": "EVENT_ACTOR_GET_POSITION",
-      "args": {
-        "actorId": "$self$",
-        "vectorX": "18",
-        "vectorY": "11",
-        "units": "tiles"
-      },
-      "id": "f1110000-0000-4000-8000-shrimpy-die-getpos"
-    },
-    {
-      "command": "EVENT_SWITCH",
-      "args": {
-        "variable": "25",
-        "choices": 3,
-        "value0": {
-          "type": "number",
-          "value": 0
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "34"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
         },
-        "value1": {
-          "type": "number",
-          "value": 1
-        },
-        "value2": {
-          "type": "number",
-          "value": 2
-        },
-        "__disableElse": false
+        "__collapseElse": true
       },
       "children": {
-        "true0": [
+        "true": [
           {
-            "command": "EVENT_ACTOR_SET_POSITION",
+            "command": "EVENT_SET_VALUE",
             "args": {
-              "actorId": "f0150018-0000-4000-8000-000000000008",
-              "x": {
+              "variable": "25",
+              "value": {
                 "type": "variable",
-                "value": "18"
-              },
-              "y": {
-                "type": "number",
-                "value": 15
-              },
+                "value": "0"
+              }
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-killrow"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "f0150018-0000-4000-8000-000000000008"
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-show"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "vectorX": "18",
+              "vectorY": "11",
               "units": "tiles"
             },
-            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row0"
-          }
-        ],
-        "true1": [
+            "id": "f1110000-0000-4000-8000-shrimpy-die-getpos"
+          },
           {
-            "command": "EVENT_ACTOR_SET_POSITION",
+            "command": "EVENT_SWITCH",
             "args": {
-              "actorId": "f0150018-0000-4000-8000-000000000008",
-              "x": {
-                "type": "variable",
-                "value": "18"
-              },
-              "y": {
+              "variable": "25",
+              "choices": 3,
+              "value0": {
                 "type": "number",
-                "value": 13
+                "value": 0
               },
-              "units": "tiles"
+              "value1": {
+                "type": "number",
+                "value": 1
+              },
+              "value2": {
+                "type": "number",
+                "value": 2
+              },
+              "__disableElse": false
             },
-            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row1"
-          }
-        ],
-        "true2": [
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "f0150018-0000-4000-8000-000000000008",
+                    "x": {
+                      "type": "variable",
+                      "value": "18"
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 15
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row0"
+                }
+              ],
+              "true1": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "f0150018-0000-4000-8000-000000000008",
+                    "x": {
+                      "type": "variable",
+                      "value": "18"
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 13
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row1"
+                }
+              ],
+              "true2": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "f0150018-0000-4000-8000-000000000008",
+                    "x": {
+                      "type": "variable",
+                      "value": "18"
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row2"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-switch"
+          },
           {
-            "command": "EVENT_ACTOR_SET_POSITION",
+            "command": "EVENT_ACTOR_HIDE",
             "args": {
-              "actorId": "f0150018-0000-4000-8000-000000000008",
-              "x": {
-                "type": "variable",
-                "value": "18"
-              },
-              "y": {
-                "type": "number",
-                "value": 11
-              },
-              "units": "tiles"
+              "actorId": "$self$"
             },
-            "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-row2"
+            "id": "f1110000-0000-4000-8000-shrimpy-die-hide"
+          },
+          {
+            "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-coll-off"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_CANCEL",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "f1110000-0000-4000-8000-shrimpy-die-move-cancel"
           }
         ],
         "false": []
       },
-      "id": "f1110000-0000-4000-8000-shrimpy-die-pa3-pos-switch"
-    },
-    {
-      "command": "EVENT_ACTOR_HIDE",
-      "args": {
-        "actorId": "$self$"
-      },
-      "id": "f1110000-0000-4000-8000-shrimpy-die-hide"
-    },
-    {
-      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
-      "args": {
-        "actorId": "$self$"
-      },
-      "id": "f1110000-0000-4000-8000-shrimpy-die-coll-off"
-    },
-    {
-      "command": "EVENT_ACTOR_MOVE_CANCEL",
-      "args": {
-        "actorId": "$self$"
-      },
-      "id": "f1110000-0000-4000-8000-shrimpy-die-move-cancel"
+      "id": "f1110000-0000-4000-8000-shrimpy-bullet-death-gate"
     }
   ],
   "hit3Script": [],

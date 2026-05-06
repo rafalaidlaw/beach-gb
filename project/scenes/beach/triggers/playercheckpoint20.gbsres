@@ -40,38 +40,15 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_IF",
+            "command": "EVENT_SET_VALUE",
             "args": {
-              "condition": {
-                "type": "ne",
-                "valueA": {
-                  "type": "variable",
-                  "value": "0"
-                },
-                "valueB": {
-                  "type": "number",
-                  "value": 1
-                }
-              },
-              "__collapseElse": true
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
             },
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "13",
-                    "value": {
-                      "type": "number",
-                      "value": 1
-                    }
-                  },
-                  "id": "f0430043-0000-4000-8000-clam-roll-request"
-                }
-              ],
-              "false": []
-            },
-            "id": "f0430043-0000-4000-8000-clam-row-gate"
+            "id": "f0430043-0000-4000-8000-clam-roll-request"
           }
         ],
         "false": []

@@ -18,13 +18,36 @@
   "symbol": "actor_boomerang",
   "script": [
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "command": "EVENT_IF",
       "args": {
-        "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-        "__name": "Player/TakeDamage",
-        "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "27"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true
       },
-      "id": "f0220022-0000-4000-8000-bmrg-take-damage"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "f0b000b0-0000-4000-8000-000000000001",
+              "__name": "Player/TakeDamage",
+              "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+            },
+            "id": "f0220022-0000-4000-8000-bmrg-take-damage"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0220022-0000-4000-8000-bmrg-touch-active-gate"
     }
   ],
   "startScript": [

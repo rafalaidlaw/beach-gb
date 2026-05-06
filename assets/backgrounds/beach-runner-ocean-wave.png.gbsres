@@ -3,10 +3,10 @@
   "id": "3814b87a-52aa-49cf-88b2-86e9c13a6bb9",
   "name": "beach-runner-ocean-wave",
   "symbol": "bg_beach_runner_ocean_wave",
-  "tileColors": "",
+  "tileColors": "0011ee+",
   "filename": "beach-runner-ocean-wave.png",
-  "width": 160,
+  "width": 255,
   "height": 18,
-  "imageWidth": 1280,
+  "imageWidth": 2040,
   "imageHeight": 144
 }

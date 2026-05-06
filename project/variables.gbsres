@@ -63,8 +63,8 @@
     },
     {
       "id": "12",
-      "name": "clamAlive",
-      "symbol": "var_clamalive"
+      "name": "clamHealth",
+      "symbol": "var_clamhealth"
     },
     {
       "id": "13",
@@ -97,6 +97,16 @@
       "symbol": "var_playery_global"
     },
     {
+      "id": "19",
+      "name": "enemyRowResolved",
+      "symbol": "var_enemyrowresolved"
+    },
+    {
+      "id": "20",
+      "name": "enemyXSink",
+      "symbol": "var_enemyxsink"
+    },
+    {
       "id": "21",
       "name": "iframeTimer",
       "symbol": "var_iframetimer"
@@ -120,6 +130,51 @@
       "id": "25",
       "name": "shrimpyKillRow",
       "symbol": "var_shrimpykillrow"
+    },
+    {
+      "id": "26",
+      "name": "shrimpyRow",
+      "symbol": "var_shrimpyrow"
+    },
+    {
+      "id": "27",
+      "name": "boomerangActive",
+      "symbol": "var_boomerangactive"
+    },
+    {
+      "id": "28",
+      "name": "shrimpyXTiles",
+      "symbol": "var_shrimpyxtiles"
+    },
+    {
+      "id": "29",
+      "name": "boomerangRoll",
+      "symbol": "var_boomerangroll"
+    },
+    {
+      "id": "30",
+      "name": "boomerangLeftX",
+      "symbol": "var_boomerangleftx"
+    },
+    {
+      "id": "31",
+      "name": "shrimpyLockedY",
+      "symbol": "var_shrimpylockedy"
+    },
+    {
+      "id": "32",
+      "name": "ppDamageState",
+      "symbol": "var_ppdamagestate"
+    },
+    {
+      "id": "33",
+      "name": "crabHealth",
+      "symbol": "var_crabhealth"
+    },
+    {
+      "id": "34",
+      "name": "shrimpyHealth",
+      "symbol": "var_shrimpyhealth"
     },
     {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",

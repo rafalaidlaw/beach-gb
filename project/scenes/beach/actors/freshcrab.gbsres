@@ -21,10 +21,10 @@
       "command": "EVENT_IF",
       "args": {
         "condition": {
-          "type": "eq",
+          "type": "gt",
           "valueA": {
             "type": "variable",
-            "value": "0"
+            "value": "33"
           },
           "valueB": {
             "type": "number",
@@ -39,94 +39,170 @@
             "command": "EVENT_IF",
             "args": {
               "condition": {
-                "type": "gt",
+                "type": "eq",
                 "valueA": {
-                  "type": "engineField",
-                  "value": "plat_vel_y"
+                  "type": "variable",
+                  "value": "0"
                 },
                 "valueB": {
                   "type": "number",
                   "value": 0
                 }
               },
-              "__collapseElse": false
+              "__collapseElse": true
             },
             "children": {
               "true": [
                 {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "command": "EVENT_IF",
                   "args": {
-                    "customEventId": "f0400040-0000-4000-8000-000000000001",
-                    "__name": "Enemy/BouncyStomp"
+                    "condition": {
+                      "type": "gt",
+                      "valueA": {
+                        "type": "engineField",
+                        "value": "plat_vel_y"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": false
                   },
-                  "id": "f1400000-0000-4000-8000-crab-bouncy-stomp"
-                },
-                {
-                  "command": "EVENT_ACTOR_HIDE",
-                  "args": {
-                    "actorId": "$self$"
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f0400040-0000-4000-8000-000000000001",
+                          "__name": "Enemy/BouncyStomp"
+                        },
+                        "id": "f1400000-0000-4000-8000-crab-bouncy-stomp"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "$self$"
+                        },
+                        "id": "f1400000-0000-4000-8000-crab-hide"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                        "args": {
+                          "actorId": "$self$"
+                        },
+                        "id": "f1400000-0000-4000-8000-crab-spent"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_CANCEL",
+                        "args": {
+                          "actorId": "$self$"
+                        },
+                        "id": "f1400000-0000-4000-8000-crab-stop-motion"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "33",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "f1400000-0000-4000-8000-crab-stomp-mark-dead-true-true-true"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f0b000b0-0000-4000-8000-000000000001",
+                          "__name": "Player/TakeDamage",
+                          "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+                        },
+                        "id": "f1400000-0000-4000-8000-crab-take-damage"
+                      }
+                    ]
                   },
-                  "id": "f1400000-0000-4000-8000-crab-hide"
-                },
-                {
-                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
-                  "args": {
-                    "actorId": "$self$"
-                  },
-                  "id": "f1400000-0000-4000-8000-crab-spent"
-                },
-                {
-                  "command": "EVENT_ACTOR_MOVE_CANCEL",
-                  "args": {
-                    "actorId": "$self$"
-                  },
-                  "id": "f1400000-0000-4000-8000-crab-stop-motion"
+                  "id": "f1400000-0000-4000-8000-crab-hit-gate"
                 }
               ],
-              "false": [
-                {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
-                  "args": {
-                    "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-                    "__name": "Player/TakeDamage",
-                    "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
-                  },
-                  "id": "f1400000-0000-4000-8000-crab-take-damage"
-                }
-              ]
+              "false": []
             },
-            "id": "f1400000-0000-4000-8000-crab-hit-gate"
+            "id": "f1400000-0000-4000-8000-crab-row-gate"
           }
         ],
         "false": []
       },
-      "id": "f1400000-0000-4000-8000-crab-row-gate"
+      "id": "f1400000-0000-4000-8000-crab-alive-gate"
     }
   ],
-  "startScript": [],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "33",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "f1400000-0000-4000-8000-crab-init-alive"
+    }
+  ],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [
     {
-      "command": "EVENT_ACTOR_HIDE",
+      "command": "EVENT_DEC_VALUE",
       "args": {
-        "actorId": "$self$"
+        "variable": "33"
       },
-      "id": "f1400000-0000-4000-8000-crab-bullet-hide"
+      "id": "f1400000-0000-4000-8000-crab-bullet-dec-hp"
     },
     {
-      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "command": "EVENT_IF",
       "args": {
-        "actorId": "$self$"
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "33"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
       },
-      "id": "f1400000-0000-4000-8000-crab-bullet-spent"
-    },
-    {
-      "command": "EVENT_ACTOR_MOVE_CANCEL",
-      "args": {
-        "actorId": "$self$"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "f1400000-0000-4000-8000-crab-bullet-hide"
+          },
+          {
+            "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "f1400000-0000-4000-8000-crab-bullet-spent"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_CANCEL",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "f1400000-0000-4000-8000-crab-bullet-stop-motion"
+          }
+        ],
+        "false": []
       },
-      "id": "f1400000-0000-4000-8000-crab-bullet-stop-motion"
+      "id": "f1400000-0000-4000-8000-crab-bullet-death-gate"
     }
   ],
   "hit3Script": [],

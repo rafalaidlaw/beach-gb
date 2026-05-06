@@ -7,7 +7,7 @@
   "y": 13,
   "symbol": "trigger_row_2",
   "prefabScriptOverrides": {},
-  "width": 160,
+  "width": 255,
   "height": 1,
   "script": [
     {
