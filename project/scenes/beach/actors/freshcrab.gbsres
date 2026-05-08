@@ -117,8 +117,7 @@
                         "command": "EVENT_CALL_CUSTOM_EVENT",
                         "args": {
                           "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-                          "__name": "Player/TakeDamage",
-                          "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+                          "__name": "Player/TakeDamage"
                         },
                         "id": "f1400000-0000-4000-8000-crab-take-damage"
                       }
@@ -153,6 +152,110 @@
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "38",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "f1400000-0000-4000-8000-crab-pistol-free-38"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "39"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "39",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f1400000-0000-4000-8000-crab-pistol-free-39"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "40"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "40",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "f1400000-0000-4000-8000-crab-pistol-free-40"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f1400000-0000-4000-8000-crab-pistol-check-40"
+                }
+              ]
+            },
+            "id": "f1400000-0000-4000-8000-crab-pistol-check-39"
+          }
+        ]
+      },
+      "id": "f1400000-0000-4000-8000-crab-pistol-check-38"
+    },
     {
       "command": "EVENT_DEC_VALUE",
       "args": {
@@ -209,5 +312,5 @@
   "coordinateType": "tiles",
   "x": 23,
   "y": 15,
-  "_index": 8
+  "_index": 7
 }

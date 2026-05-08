@@ -18,7 +18,7 @@
               "tiles": [
                 {
                   "id": "e7eeb4f2-8050-4999-8b05-b438258b5532",
-                  "x": 0,
+                  "x": 24,
                   "y": 0,
                   "sliceX": 0,
                   "sliceY": 0,
@@ -31,7 +31,7 @@
                 },
                 {
                   "id": "8be85fc0-c48a-4f7d-8058-25b3318cd869",
-                  "x": 8,
+                  "x": 32,
                   "y": 0,
                   "sliceX": 8,
                   "sliceY": 0,
@@ -113,11 +113,11 @@
     }
   ],
   "numTiles": 2,
-  "canvasOriginX": 0,
+  "canvasOriginX": -24,
   "canvasOriginY": 0,
-  "canvasWidth": 16,
+  "canvasWidth": 64,
   "canvasHeight": 16,
-  "boundsX": 0,
+  "boundsX": 48,
   "boundsY": -8,
   "boundsWidth": 16,
   "boundsHeight": 16,

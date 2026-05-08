@@ -1,83 +1,83 @@
 {
   "_resourceType": "sprite",
-  "id": "3647e8d8-47d8-46eb-8b0c-ce6b12e72e16",
-  "name": "Status-UIt",
-  "symbol": "sprite_status_uit",
+  "id": "f9d37e87-a167-496a-a6a1-ac12707470b1",
+  "name": "food/cocktail-shrimp",
+  "symbol": "sprite_food_cocktail_shrimp",
   "states": [
     {
-      "id": "6261a395-29d8-44a7-88cc-2544e854fae9",
+      "id": "0d8896be-72f7-4e3d-a259-e12c79380c39",
       "name": "",
       "animationType": "multi_movement",
       "flipLeft": true,
       "animations": [
         {
-          "id": "a647f482-3ede-4c23-b446-8df1b4696c10",
+          "id": "bcef8906-e7da-4f0c-858f-6df9bacd21c3",
           "frames": [
             {
-              "id": "9a52de21-a86c-48a1-9e16-dc2af7e0f249",
+              "id": "38645c40-ef0d-444d-90e4-37bcb5211f6f",
               "tiles": []
             }
           ]
         },
         {
-          "id": "74a28e88-26bb-44ee-9fba-a1e9e85a6bff",
+          "id": "00d79ccc-7768-4090-8580-8e8b929a7e0c",
           "frames": [
             {
-              "id": "93a70199-f0ad-4768-bfb2-2aa26fdfb930",
+              "id": "ffeaae4a-40d5-4bc1-826d-38658044bfa5",
               "tiles": []
             }
           ]
         },
         {
-          "id": "68216cc7-4491-4c8d-9e4c-3f4eaffd0eb8",
+          "id": "884260f1-6941-48e3-9adc-005c4ec3bc79",
           "frames": [
             {
-              "id": "7203fd2d-e0cb-4d6a-b481-072e6c75515e",
+              "id": "8e1a8f71-3fb2-4836-bf84-6bbef90fbcf4",
               "tiles": []
             }
           ]
         },
         {
-          "id": "5ef0d899-15b5-4922-b46f-e669f64ab7fa",
+          "id": "77a01fba-beb8-4ea5-96d5-5644e869357b",
           "frames": [
             {
-              "id": "a79f9699-f94f-4e51-9ebc-a67fcff01ad8",
+              "id": "f01d30ee-ae84-450c-bcb1-c481320c36a8",
               "tiles": []
             }
           ]
         },
         {
-          "id": "d661bd54-e0d8-42a2-9151-aa40bf05081c",
+          "id": "4ff326b0-3627-42cb-ad48-dfc26c256d4e",
           "frames": [
             {
-              "id": "4c42fffa-db04-4525-ac04-c55a2abb7238",
+              "id": "bae3c4b5-08f1-4d87-a0ec-11cc4fd7c4af",
               "tiles": []
             }
           ]
         },
         {
-          "id": "e4403dc1-5a03-493f-9ce1-bb9177a2337a",
+          "id": "b0636b5b-7bfd-4809-a091-0a204f2ee712",
           "frames": [
             {
-              "id": "143111e5-d2f1-4873-a3ae-c52d8a8e7d1b",
+              "id": "f0e7b01e-22ee-45eb-afae-d8be525f7e09",
               "tiles": []
             }
           ]
         },
         {
-          "id": "02bf44c9-f4cb-4d04-9ff6-d56500d1f9ee",
+          "id": "145059a7-9dc3-4160-9ef2-bc7b980ef894",
           "frames": [
             {
-              "id": "f1b34d1c-f64d-4a0d-afcb-40486a641287",
+              "id": "8b11789b-4607-482b-99bd-1ee5301249a6",
               "tiles": []
             }
           ]
         },
         {
-          "id": "f36b068e-9045-445c-85d9-e8ee09f1a308",
+          "id": "f8fb102c-7028-4d90-a33d-1b81550a12a3",
           "frames": [
             {
-              "id": "d6725207-6f8b-47f4-994c-fe46a4b93352",
+              "id": "64849260-1f3c-4d64-b3fd-67bce9de082e",
               "tiles": []
             }
           ]
@@ -95,8 +95,8 @@
   "boundsWidth": 16,
   "boundsHeight": 16,
   "animSpeed": 15,
-  "filename": "Status-UIt.png",
-  "width": 190,
-  "height": 21,
-  "checksum": "22245289d1b13e3e45a1a9d3cffa87ed4f324a85"
+  "filename": "food/cocktail-shrimp.png",
+  "width": 8,
+  "height": 10,
+  "checksum": "070d6d45f1d39c121f978600b327aba44f7d7e5f"
 }

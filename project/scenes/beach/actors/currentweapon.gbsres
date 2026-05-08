@@ -1,0 +1,140 @@
+{
+  "_resourceType": "actor",
+  "id": "8082f0e6-afdf-42a6-84c8-c42efb657cb5",
+  "name": "CurrentWeapon",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f82cd25a-936f-49ba-b157-07a1e11559c5",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": true,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_6",
+  "script": [],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "37"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "35"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "Gatling",
+                    "loopAnim": true
+                  },
+                  "id": "f1a00000-0000-4000-8000-weapon-icon-gate-set-gatling"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "37",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "f1a00000-0000-4000-8000-weapon-icon-gate-mirror-set-1"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1a00000-0000-4000-8000-weapon-icon-gate-enter-gatling"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "35"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "",
+                    "loopAnim": true
+                  },
+                  "id": "f1a00000-0000-4000-8000-weapon-icon-gate-set-default"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "37",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f1a00000-0000-4000-8000-weapon-icon-gate-mirror-set-0"
+                }
+              ],
+              "false": []
+            },
+            "id": "f1a00000-0000-4000-8000-weapon-icon-gate-exit-gatling"
+          }
+        ]
+      },
+      "id": "f1a00000-0000-4000-8000-weapon-icon-gate"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "pixels",
+  "x": 40,
+  "y": 11,
+  "_index": 8
+}

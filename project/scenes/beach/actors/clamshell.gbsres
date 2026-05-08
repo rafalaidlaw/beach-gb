@@ -21,10 +21,10 @@
       "command": "EVENT_IF",
       "args": {
         "condition": {
-          "type": "gt",
+          "type": "eq",
           "valueA": {
             "type": "variable",
-            "value": "12"
+            "value": "21"
           },
           "valueB": {
             "type": "number",
@@ -36,25 +36,17 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "f0430043-0000-4000-8000-000000000001",
-              "__name": "Enemy/ClamResolveRow"
-            },
-            "id": "f0410041-0000-4000-8000-clam-touch-resolve"
-          },
-          {
             "command": "EVENT_IF",
             "args": {
               "condition": {
-                "type": "eq",
+                "type": "gt",
                 "valueA": {
                   "type": "variable",
-                  "value": "0"
+                  "value": "12"
                 },
                 "valueB": {
-                  "type": "variable",
-                  "value": "19"
+                  "type": "number",
+                  "value": 0
                 }
               },
               "__collapseElse": true
@@ -62,28 +54,103 @@
             "children": {
               "true": [
                 {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f0430043-0000-4000-8000-000000000001",
+                    "__name": "Enemy/ClamResolveRow"
+                  },
+                  "id": "f0410041-0000-4000-8000-clam-touch-resolve"
+                },
+                {
                   "command": "EVENT_IF",
                   "args": {
                     "condition": {
-                      "type": "gt",
+                      "type": "eq",
                       "valueA": {
-                        "type": "engineField",
-                        "value": "plat_vel_y"
+                        "type": "variable",
+                        "value": "0"
                       },
                       "valueB": {
-                        "type": "number",
-                        "value": 0
+                        "type": "variable",
+                        "value": "19"
                       }
                     },
-                    "__collapseElse": false
+                    "__collapseElse": true
                   },
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "command": "EVENT_ENGINE_FIELD_SET",
                         "args": {
-                          "customEventId": "f0400040-0000-4000-8000-000000000001",
-                          "__name": "Enemy/BouncyStomp"
+                          "engineFieldKey": "plat_is_actor_attached",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "f0410041-0000-4000-8000-clam-detach"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "6",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "f0410041-0000-4000-8000-clam-set-isjumping"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "player",
+                          "spriteStateId": "Jumping",
+                          "loopAnim": true
+                        },
+                        "id": "f0410041-0000-4000-8000-clam-player-jumping-state"
+                      },
+                      {
+                        "command": "EVENT_ENGINE_FIELD_SET",
+                        "args": {
+                          "engineFieldKey": "plat_grav",
+                          "value": {
+                            "type": "number",
+                            "value": 1792
+                          }
+                        },
+                        "id": "f0410041-0000-4000-8000-clam-grav"
+                      },
+                      {
+                        "command": "EVENT_ENGINE_FIELD_SET",
+                        "args": {
+                          "engineFieldKey": "plat_hold_grav",
+                          "value": {
+                            "type": "number",
+                            "value": 1720
+                          }
+                        },
+                        "id": "f0410041-0000-4000-8000-clam-hold-grav"
+                      },
+                      {
+                        "command": "EVENT_ENGINE_FIELD_SET",
+                        "args": {
+                          "engineFieldKey": "plat_next_state",
+                          "value": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        },
+                        "id": "f0410041-0000-4000-8000-clam-next-state"
+                      },
+                      {
+                        "command": "EVENT_ENGINE_FIELD_SET",
+                        "args": {
+                          "engineFieldKey": "plat_vel_y",
+                          "value": {
+                            "type": "number",
+                            "value": -30000
+                          }
                         },
                         "id": "f0410041-0000-4000-8000-clam-bouncy-stomp"
                       },
@@ -122,69 +189,56 @@
                         "id": "f0410041-0000-4000-8000-clam-stop-motion"
                       }
                     ],
-                    "false": [
-                      {
-                        "command": "EVENT_CALL_CUSTOM_EVENT",
-                        "args": {
-                          "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-                          "__name": "Player/TakeDamage",
-                          "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
-                        },
-                        "id": "f0410041-0000-4000-8000-clam-take-damage"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
-                        "args": {
-                          "actorId": "$self$"
-                        },
-                        "id": "f0410041-0000-4000-8000-clam-side-spent"
-                      }
-                    ]
+                    "false": []
                   },
-                  "id": "f0410041-0000-4000-8000-clam-hit-gate"
+                  "id": "f0410041-0000-4000-8000-clam-touch-row-gate"
                 }
               ],
               "false": []
             },
-            "id": "f0410041-0000-4000-8000-clam-row-gate"
+            "id": "f0410041-0000-4000-8000-clam-touch-alive-gate"
           }
         ],
         "false": []
       },
-      "id": "f0410041-0000-4000-8000-clam-touch-alive-gate"
+      "id": "f0410041-0000-4000-8000-clam-touch-iframe-gate"
     }
   ],
   "startScript": [],
-  "updateScript": [
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [
     {
       "command": "EVENT_IF",
       "args": {
         "condition": {
-          "type": "eq",
+          "type": "gt",
           "valueA": {
             "type": "variable",
-            "value": "13"
+            "value": "38"
           },
           "valueB": {
             "type": "number",
-            "value": 1
+            "value": 0
           }
         },
-        "__collapseElse": true
+        "__collapseElse": false
       },
       "children": {
         "true": [
           {
             "command": "EVENT_SET_VALUE",
             "args": {
-              "variable": "13",
+              "variable": "38",
               "value": {
                 "type": "number",
                 "value": 0
               }
             },
-            "id": "f0440044-0000-4000-8000-clam-roll-flag-clear"
-          },
+            "id": "f0c000c0-0000-4000-8000-clam-pistol-free-38"
+          }
+        ],
+        "false": [
           {
             "command": "EVENT_IF",
             "args": {
@@ -192,37 +246,42 @@
                 "type": "gt",
                 "valueA": {
                   "type": "variable",
-                  "value": "12"
+                  "value": "39"
                 },
                 "valueB": {
                   "type": "number",
                   "value": 0
                 }
               },
-              "__collapseElse": true
+              "__collapseElse": false
             },
             "children": {
               "true": [
                 {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "command": "EVENT_SET_VALUE",
                   "args": {
-                    "customEventId": "f0430043-0000-4000-8000-000000000001",
-                    "__name": "Enemy/ClamResolveRow"
+                    "variable": "39",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
                   },
-                  "id": "f0440044-0000-4000-8000-clam-roll-resolve"
-                },
+                  "id": "f0c000c0-0000-4000-8000-clam-pistol-free-39"
+                }
+              ],
+              "false": [
                 {
                   "command": "EVENT_IF",
                   "args": {
                     "condition": {
-                      "type": "ne",
+                      "type": "gt",
                       "valueA": {
                         "type": "variable",
-                        "value": "0"
+                        "value": "40"
                       },
                       "valueB": {
-                        "type": "variable",
-                        "value": "19"
+                        "type": "number",
+                        "value": 0
                       }
                     },
                     "__collapseElse": true
@@ -230,67 +289,29 @@
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                        "command": "EVENT_SET_VALUE",
                         "args": {
-                          "actorId": "$self$",
-                          "speed": 2
-                        },
-                        "id": "f0440044-0000-4000-8000-clam-roll-speed"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "Rolling",
-                          "loopAnim": true
-                        },
-                        "id": "f0440044-0000-4000-8000-clam-roll-state"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                        "args": {
-                          "actorId": "$self$",
-                          "x": {
-                            "type": "number",
-                            "value": 20
-                          },
-                          "y": {
+                          "variable": "40",
+                          "value": {
                             "type": "number",
                             "value": 0
-                          },
-                          "moveType": "horizontal",
-                          "units": "tiles",
-                          "collideWith": []
+                          }
                         },
-                        "id": "f0440044-0000-4000-8000-clam-roll-move"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "",
-                          "loopAnim": false
-                        },
-                        "id": "f0440044-0000-4000-8000-clam-roll-default"
+                        "id": "f0c000c0-0000-4000-8000-clam-pistol-free-40"
                       }
                     ],
                     "false": []
                   },
-                  "id": "f0440044-0000-4000-8000-clam-roll-row-gate"
+                  "id": "f0c000c0-0000-4000-8000-clam-pistol-check-40"
                 }
-              ],
-              "false": []
+              ]
             },
-            "id": "f0440044-0000-4000-8000-clam-alive-recheck"
+            "id": "f0c000c0-0000-4000-8000-clam-pistol-check-39"
           }
-        ],
-        "false": []
+        ]
       },
-      "id": "f0440044-0000-4000-8000-clam-roll-gate"
-    }
-  ],
-  "hit1Script": [],
-  "hit2Script": [
+      "id": "f0c000c0-0000-4000-8000-clam-pistol-check-38"
+    },
     {
       "command": "EVENT_DEC_VALUE",
       "args": {

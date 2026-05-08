@@ -37,13 +37,12 @@
       "speed": 0
     }
   ],
-  "playerSpriteSheetId": "31595d9e-45f1-4e34-928b-2fd2eb508320",
+  "playerSpriteSheetId": "0b63e477-945f-4820-abb3-021697289de7",
   "script": [
     {
       "command": "EVENT_SET_INPUT_SCRIPT",
       "args": {
         "input": [
-          "left",
           "right"
         ],
         "override": true,
@@ -54,6 +53,68 @@
         "true": []
       },
       "id": "210a02f1-4a10-4442-8ef5-a681f8e3fe1c"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "left"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "35"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "35",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "f1900000-0000-4000-8000-left-weapon-toggle-set-gatling"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "35",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "f1900000-0000-4000-8000-left-weapon-toggle-set-pistol"
+                }
+              ]
+            },
+            "id": "f1900000-0000-4000-8000-left-weapon-toggle-toggle-gate"
+          }
+        ]
+      },
+      "id": "f1900000-0000-4000-8000-left-weapon-toggle"
     },
     {
       "command": "EVENT_ACTOR_SET_POSITION",
@@ -374,7 +435,7 @@
         "variable": "1",
         "value": {
           "type": "number",
-          "value": 12
+          "value": 0
         },
         "__collapse": true
       },
@@ -481,7 +542,8 @@
           "type": "number",
           "value": 2
         },
-        "__disableElse": false
+        "__disableElse": false,
+        "__collapse": true
       },
       "children": {
         "true0": [
@@ -495,6 +557,17 @@
               }
             },
             "id": "f0360036-0000-4000-8000-init-targety-row0"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "45",
+              "value": {
+                "type": "number",
+                "value": 13
+              }
+            },
+            "id": "f0360036-0000-4000-8000-init-targety-row0-v45"
           }
         ],
         "true1": [
@@ -508,6 +581,17 @@
               }
             },
             "id": "f0360036-0000-4000-8000-init-targety-row1"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "45",
+              "value": {
+                "type": "number",
+                "value": 11
+              }
+            },
+            "id": "f0360036-0000-4000-8000-init-targety-row1-v45"
           }
         ],
         "true2": [
@@ -521,6 +605,17 @@
               }
             },
             "id": "f0360036-0000-4000-8000-init-targety-row2"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "45",
+              "value": {
+                "type": "number",
+                "value": 9
+              }
+            },
+            "id": "f0360036-0000-4000-8000-init-targety-row2-v45"
           }
         ],
         "false": []
@@ -534,7 +629,8 @@
         "value": {
           "type": "variable",
           "value": "0"
-        }
+        },
+        "__collapse": true
       },
       "id": "f0360036-0000-4000-8000-init-shrimpyrow"
     },
@@ -546,7 +642,7 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": false
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -557,7 +653,7 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "21"
+                  "value": "6"
                 },
                 "valueB": {
                   "type": "number",
@@ -572,6 +668,252 @@
                   "command": "EVENT_IF",
                   "args": {
                     "condition": {
+                      "type": "gt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "0"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_LAUNCH_PROJECTILE",
+                        "args": {
+                          "spriteSheetId": "37b6d9a8-03ed-4b20-b5e7-640994387712",
+                          "spriteStateId": "",
+                          "actorId": "player",
+                          "x": -40,
+                          "y": 12,
+                          "directionType": "direction",
+                          "direction": "right",
+                          "speed": 0,
+                          "animSpeed": 15,
+                          "lifeTime": 0.15,
+                          "initialOffset": 0,
+                          "collisionGroup": "3",
+                          "collisionMask": [],
+                          "loopAnim": true,
+                          "destroyOnHit": false,
+                          "__section": "source"
+                        },
+                        "id": "f0f000f0-0000-4000-8000-down-fx-poof"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "23",
+                          "value": {
+                            "type": "engineField",
+                            "value": "plat_vel_y"
+                          }
+                        },
+                        "id": "f0e000e0-0000-4000-8000-down-stash-vy"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
+                        "args": {
+                          "actorId": "player",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 16
+                          },
+                          "units": "pixels"
+                        },
+                        "id": "f0e000e0-0000-4000-8000-down-snap-y"
+                      },
+                      {
+                        "command": "EVENT_ENGINE_FIELD_SET",
+                        "args": {
+                          "engineFieldKey": "plat_vel_y",
+                          "value": {
+                            "type": "variable",
+                            "value": "23"
+                          }
+                        },
+                        "id": "f0e000e0-0000-4000-8000-down-restore-vy"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "24",
+                          "value": {
+                            "type": "number",
+                            "value": 8
+                          }
+                        },
+                        "id": "f0e000e0-0000-4000-8000-down-swap-invuln"
+                      },
+                      {
+                        "command": "EVENT_DEC_VALUE",
+                        "args": {
+                          "variable": "0"
+                        },
+                        "id": "f0e000e0-0000-4000-8000-down-row-dec"
+                      },
+                      {
+                        "command": "EVENT_SWITCH",
+                        "args": {
+                          "variable": "0",
+                          "choices": 3,
+                          "value0": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "value1": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "value2": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true0": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "27"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
+                                    },
+                                    "id": "f0370037-0000-4000-8000-down-targety-0"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0370037-0000-4000-8000-down-targety-0-bmrg-gate"
+                            }
+                          ],
+                          "true1": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "27"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "id": "f0370037-0000-4000-8000-down-targety-1"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0370037-0000-4000-8000-down-targety-1-bmrg-gate"
+                            }
+                          ],
+                          "true2": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "27"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 9
+                                      }
+                                    },
+                                    "id": "f0370037-0000-4000-8000-down-targety-2"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0370037-0000-4000-8000-down-targety-2-bmrg-gate"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0370037-0000-4000-8000-down-targety-switch"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "26",
+                          "value": {
+                            "type": "variable",
+                            "value": "0"
+                          }
+                        },
+                        "id": "f0370037-0000-4000-8000-down-shrimpyrow"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0e000e0-0000-4000-8000-down-row-bounds"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
                       "type": "eq",
                       "valueA": {
                         "type": "variable",
@@ -579,7 +921,7 @@
                       },
                       "valueB": {
                         "type": "number",
-                        "value": 0
+                        "value": 1
                       }
                     },
                     "__collapseElse": true
@@ -605,13 +947,29 @@
                         "children": {
                           "true": [
                             {
+                              "command": "EVENT_ACTOR_SHOW",
+                              "args": {
+                                "actorId": "6f6f6f6f-0000-4000-8000-000000000007"
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-shadow-show"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "player",
+                                "spriteStateId": "Jumping",
+                                "loopAnim": true
+                              },
+                              "id": "f1130000-0000-4000-8000-air-down-state-jumping"
+                            },
+                            {
                               "command": "EVENT_LAUNCH_PROJECTILE",
                               "args": {
                                 "spriteSheetId": "37b6d9a8-03ed-4b20-b5e7-640994387712",
                                 "spriteStateId": "",
                                 "actorId": "player",
                                 "x": -40,
-                                "y": 12,
+                                "y": -20,
                                 "directionType": "direction",
                                 "direction": "right",
                                 "speed": 0,
@@ -624,18 +982,7 @@
                                 "destroyOnHit": false,
                                 "__section": "source"
                               },
-                              "id": "f0f000f0-0000-4000-8000-down-fx-poof"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "23",
-                                "value": {
-                                  "type": "engineField",
-                                  "value": "plat_vel_y"
-                                }
-                              },
-                              "id": "f0e000e0-0000-4000-8000-down-stash-vy"
+                              "id": "f1220000-0000-4000-8000-air-down-fx-poof"
                             },
                             {
                               "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
@@ -651,18 +998,14 @@
                                 },
                                 "units": "pixels"
                               },
-                              "id": "f0e000e0-0000-4000-8000-down-snap-y"
+                              "id": "f1120000-0000-4000-8000-air-down-snap"
                             },
                             {
-                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "command": "EVENT_DEC_VALUE",
                               "args": {
-                                "engineFieldKey": "plat_vel_y",
-                                "value": {
-                                  "type": "variable",
-                                  "value": "23"
-                                }
+                                "variable": "0"
                               },
-                              "id": "f0e000e0-0000-4000-8000-down-restore-vy"
+                              "id": "f1120000-0000-4000-8000-air-down-rowop"
                             },
                             {
                               "command": "EVENT_SET_VALUE",
@@ -673,14 +1016,7 @@
                                   "value": 8
                                 }
                               },
-                              "id": "f0e000e0-0000-4000-8000-down-swap-invuln"
-                            },
-                            {
-                              "command": "EVENT_DEC_VALUE",
-                              "args": {
-                                "variable": "0"
-                              },
-                              "id": "f0e000e0-0000-4000-8000-down-row-dec"
+                              "id": "f1120000-0000-4000-8000-air-down-swap-invuln"
                             },
                             {
                               "command": "EVENT_SWITCH",
@@ -704,194 +1040,23 @@
                               "children": {
                                 "true0": [
                                   {
-                                    "command": "EVENT_SET_VALUE",
+                                    "command": "EVENT_IF",
                                     "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 13
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-0"
-                                  }
-                                ],
-                                "true1": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-1"
-                                  }
-                                ],
-                                "true2": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 9
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-2"
-                                  }
-                                ],
-                                "false": []
-                              },
-                              "id": "f0370037-0000-4000-8000-down-targety-switch"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "26",
-                                "value": {
-                                  "type": "variable",
-                                  "value": "0"
-                                }
-                              },
-                              "id": "f0370037-0000-4000-8000-down-shrimpyrow"
-                            }
-                          ],
-                          "false": []
-                        },
-                        "id": "f0e000e0-0000-4000-8000-down-row-bounds"
-                      }
-                    ],
-                    "false": [
-                      {
-                        "command": "EVENT_IF",
-                        "args": {
-                          "condition": {
-                            "type": "eq",
-                            "valueA": {
-                              "type": "variable",
-                              "value": "6"
-                            },
-                            "valueB": {
-                              "type": "number",
-                              "value": 1
-                            }
-                          },
-                          "__collapseElse": true
-                        },
-                        "children": {
-                          "true": [
-                            {
-                              "command": "EVENT_IF",
-                              "args": {
-                                "condition": {
-                                  "type": "gt",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "0"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
-                              },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_ACTOR_SHOW",
-                                    "args": {
-                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007"
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-shadow-show"
-                                  },
-                                  {
-                                    "command": "EVENT_ACTOR_SET_STATE",
-                                    "args": {
-                                      "actorId": "player",
-                                      "spriteStateId": "Jumping",
-                                      "loopAnim": true
-                                    },
-                                    "id": "f1130000-0000-4000-8000-air-down-state-jumping"
-                                  },
-                                  {
-                                    "command": "EVENT_LAUNCH_PROJECTILE",
-                                    "args": {
-                                      "spriteSheetId": "37b6d9a8-03ed-4b20-b5e7-640994387712",
-                                      "spriteStateId": "",
-                                      "actorId": "player",
-                                      "x": -40,
-                                      "y": -20,
-                                      "directionType": "direction",
-                                      "direction": "right",
-                                      "speed": 0,
-                                      "animSpeed": 15,
-                                      "lifeTime": 0.15,
-                                      "initialOffset": 0,
-                                      "collisionGroup": "3",
-                                      "collisionMask": [],
-                                      "loopAnim": true,
-                                      "destroyOnHit": false,
-                                      "__section": "source"
-                                    },
-                                    "id": "f1220000-0000-4000-8000-air-down-fx-poof"
-                                  },
-                                  {
-                                    "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
-                                    "args": {
-                                      "actorId": "player",
-                                      "x": {
-                                        "type": "number",
-                                        "value": 0
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "27"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 0
+                                        }
                                       },
-                                      "y": {
-                                        "type": "number",
-                                        "value": 16
-                                      },
-                                      "units": "pixels"
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-snap"
-                                  },
-                                  {
-                                    "command": "EVENT_DEC_VALUE",
-                                    "args": {
-                                      "variable": "0"
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-rowop"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "24",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 8
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-swap-invuln"
-                                  },
-                                  {
-                                    "command": "EVENT_SWITCH",
-                                    "args": {
-                                      "variable": "0",
-                                      "choices": 3,
-                                      "value0": {
-                                        "type": "number",
-                                        "value": 0
-                                      },
-                                      "value1": {
-                                        "type": "number",
-                                        "value": 1
-                                      },
-                                      "value2": {
-                                        "type": "number",
-                                        "value": 2
-                                      },
-                                      "__disableElse": false
+                                      "__collapseElse": true
                                     },
                                     "children": {
-                                      "true0": [
+                                      "true": [
                                         {
                                           "command": "EVENT_SET_VALUE",
                                           "args": {
@@ -904,7 +1069,30 @@
                                           "id": "f1120000-0000-4000-8000-air-down-targety-0"
                                         }
                                       ],
-                                      "true1": [
+                                      "false": []
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-0-bmrg-gate"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "27"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 0
+                                        }
+                                      },
+                                      "__collapseElse": true
+                                    },
+                                    "children": {
+                                      "true": [
                                         {
                                           "command": "EVENT_SET_VALUE",
                                           "args": {
@@ -917,7 +1105,30 @@
                                           "id": "f1120000-0000-4000-8000-air-down-targety-1"
                                         }
                                       ],
-                                      "true2": [
+                                      "false": []
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-1-bmrg-gate"
+                                  }
+                                ],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "27"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 0
+                                        }
+                                      },
+                                      "__collapseElse": true
+                                    },
+                                    "children": {
+                                      "true": [
                                         {
                                           "command": "EVENT_SET_VALUE",
                                           "args": {
@@ -932,181 +1143,181 @@
                                       ],
                                       "false": []
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-down-targety-switch"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "26",
-                                      "value": {
-                                        "type": "variable",
-                                        "value": "0"
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-shrimpyrow"
-                                  },
-                                  {
-                                    "command": "EVENT_SWITCH",
-                                    "args": {
-                                      "variable": "0",
-                                      "choices": 3,
-                                      "value0": {
-                                        "type": "number",
-                                        "value": 0
-                                      },
-                                      "value1": {
-                                        "type": "number",
-                                        "value": 1
-                                      },
-                                      "value2": {
-                                        "type": "number",
-                                        "value": 2
-                                      },
-                                      "__disableElse": false
-                                    },
-                                    "children": {
-                                      "true0": [
-                                        {
-                                          "command": "EVENT_ACTOR_SET_POSITION",
-                                          "args": {
-                                            "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
-                                            "x": {
-                                              "type": "number",
-                                              "value": 28
-                                            },
-                                            "y": {
-                                              "type": "number",
-                                              "value": 131
-                                            },
-                                            "units": "pixels"
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-shadow-0"
-                                        }
-                                      ],
-                                      "true1": [
-                                        {
-                                          "command": "EVENT_ACTOR_SET_POSITION",
-                                          "args": {
-                                            "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
-                                            "x": {
-                                              "type": "number",
-                                              "value": 28
-                                            },
-                                            "y": {
-                                              "type": "number",
-                                              "value": 114
-                                            },
-                                            "units": "pixels"
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-shadow-1"
-                                        }
-                                      ],
-                                      "true2": [
-                                        {
-                                          "command": "EVENT_ACTOR_SET_POSITION",
-                                          "args": {
-                                            "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
-                                            "x": {
-                                              "type": "number",
-                                              "value": 28
-                                            },
-                                            "y": {
-                                              "type": "number",
-                                              "value": 99
-                                            },
-                                            "units": "pixels"
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-shadow-2"
-                                        }
-                                      ],
-                                      "false": []
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-shadow-switch"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_is_actor_attached",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 0
-                                      }
-                                    },
-                                    "id": "f1210000-0000-4000-8000-air-down-detach"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "6",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 2
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-var6-2"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_grav",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 1792
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-grav"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_hold_grav",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 1720
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-hold-grav"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_vel_y",
-                                      "value": {
-                                        "type": "number",
-                                        "value": -20000
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-vel-y"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_next_state",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 2
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-down-next-state"
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-2-bmrg-gate"
                                   }
                                 ],
                                 "false": []
                               },
-                              "id": "f1120000-0000-4000-8000-air-down-bounds"
+                              "id": "f1120000-0000-4000-8000-air-down-targety-switch"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "26",
+                                "value": {
+                                  "type": "variable",
+                                  "value": "0"
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-shrimpyrow"
+                            },
+                            {
+                              "command": "EVENT_SWITCH",
+                              "args": {
+                                "variable": "0",
+                                "choices": 3,
+                                "value0": {
+                                  "type": "number",
+                                  "value": 0
+                                },
+                                "value1": {
+                                  "type": "number",
+                                  "value": 1
+                                },
+                                "value2": {
+                                  "type": "number",
+                                  "value": 2
+                                },
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true0": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 28
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 131
+                                      },
+                                      "units": "pixels"
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-down-shadow-0"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 28
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 114
+                                      },
+                                      "units": "pixels"
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-down-shadow-1"
+                                  }
+                                ],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 28
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 99
+                                      },
+                                      "units": "pixels"
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-down-shadow-2"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-shadow-switch"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_is_actor_attached",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "f1210000-0000-4000-8000-air-down-detach"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "6",
+                                "value": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-var6-2"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_grav",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1792
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-grav"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_hold_grav",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1720
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-hold-grav"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_vel_y",
+                                "value": {
+                                  "type": "number",
+                                  "value": -20000
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-vel-y"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_next_state",
+                                "value": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-down-next-state"
                             }
                           ],
                           "false": []
                         },
-                        "id": "f1120000-0000-4000-8000-air-down-air-gate"
+                        "id": "f1120000-0000-4000-8000-air-down-bounds"
                       }
-                    ]
+                    ],
+                    "false": []
                   },
-                  "id": "f0d100d1-0000-4000-8000-down-grounded-gate"
+                  "id": "f1120000-0000-4000-8000-air-down-air-gate"
                 }
-              ],
-              "false": []
+              ]
             },
-            "id": "f0d000d0-0000-4000-8000-down-iframe-gate"
+            "id": "f0d100d1-0000-4000-8000-down-grounded-gate"
           }
         ]
       },
@@ -1131,7 +1342,7 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "21"
+                  "value": "6"
                 },
                 "valueB": {
                   "type": "number",
@@ -1146,6 +1357,253 @@
                   "command": "EVENT_IF",
                   "args": {
                     "condition": {
+                      "type": "lt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "0"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 2
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_LAUNCH_PROJECTILE",
+                        "args": {
+                          "spriteSheetId": "37b6d9a8-03ed-4b20-b5e7-640994387712",
+                          "spriteStateId": "",
+                          "actorId": "player",
+                          "x": -40,
+                          "y": 0,
+                          "directionType": "direction",
+                          "direction": "right",
+                          "speed": 0,
+                          "animSpeed": 15,
+                          "lifeTime": 0.15,
+                          "initialOffset": 0,
+                          "collisionGroup": "3",
+                          "collisionMask": [],
+                          "loopAnim": true,
+                          "destroyOnHit": false,
+                          "__collapse": false,
+                          "__section": "source"
+                        },
+                        "id": "f0f000f0-0000-4000-8000-up-fx-poof"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "23",
+                          "value": {
+                            "type": "engineField",
+                            "value": "plat_vel_y"
+                          }
+                        },
+                        "id": "f0e000e0-0000-4000-8000-up-stash-vy"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
+                        "args": {
+                          "actorId": "player",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": -16
+                          },
+                          "units": "pixels"
+                        },
+                        "id": "f0e000e0-0000-4000-8000-up-snap-y"
+                      },
+                      {
+                        "command": "EVENT_ENGINE_FIELD_SET",
+                        "args": {
+                          "engineFieldKey": "plat_vel_y",
+                          "value": {
+                            "type": "variable",
+                            "value": "23"
+                          }
+                        },
+                        "id": "f0e000e0-0000-4000-8000-up-restore-vy"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "24",
+                          "value": {
+                            "type": "number",
+                            "value": 8
+                          }
+                        },
+                        "id": "f0e000e0-0000-4000-8000-up-swap-invuln"
+                      },
+                      {
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "0"
+                        },
+                        "id": "f0e000e0-0000-4000-8000-up-row-inc"
+                      },
+                      {
+                        "command": "EVENT_SWITCH",
+                        "args": {
+                          "variable": "0",
+                          "choices": 3,
+                          "value0": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "value1": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "value2": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true0": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "27"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
+                                    },
+                                    "id": "f0380038-0000-4000-8000-up-targety-0"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0380038-0000-4000-8000-up-targety-0-bmrg-gate"
+                            }
+                          ],
+                          "true1": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "27"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "id": "f0380038-0000-4000-8000-up-targety-1"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0380038-0000-4000-8000-up-targety-1-bmrg-gate"
+                            }
+                          ],
+                          "true2": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "27"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 9
+                                      }
+                                    },
+                                    "id": "f0380038-0000-4000-8000-up-targety-2"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0380038-0000-4000-8000-up-targety-2-bmrg-gate"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0380038-0000-4000-8000-up-targety-switch"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "26",
+                          "value": {
+                            "type": "variable",
+                            "value": "0"
+                          }
+                        },
+                        "id": "f0380038-0000-4000-8000-up-shrimpyrow"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0e000e0-0000-4000-8000-up-row-bounds"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
                       "type": "eq",
                       "valueA": {
                         "type": "variable",
@@ -1153,7 +1611,7 @@
                       },
                       "valueB": {
                         "type": "number",
-                        "value": 0
+                        "value": 1
                       }
                     },
                     "__collapseElse": true
@@ -1179,6 +1637,22 @@
                         "children": {
                           "true": [
                             {
+                              "command": "EVENT_ACTOR_SHOW",
+                              "args": {
+                                "actorId": "6f6f6f6f-0000-4000-8000-000000000007"
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-shadow-show"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "player",
+                                "spriteStateId": "Jumping",
+                                "loopAnim": true
+                              },
+                              "id": "f1130000-0000-4000-8000-air-up-state-jumping"
+                            },
+                            {
                               "command": "EVENT_LAUNCH_PROJECTILE",
                               "args": {
                                 "spriteSheetId": "37b6d9a8-03ed-4b20-b5e7-640994387712",
@@ -1196,21 +1670,9 @@
                                 "collisionMask": [],
                                 "loopAnim": true,
                                 "destroyOnHit": false,
-                                "__collapse": false,
                                 "__section": "source"
                               },
-                              "id": "f0f000f0-0000-4000-8000-up-fx-poof"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "23",
-                                "value": {
-                                  "type": "engineField",
-                                  "value": "plat_vel_y"
-                                }
-                              },
-                              "id": "f0e000e0-0000-4000-8000-up-stash-vy"
+                              "id": "f1220000-0000-4000-8000-air-up-fx-poof"
                             },
                             {
                               "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
@@ -1226,18 +1688,14 @@
                                 },
                                 "units": "pixels"
                               },
-                              "id": "f0e000e0-0000-4000-8000-up-snap-y"
+                              "id": "f1120000-0000-4000-8000-air-up-snap"
                             },
                             {
-                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "command": "EVENT_INC_VALUE",
                               "args": {
-                                "engineFieldKey": "plat_vel_y",
-                                "value": {
-                                  "type": "variable",
-                                  "value": "23"
-                                }
+                                "variable": "0"
                               },
-                              "id": "f0e000e0-0000-4000-8000-up-restore-vy"
+                              "id": "f1120000-0000-4000-8000-air-up-rowop"
                             },
                             {
                               "command": "EVENT_SET_VALUE",
@@ -1248,14 +1706,7 @@
                                   "value": 8
                                 }
                               },
-                              "id": "f0e000e0-0000-4000-8000-up-swap-invuln"
-                            },
-                            {
-                              "command": "EVENT_INC_VALUE",
-                              "args": {
-                                "variable": "0"
-                              },
-                              "id": "f0e000e0-0000-4000-8000-up-row-inc"
+                              "id": "f1120000-0000-4000-8000-air-up-swap-invuln"
                             },
                             {
                               "command": "EVENT_SWITCH",
@@ -1279,194 +1730,23 @@
                               "children": {
                                 "true0": [
                                   {
-                                    "command": "EVENT_SET_VALUE",
+                                    "command": "EVENT_IF",
                                     "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 13
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-0"
-                                  }
-                                ],
-                                "true1": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-1"
-                                  }
-                                ],
-                                "true2": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 9
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-2"
-                                  }
-                                ],
-                                "false": []
-                              },
-                              "id": "f0380038-0000-4000-8000-up-targety-switch"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "26",
-                                "value": {
-                                  "type": "variable",
-                                  "value": "0"
-                                }
-                              },
-                              "id": "f0380038-0000-4000-8000-up-shrimpyrow"
-                            }
-                          ],
-                          "false": []
-                        },
-                        "id": "f0e000e0-0000-4000-8000-up-row-bounds"
-                      }
-                    ],
-                    "false": [
-                      {
-                        "command": "EVENT_IF",
-                        "args": {
-                          "condition": {
-                            "type": "eq",
-                            "valueA": {
-                              "type": "variable",
-                              "value": "6"
-                            },
-                            "valueB": {
-                              "type": "number",
-                              "value": 1
-                            }
-                          },
-                          "__collapseElse": true
-                        },
-                        "children": {
-                          "true": [
-                            {
-                              "command": "EVENT_IF",
-                              "args": {
-                                "condition": {
-                                  "type": "lt",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "0"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 2
-                                  }
-                                },
-                                "__collapseElse": true
-                              },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_ACTOR_SHOW",
-                                    "args": {
-                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007"
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-shadow-show"
-                                  },
-                                  {
-                                    "command": "EVENT_ACTOR_SET_STATE",
-                                    "args": {
-                                      "actorId": "player",
-                                      "spriteStateId": "Jumping",
-                                      "loopAnim": true
-                                    },
-                                    "id": "f1130000-0000-4000-8000-air-up-state-jumping"
-                                  },
-                                  {
-                                    "command": "EVENT_LAUNCH_PROJECTILE",
-                                    "args": {
-                                      "spriteSheetId": "37b6d9a8-03ed-4b20-b5e7-640994387712",
-                                      "spriteStateId": "",
-                                      "actorId": "player",
-                                      "x": -40,
-                                      "y": 0,
-                                      "directionType": "direction",
-                                      "direction": "right",
-                                      "speed": 0,
-                                      "animSpeed": 15,
-                                      "lifeTime": 0.15,
-                                      "initialOffset": 0,
-                                      "collisionGroup": "3",
-                                      "collisionMask": [],
-                                      "loopAnim": true,
-                                      "destroyOnHit": false,
-                                      "__section": "source"
-                                    },
-                                    "id": "f1220000-0000-4000-8000-air-up-fx-poof"
-                                  },
-                                  {
-                                    "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
-                                    "args": {
-                                      "actorId": "player",
-                                      "x": {
-                                        "type": "number",
-                                        "value": 0
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "27"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 0
+                                        }
                                       },
-                                      "y": {
-                                        "type": "number",
-                                        "value": -16
-                                      },
-                                      "units": "pixels"
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-snap"
-                                  },
-                                  {
-                                    "command": "EVENT_INC_VALUE",
-                                    "args": {
-                                      "variable": "0"
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-rowop"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "24",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 8
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-swap-invuln"
-                                  },
-                                  {
-                                    "command": "EVENT_SWITCH",
-                                    "args": {
-                                      "variable": "0",
-                                      "choices": 3,
-                                      "value0": {
-                                        "type": "number",
-                                        "value": 0
-                                      },
-                                      "value1": {
-                                        "type": "number",
-                                        "value": 1
-                                      },
-                                      "value2": {
-                                        "type": "number",
-                                        "value": 2
-                                      },
-                                      "__disableElse": false
+                                      "__collapseElse": true
                                     },
                                     "children": {
-                                      "true0": [
+                                      "true": [
                                         {
                                           "command": "EVENT_SET_VALUE",
                                           "args": {
@@ -1479,7 +1759,30 @@
                                           "id": "f1120000-0000-4000-8000-air-up-targety-0"
                                         }
                                       ],
-                                      "true1": [
+                                      "false": []
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-0-bmrg-gate"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "27"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 0
+                                        }
+                                      },
+                                      "__collapseElse": true
+                                    },
+                                    "children": {
+                                      "true": [
                                         {
                                           "command": "EVENT_SET_VALUE",
                                           "args": {
@@ -1492,7 +1795,30 @@
                                           "id": "f1120000-0000-4000-8000-air-up-targety-1"
                                         }
                                       ],
-                                      "true2": [
+                                      "false": []
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-1-bmrg-gate"
+                                  }
+                                ],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "27"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 0
+                                        }
+                                      },
+                                      "__collapseElse": true
+                                    },
+                                    "children": {
+                                      "true": [
                                         {
                                           "command": "EVENT_SET_VALUE",
                                           "args": {
@@ -1507,181 +1833,181 @@
                                       ],
                                       "false": []
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-up-targety-switch"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "26",
-                                      "value": {
-                                        "type": "variable",
-                                        "value": "0"
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-shrimpyrow"
-                                  },
-                                  {
-                                    "command": "EVENT_SWITCH",
-                                    "args": {
-                                      "variable": "0",
-                                      "choices": 3,
-                                      "value0": {
-                                        "type": "number",
-                                        "value": 0
-                                      },
-                                      "value1": {
-                                        "type": "number",
-                                        "value": 1
-                                      },
-                                      "value2": {
-                                        "type": "number",
-                                        "value": 2
-                                      },
-                                      "__disableElse": false
-                                    },
-                                    "children": {
-                                      "true0": [
-                                        {
-                                          "command": "EVENT_ACTOR_SET_POSITION",
-                                          "args": {
-                                            "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
-                                            "x": {
-                                              "type": "number",
-                                              "value": 28
-                                            },
-                                            "y": {
-                                              "type": "number",
-                                              "value": 131
-                                            },
-                                            "units": "pixels"
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-shadow-0"
-                                        }
-                                      ],
-                                      "true1": [
-                                        {
-                                          "command": "EVENT_ACTOR_SET_POSITION",
-                                          "args": {
-                                            "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
-                                            "x": {
-                                              "type": "number",
-                                              "value": 28
-                                            },
-                                            "y": {
-                                              "type": "number",
-                                              "value": 114
-                                            },
-                                            "units": "pixels"
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-shadow-1"
-                                        }
-                                      ],
-                                      "true2": [
-                                        {
-                                          "command": "EVENT_ACTOR_SET_POSITION",
-                                          "args": {
-                                            "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
-                                            "x": {
-                                              "type": "number",
-                                              "value": 28
-                                            },
-                                            "y": {
-                                              "type": "number",
-                                              "value": 99
-                                            },
-                                            "units": "pixels"
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-shadow-2"
-                                        }
-                                      ],
-                                      "false": []
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-shadow-switch"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_is_actor_attached",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 0
-                                      }
-                                    },
-                                    "id": "f1210000-0000-4000-8000-air-up-detach"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "6",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 2
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-var6-2"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_grav",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 1792
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-grav"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_hold_grav",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 1720
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-hold-grav"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_vel_y",
-                                      "value": {
-                                        "type": "number",
-                                        "value": -15790
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-vel-y"
-                                  },
-                                  {
-                                    "command": "EVENT_ENGINE_FIELD_SET",
-                                    "args": {
-                                      "engineFieldKey": "plat_next_state",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 2
-                                      }
-                                    },
-                                    "id": "f1120000-0000-4000-8000-air-up-next-state"
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-2-bmrg-gate"
                                   }
                                 ],
                                 "false": []
                               },
-                              "id": "f1120000-0000-4000-8000-air-up-bounds"
+                              "id": "f1120000-0000-4000-8000-air-up-targety-switch"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "26",
+                                "value": {
+                                  "type": "variable",
+                                  "value": "0"
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-shrimpyrow"
+                            },
+                            {
+                              "command": "EVENT_SWITCH",
+                              "args": {
+                                "variable": "0",
+                                "choices": 3,
+                                "value0": {
+                                  "type": "number",
+                                  "value": 0
+                                },
+                                "value1": {
+                                  "type": "number",
+                                  "value": 1
+                                },
+                                "value2": {
+                                  "type": "number",
+                                  "value": 2
+                                },
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true0": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 28
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 131
+                                      },
+                                      "units": "pixels"
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-up-shadow-0"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 28
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 114
+                                      },
+                                      "units": "pixels"
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-up-shadow-1"
+                                  }
+                                ],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "6f6f6f6f-0000-4000-8000-000000000007",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 28
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 99
+                                      },
+                                      "units": "pixels"
+                                    },
+                                    "id": "f1120000-0000-4000-8000-air-up-shadow-2"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-shadow-switch"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_is_actor_attached",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "f1210000-0000-4000-8000-air-up-detach"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "6",
+                                "value": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-var6-2"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_grav",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1792
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-grav"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_hold_grav",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1720
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-hold-grav"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_vel_y",
+                                "value": {
+                                  "type": "number",
+                                  "value": -15790
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-vel-y"
+                            },
+                            {
+                              "command": "EVENT_ENGINE_FIELD_SET",
+                              "args": {
+                                "engineFieldKey": "plat_next_state",
+                                "value": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "f1120000-0000-4000-8000-air-up-next-state"
                             }
                           ],
                           "false": []
                         },
-                        "id": "f1120000-0000-4000-8000-air-up-air-gate"
+                        "id": "f1120000-0000-4000-8000-air-up-bounds"
                       }
-                    ]
+                    ],
+                    "false": []
                   },
-                  "id": "f0d100d1-0000-4000-8000-up-grounded-gate"
+                  "id": "f1120000-0000-4000-8000-air-up-air-gate"
                 }
-              ],
-              "false": []
+              ]
             },
-            "id": "f0d000d0-0000-4000-8000-up-iframe-gate"
+            "id": "f0d100d1-0000-4000-8000-up-grounded-gate"
           }
         ]
       },
@@ -1695,7 +2021,7 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": false
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -1906,7 +2232,7 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -1929,32 +2255,284 @@
             "children": {
               "true": [
                 {
-                  "command": "EVENT_LAUNCH_PROJECTILE",
+                  "command": "EVENT_IF",
                   "args": {
-                    "spriteSheetId": "f82cd25a-936f-49ba-b157-07a1e11559c5",
-                    "spriteStateId": "",
-                    "actorId": "player",
-                    "x": -24,
-                    "y": 0,
-                    "directionType": "direction",
-                    "direction": "right",
-                    "speed": 4,
-                    "animSpeed": 15,
-                    "lifeTime": 1.5,
-                    "initialOffset": 0,
-                    "collisionGroup": "2",
-                    "collisionMask": [
-                      "1"
-                    ],
-                    "loopAnim": false,
-                    "destroyOnHit": true
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "35"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": true
                   },
-                  "id": "f0c000c0-0000-4000-8000-b-fire-projectile"
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "21"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 0
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "41"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 0
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "38"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 0
+                                        }
+                                      },
+                                      "__collapseElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_LAUNCH_PROJECTILE",
+                                          "args": {
+                                            "spriteSheetId": "f82cd25a-936f-49ba-b157-07a1e11559c5",
+                                            "spriteStateId": "",
+                                            "actorId": "player",
+                                            "x": -24,
+                                            "y": 0,
+                                            "directionType": "direction",
+                                            "direction": "right",
+                                            "speed": 4,
+                                            "animSpeed": 15,
+                                            "lifeTime": 0.6,
+                                            "initialOffset": 0,
+                                            "collisionGroup": "2",
+                                            "collisionMask": [
+                                              "1"
+                                            ],
+                                            "loopAnim": false,
+                                            "destroyOnHit": true
+                                          },
+                                          "id": "f0c000c0-0000-4000-8000-pistol-launch-slot0"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "38",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 36
+                                            }
+                                          },
+                                          "id": "f0c000c0-0000-4000-8000-pistol-set-slot0"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "41",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 5
+                                            }
+                                          },
+                                          "id": "f0c000c0-0000-4000-8000-pistol-delay-set-slot0"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_IF",
+                                          "args": {
+                                            "condition": {
+                                              "type": "eq",
+                                              "valueA": {
+                                                "type": "variable",
+                                                "value": "39"
+                                              },
+                                              "valueB": {
+                                                "type": "number",
+                                                "value": 0
+                                              }
+                                            },
+                                            "__collapseElse": false
+                                          },
+                                          "children": {
+                                            "true": [
+                                              {
+                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                "args": {
+                                                  "spriteSheetId": "f82cd25a-936f-49ba-b157-07a1e11559c5",
+                                                  "spriteStateId": "",
+                                                  "actorId": "player",
+                                                  "x": -24,
+                                                  "y": 0,
+                                                  "directionType": "direction",
+                                                  "direction": "right",
+                                                  "speed": 4,
+                                                  "animSpeed": 15,
+                                                  "lifeTime": 0.6,
+                                                  "initialOffset": 0,
+                                                  "collisionGroup": "2",
+                                                  "collisionMask": [
+                                                    "1"
+                                                  ],
+                                                  "loopAnim": false,
+                                                  "destroyOnHit": true
+                                                },
+                                                "id": "f0c000c0-0000-4000-8000-pistol-launch-slot1"
+                                              },
+                                              {
+                                                "command": "EVENT_SET_VALUE",
+                                                "args": {
+                                                  "variable": "39",
+                                                  "value": {
+                                                    "type": "number",
+                                                    "value": 36
+                                                  }
+                                                },
+                                                "id": "f0c000c0-0000-4000-8000-pistol-set-slot1"
+                                              },
+                                              {
+                                                "command": "EVENT_SET_VALUE",
+                                                "args": {
+                                                  "variable": "41",
+                                                  "value": {
+                                                    "type": "number",
+                                                    "value": 5
+                                                  }
+                                                },
+                                                "id": "f0c000c0-0000-4000-8000-pistol-delay-set-slot1"
+                                              }
+                                            ],
+                                            "false": [
+                                              {
+                                                "command": "EVENT_IF",
+                                                "args": {
+                                                  "condition": {
+                                                    "type": "eq",
+                                                    "valueA": {
+                                                      "type": "variable",
+                                                      "value": "40"
+                                                    },
+                                                    "valueB": {
+                                                      "type": "number",
+                                                      "value": 0
+                                                    }
+                                                  },
+                                                  "__collapseElse": true
+                                                },
+                                                "children": {
+                                                  "true": [
+                                                    {
+                                                      "command": "EVENT_LAUNCH_PROJECTILE",
+                                                      "args": {
+                                                        "spriteSheetId": "f82cd25a-936f-49ba-b157-07a1e11559c5",
+                                                        "spriteStateId": "",
+                                                        "actorId": "player",
+                                                        "x": -24,
+                                                        "y": 0,
+                                                        "directionType": "direction",
+                                                        "direction": "right",
+                                                        "speed": 4,
+                                                        "animSpeed": 15,
+                                                        "lifeTime": 0.6,
+                                                        "initialOffset": 0,
+                                                        "collisionGroup": "2",
+                                                        "collisionMask": [
+                                                          "1"
+                                                        ],
+                                                        "loopAnim": false,
+                                                        "destroyOnHit": true
+                                                      },
+                                                      "id": "f0c000c0-0000-4000-8000-pistol-launch-slot2"
+                                                    },
+                                                    {
+                                                      "command": "EVENT_SET_VALUE",
+                                                      "args": {
+                                                        "variable": "40",
+                                                        "value": {
+                                                          "type": "number",
+                                                          "value": 36
+                                                        }
+                                                      },
+                                                      "id": "f0c000c0-0000-4000-8000-pistol-set-slot2"
+                                                    },
+                                                    {
+                                                      "command": "EVENT_SET_VALUE",
+                                                      "args": {
+                                                        "variable": "41",
+                                                        "value": {
+                                                          "type": "number",
+                                                          "value": 5
+                                                        }
+                                                      },
+                                                      "id": "f0c000c0-0000-4000-8000-pistol-delay-set-slot2"
+                                                    }
+                                                  ],
+                                                  "false": []
+                                                },
+                                                "id": "f0c000c0-0000-4000-8000-pistol-slot2-gate"
+                                              }
+                                            ]
+                                          },
+                                          "id": "f0c000c0-0000-4000-8000-pistol-slot1-gate"
+                                        }
+                                      ]
+                                    },
+                                    "id": "f0c000c0-0000-4000-8000-pistol-slot0-gate"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0c000c0-0000-4000-8000-pistol-fire-delay-gate"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0d000d0-0000-4000-8000-b-iframe-gate"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0c000c0-0000-4000-8000-b-pistol-weapon-gate"
                 }
               ],
               "false": []
             },
-            "id": "f0d000d0-0000-4000-8000-b-iframe-gate"
+            "id": "f0c000c0-0000-4000-8000-b-iframe-gate"
           }
         ]
       },
@@ -1986,15 +2564,14 @@
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
               "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-              "__name": "Player/TakeDamage",
-              "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+              "__name": "Player/TakeDamage"
             },
             "id": "f0c000c0-0000-4000-8000-player-hit3-take-damage"
           }
         ],
         "false": []
       },
-      "id": "f0c000c0-0000-4000-8000-player-hit3-active-gate"
+      "id": "f0c000c0-0000-4000-8000-player-hit3-bmrg-gate"
     }
   ],
   "collisions": "0023dc+"

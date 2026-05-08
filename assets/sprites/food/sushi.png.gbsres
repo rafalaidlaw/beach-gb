@@ -1,83 +1,83 @@
 {
   "_resourceType": "sprite",
-  "id": "3647e8d8-47d8-46eb-8b0c-ce6b12e72e16",
-  "name": "Status-UIt",
-  "symbol": "sprite_status_uit",
+  "id": "e9cc711b-53f9-4cc3-b8ad-5204b5dc0678",
+  "name": "food/sushi",
+  "symbol": "sprite_food_sushi",
   "states": [
     {
-      "id": "6261a395-29d8-44a7-88cc-2544e854fae9",
+      "id": "2747b88d-2ec6-49e4-9427-7239f7dce562",
       "name": "",
       "animationType": "multi_movement",
       "flipLeft": true,
       "animations": [
         {
-          "id": "a647f482-3ede-4c23-b446-8df1b4696c10",
+          "id": "601d6f80-fe46-4a12-99f7-f2b4b08a1992",
           "frames": [
             {
-              "id": "9a52de21-a86c-48a1-9e16-dc2af7e0f249",
+              "id": "d1d75b7e-a8a4-4c09-9d2b-c44d78d8c1d2",
               "tiles": []
             }
           ]
         },
         {
-          "id": "74a28e88-26bb-44ee-9fba-a1e9e85a6bff",
+          "id": "74b4d234-1583-4c2a-935e-83de0a4ccb03",
           "frames": [
             {
-              "id": "93a70199-f0ad-4768-bfb2-2aa26fdfb930",
+              "id": "16933678-96f3-4391-95c4-eddb4d809a35",
               "tiles": []
             }
           ]
         },
         {
-          "id": "68216cc7-4491-4c8d-9e4c-3f4eaffd0eb8",
+          "id": "6e45b878-3db8-44bd-abd2-3fdbc48e587b",
           "frames": [
             {
-              "id": "7203fd2d-e0cb-4d6a-b481-072e6c75515e",
+              "id": "6d3ffcf7-130c-492c-9a19-66d024612db8",
               "tiles": []
             }
           ]
         },
         {
-          "id": "5ef0d899-15b5-4922-b46f-e669f64ab7fa",
+          "id": "87a965cd-e2fb-41dc-a950-da38d2841e9e",
           "frames": [
             {
-              "id": "a79f9699-f94f-4e51-9ebc-a67fcff01ad8",
+              "id": "bf1c1042-2064-46f1-b6be-a54c9504d014",
               "tiles": []
             }
           ]
         },
         {
-          "id": "d661bd54-e0d8-42a2-9151-aa40bf05081c",
+          "id": "60266604-e59d-483c-adbf-ee1ea9eb7397",
           "frames": [
             {
-              "id": "4c42fffa-db04-4525-ac04-c55a2abb7238",
+              "id": "5e58248c-4ad8-47d4-ad33-48803177a273",
               "tiles": []
             }
           ]
         },
         {
-          "id": "e4403dc1-5a03-493f-9ce1-bb9177a2337a",
+          "id": "9dc28c7d-8971-4f7e-9490-49c0e91ed5e6",
           "frames": [
             {
-              "id": "143111e5-d2f1-4873-a3ae-c52d8a8e7d1b",
+              "id": "98e90413-0eef-4452-93a7-929e5d127cd7",
               "tiles": []
             }
           ]
         },
         {
-          "id": "02bf44c9-f4cb-4d04-9ff6-d56500d1f9ee",
+          "id": "0475fa32-ed3f-4b01-87ce-ea63bb3bd5d0",
           "frames": [
             {
-              "id": "f1b34d1c-f64d-4a0d-afcb-40486a641287",
+              "id": "addccb03-1dea-45ab-96b9-3046848ea573",
               "tiles": []
             }
           ]
         },
         {
-          "id": "f36b068e-9045-445c-85d9-e8ee09f1a308",
+          "id": "261ca03e-4126-473b-979b-90a0e8463baf",
           "frames": [
             {
-              "id": "d6725207-6f8b-47f4-994c-fe46a4b93352",
+              "id": "e8faa0de-54d8-46a8-948e-58a49e60398a",
               "tiles": []
             }
           ]
@@ -95,8 +95,8 @@
   "boundsWidth": 16,
   "boundsHeight": 16,
   "animSpeed": 15,
-  "filename": "Status-UIt.png",
-  "width": 190,
-  "height": 21,
-  "checksum": "22245289d1b13e3e45a1a9d3cffa87ed4f324a85"
+  "filename": "food/sushi.png",
+  "width": 14,
+  "height": 15,
+  "checksum": "f14513ddead50ecff38c78c01032804532817281"
 }

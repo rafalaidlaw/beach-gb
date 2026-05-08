@@ -2,14 +2,9 @@
   "_resourceType": "script",
   "id": "f0b000b0-0000-4000-8000-000000000001",
   "name": "Player/TakeDamage",
-  "description": "Standard hit response: gates on i-frame timer (no double damage). DECs playerHealth, sets i-frame timer to 60 frames (~1 sec), resets strobe tick, knocks player back 3 tiles, and updates the Healthbar via Player/UpdateHealthbar. The Healthbar actor monitors var_21 (iframeTimer) per-frame and toggles player visibility for the strobe + auto-restores when timer expires.",
+  "description": "3-strike hit response. Gates on iframe (var_21) and swap-invuln (var_24). INCs var_1 playerHitCount; on hit 3 switches to gameover scene; otherwise sets 60-frame iframe + resets strobe (var_22) + sets player sprite to 'Small Run' (hit 1) or 'Small Dog Run' (hit 2). The bullet actor's updateScript drives the SML-style flicker between OLD and NEW forms during the iframe window.",
   "variables": {},
-  "actors": {
-    "ddcbc746-fcee-46a6-a433-0478415320c3": {
-      "id": "ddcbc746-fcee-46a6-a433-0478415320c3",
-      "name": "Actor \u0000"
-    }
-  },
+  "actors": {},
   "symbol": "script_take_damage",
   "script": [
     {
@@ -49,42 +44,150 @@
             "children": {
               "true": [
                 {
-                  "command": "EVENT_DEC_VALUE",
+                  "command": "EVENT_INC_VALUE",
                   "args": {
                     "variable": "1"
                   },
-                  "id": "f0b000b0-0000-4000-8000-td-dec-hp"
+                  "id": "f0b000b0-0000-4000-8000-td-inc-hitcount"
                 },
                 {
-                  "command": "EVENT_SET_VALUE",
+                  "command": "EVENT_IF",
                   "args": {
-                    "variable": "21",
-                    "value": {
-                      "type": "number",
-                      "value": 60
-                    }
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "1"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 3
+                      }
+                    },
+                    "__collapseElse": false
                   },
-                  "id": "f0b000b0-0000-4000-8000-td-set-iframe"
-                },
-                {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "22",
-                    "value": {
-                      "type": "number",
-                      "value": 0
-                    }
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SWITCH_SCENE",
+                        "args": {
+                          "sceneId": "f0e0e0e0-0000-4000-8000-game0ver0000",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "direction": "",
+                          "fadeSpeed": "2"
+                        },
+                        "id": "f0b000b0-0000-4000-8000-td-switch-gameover"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "21",
+                          "value": {
+                            "type": "number",
+                            "value": 30
+                          }
+                        },
+                        "id": "f0b000b0-0000-4000-8000-td-set-iframe"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "22",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "f0b000b0-0000-4000-8000-td-reset-strobe"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "43",
+                          "value": {
+                            "type": "number",
+                            "value": 20
+                          }
+                        },
+                        "id": "f0b000b0-0000-4000-8000-td-set-flash"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "1"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 1
+                            }
+                          },
+                          "__collapseElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "player",
+                                "spriteStateId": "Small Run",
+                                "loopAnim": true
+                              },
+                              "id": "f0b000b0-0000-4000-8000-td-state-small-run"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "1"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 2
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "player",
+                                      "spriteStateId": "Small Dog Run",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0b000b0-0000-4000-8000-td-state-small-dog-run"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0b000b0-0000-4000-8000-td-state-pick-2"
+                            }
+                          ]
+                        },
+                        "id": "f0b000b0-0000-4000-8000-td-state-pick-1"
+                      }
+                    ]
                   },
-                  "id": "f0b000b0-0000-4000-8000-td-reset-strobe"
-                },
-                {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
-                  "args": {
-                    "customEventId": "f0900090-0000-4000-8000-000000000001",
-                    "__name": "Player/UpdateHealthbar",
-                    "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
-                  },
-                  "id": "f0b000b0-0000-4000-8000-td-call-update-hb"
+                  "id": "f0b000b0-0000-4000-8000-td-death-or-survive"
                 }
               ],
               "false": []

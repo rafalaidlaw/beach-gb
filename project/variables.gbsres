@@ -8,8 +8,8 @@
     },
     {
       "id": "1",
-      "name": "playerHealth",
-      "symbol": "var_playerhealth"
+      "name": "playerHitCount",
+      "symbol": "var_playerhitcount"
     },
     {
       "id": "2",
@@ -68,8 +68,8 @@
     },
     {
       "id": "13",
-      "name": "clamRollPending",
-      "symbol": "var_clamrollpending"
+      "name": "clamPassedBy",
+      "symbol": "var_clampassedby"
     },
     {
       "id": "14",
@@ -177,6 +177,61 @@
       "symbol": "var_shrimpyhealth"
     },
     {
+      "id": "35",
+      "name": "currentWeapon",
+      "symbol": "var_currentweapon"
+    },
+    {
+      "id": "36",
+      "name": "gatlingCooldown",
+      "symbol": "var_gatlingcooldown"
+    },
+    {
+      "id": "37",
+      "name": "weaponIconState",
+      "symbol": "var_weaponiconstate"
+    },
+    {
+      "id": "38",
+      "name": "pistolSlot0",
+      "symbol": "var_pistolslot0"
+    },
+    {
+      "id": "39",
+      "name": "pistolSlot1",
+      "symbol": "var_pistolslot1"
+    },
+    {
+      "id": "40",
+      "name": "pistolSlot2",
+      "symbol": "var_pistolslot2"
+    },
+    {
+      "id": "41",
+      "name": "pistolFireDelay",
+      "symbol": "var_pistolfiredelay"
+    },
+    {
+      "id": "42",
+      "name": "clamSpawnX",
+      "symbol": "var_clamspawnx"
+    },
+    {
+      "id": "43",
+      "name": "flashCounter",
+      "symbol": "var_flashcounter"
+    },
+    {
+      "id": "45",
+      "name": "shrimpyLockedY",
+      "symbol": "var_shrimpylockedy"
+    },
+    {
+      "id": "46",
+      "name": "shrimpyYScratch",
+      "symbol": "var_shrimpy_y_scratch"
+    },
+    {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",
       "name": "notJumping",
       "symbol": "var_notjumping_1"
@@ -250,6 +305,21 @@
       "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L1",
       "name": "platform-01-Y",
       "symbol": "var_platform_y_1"
+    },
+    {
+      "id": "47",
+      "name": "shrimpyPivotMid",
+      "symbol": "var_shrimpypivotmid"
+    },
+    {
+      "id": "48",
+      "name": "shrimpyPivotBack",
+      "symbol": "var_shrimpypivotback"
+    },
+    {
+      "id": "49",
+      "name": "shrimpyPivotFore",
+      "symbol": "var_shrimpypivotfore"
     }
   ],
   "constants": []

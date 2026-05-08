@@ -39,8 +39,7 @@
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
               "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-              "__name": "Player/TakeDamage",
-              "$actor[ddcbc746-fcee-46a6-a433-0478415320c3]$": "ddcbc746-fcee-46a6-a433-0478415320c3"
+              "__name": "Player/TakeDamage"
             },
             "id": "f0220022-0000-4000-8000-bmrg-take-damage"
           }
@@ -147,7 +146,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": -6
+                "value": -16
               },
               "y": {
                 "type": "number",

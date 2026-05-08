@@ -1,0 +1,181 @@
+{
+  "_resourceType": "sprite",
+  "id": "3d82b29e-7d67-43ac-8f31-73dae32737bc",
+  "name": "mail-dog-smaller",
+  "symbol": "sprite_mail_dog_smaller",
+  "states": [
+    {
+      "id": "646ccac3-005a-42f5-9704-cb5905dc9772",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "83cf8d08-da57-4773-8423-b6ef91112ed8",
+          "frames": [
+            {
+              "id": "ea784dec-bc35-4b7a-8042-44d6ec9b1b50",
+              "tiles": [
+                {
+                  "id": "6c46695e-b615-477a-aede-4105ee4f8df7",
+                  "x": -33,
+                  "y": 16,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "e81fc01a-0e3f-4d46-8296-5e2d87cdc64b",
+                  "x": -33,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "000ae497-b9d6-4c7d-aad7-a5e40004884d",
+                  "x": -25,
+                  "y": 16,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "e131920c-9666-4c44-99c6-c2c720ed0b5d",
+                  "x": -25,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "d7e97ca0-1d49-4079-b1b0-b98c7d184fe6",
+                  "x": -17,
+                  "y": 16,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "4031e542-f3e0-4a25-919f-29b663d23a6d",
+                  "x": -17,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ca986d83-3dc4-458a-b02d-06f3e6c57d41",
+          "frames": [
+            {
+              "id": "1079e95d-1f8a-4d98-a5b4-350b3af53e22",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e1b4b1eb-8f81-4a76-929d-57ef7a82ac1a",
+          "frames": [
+            {
+              "id": "9b67a5d5-c5ed-4ee0-9add-8cc32af289a0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "23e5020a-731f-4cac-9daf-97f2bcbc2903",
+          "frames": [
+            {
+              "id": "20cd9212-b119-4a8a-9fbe-72e0134948f4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1ba682a6-2862-4bf4-bc73-51a5df5a1122",
+          "frames": [
+            {
+              "id": "f30c73ba-9476-4536-aee7-567b582186cb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2995a663-352b-4826-883b-8a8df1316441",
+          "frames": [
+            {
+              "id": "fdc117bf-0f8f-477b-8adb-bf02e0081a08",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5b50f37d-65b2-44c6-8dda-b5987b3c4560",
+          "frames": [
+            {
+              "id": "24125654-2d34-480e-90af-0e4633736fd1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "312639a8-216c-4f5b-b6ec-35d14c94f33a",
+          "frames": [
+            {
+              "id": "2a9472f1-db42-4cf6-97f8-0d1f2f4f799a",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 6,
+  "canvasOriginX": 24,
+  "canvasOriginY": 0,
+  "canvasWidth": 80,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "mail-dog-smaller.png",
+  "width": 24,
+  "height": 32,
+  "checksum": "4845aa924de4cddf97c321b51de5784e73f37217"
+}
