@@ -267,6 +267,16 @@
       "symbol": "var_boomerang2_active"
     },
     {
+      "id": "54",
+      "name": "trigA_armed",
+      "symbol": "var_trig_a_armed"
+    },
+    {
+      "id": "55",
+      "name": "trigB_armed",
+      "symbol": "var_trig_b_armed"
+    },
+    {
       "id": "60",
       "name": "entranceSlashDone",
       "symbol": "var_entrance_slash_done"
@@ -345,6 +355,31 @@
       "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L1",
       "name": "platform-01-Y",
       "symbol": "var_platform_y_1"
+    },
+    {
+      "id": "61",
+      "name": "firstPatrolDone",
+      "symbol": "var_first_patrol_done"
+    },
+    {
+      "id": "62",
+      "name": "secondSlashDone",
+      "symbol": "var_second_slash_done"
+    },
+    {
+      "id": "63",
+      "name": "secondPatrolDone",
+      "symbol": "var_second_patrol_done"
+    },
+    {
+      "id": "64",
+      "name": "boomerangThrowRow",
+      "symbol": "var_boomerang_throw_row"
+    },
+    {
+      "id": "65",
+      "name": "playerRowTouch",
+      "symbol": "var_player_row_touch"
     }
   ],
   "constants": []

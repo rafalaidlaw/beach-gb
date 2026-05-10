@@ -1345,6 +1345,167 @@
                   "priority": false
                 }
               ]
+            },
+            {
+              "id": "0446fa50-c52a-421a-ab8b-02c0a5fe6f20",
+              "tiles": [
+                {
+                  "id": "809efa6b-c590-48d9-8bc6-21c15b7cc50e",
+                  "x": -8,
+                  "y": 32,
+                  "sliceX": 400,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "a1a513a7-b8a0-40fb-ab89-172df30ceafe",
+                  "x": -8,
+                  "y": 16,
+                  "sliceX": 400,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "3cf8642a-764b-4cf0-af17-4f1747222654",
+                  "x": -8,
+                  "y": 0,
+                  "sliceX": 400,
+                  "sliceY": 32,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "8257cdd9-5d12-481f-b298-f002ceb853f2",
+                  "x": 0,
+                  "y": 32,
+                  "sliceX": 408,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "e695cba0-8d73-4e3b-9b85-e501128d730e",
+                  "x": 0,
+                  "y": 16,
+                  "sliceX": 408,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "12a81a19-cbce-4dbe-9cb1-0196c8f9579f",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 408,
+                  "sliceY": 32,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "8a6f1906-cb63-46c5-b9c3-bca47024c1d7",
+                  "x": 8,
+                  "y": 32,
+                  "sliceX": 416,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "fac064a9-dac5-4d15-b202-3d0f28a9d80a",
+                  "x": 8,
+                  "y": 16,
+                  "sliceX": 416,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "133cd8cd-afad-46c5-800b-7b4544dac878",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 416,
+                  "sliceY": 32,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "a218d5f9-975d-41c3-bf3e-6c5f11a0c7a4",
+                  "x": 16,
+                  "y": 32,
+                  "sliceX": 424,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "2d8bb026-39d4-492a-b15b-f16b08477674",
+                  "x": 16,
+                  "y": 16,
+                  "sliceX": 424,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "70d6cdd8-6968-4b90-887b-5c28ed1e59ec",
+                  "x": 16,
+                  "y": 0,
+                  "sliceX": 424,
+                  "sliceY": 32,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
             }
           ]
         },
@@ -1601,7 +1762,7 @@
       "flipLeft": true
     }
   ],
-  "numTiles": 76,
+  "numTiles": 87,
   "canvasOriginX": -8,
   "canvasOriginY": -24,
   "canvasWidth": 32,
@@ -1612,7 +1773,7 @@
   "boundsHeight": 23,
   "animSpeed": 15,
   "filename": "Ocean Enemies/Surfing-Shrimp.png",
-  "width": 396,
+  "width": 432,
   "height": 48,
   "checksum": "479895a08b895dbf3f89fb508b3710371e55b160"
 }

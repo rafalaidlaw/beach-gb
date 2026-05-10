@@ -42,6 +42,72 @@
     {
       "command": "EVENT_SET_VALUE",
       "args": {
+        "variable": "64",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f1110000-0000-4000-8000-init-boomerang-throw-row"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "61",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f1110000-0000-4000-8000-init-first-patrol-done"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "62",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f1110000-0000-4000-8000-init-second-slash-done"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "63",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f1110000-0000-4000-8000-init-second-patrol-done"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "54",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f1110000-0000-4000-8000-init-trig-a-armed"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "55",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f1110000-0000-4000-8000-init-trig-b-armed"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
         "variable": "60",
         "value": {
           "type": "number",
@@ -2799,12 +2865,35 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "command": "EVENT_IF",
             "args": {
-              "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-              "__name": "Player/TakeDamage"
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "0"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "64"
+                }
+              },
+              "__collapseElse": true
             },
-            "id": "f0c000c0-0000-4000-8000-player-hit3-take-damage"
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f0b000b0-0000-4000-8000-000000000001",
+                    "__name": "Player/TakeDamage"
+                  },
+                  "id": "f0c000c0-0000-4000-8000-player-hit3-take-damage"
+                }
+              ],
+              "false": []
+            },
+            "id": "f0c000c0-0000-4000-8000-player-hit3-row-gate"
           }
         ],
         "false": []

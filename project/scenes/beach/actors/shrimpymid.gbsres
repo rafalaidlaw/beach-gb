@@ -300,7 +300,7 @@
                   "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
                   "args": {
                     "actorId": "$self$",
-                    "speed": 5
+                    "speed": 6
                   },
                   "id": "f1130000-0000-4000-8000-slash-anim-speed-fast"
                 },
@@ -374,89 +374,743 @@
             "id": "f1110000-0000-4000-8000-shrimpy-entrance-slash-gate"
           },
           {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+            "command": "EVENT_IF",
             "args": {
-              "actorId": "$self$",
-              "speed": 2,
-              "__collapse": true
-            },
-            "id": "ea04710c-29ee-48c4-9c0b-a304ae9225b9"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 236
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "61"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
               },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true,
-              "units": "pixels"
+              "__collapseElse": true
             },
-            "id": "cd4c7174-61c5-4064-9e6a-da728ab82d0d"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-            "args": {
-              "actorId": "$self$",
-              "speed": 1,
-              "__collapse": true
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                  "args": {
+                    "actorId": "$self$",
+                    "speed": 2,
+                    "__collapse": true
+                  },
+                  "id": "ea04710c-29ee-48c4-9c0b-a304ae9225b9"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 260
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false
+                  },
+                  "id": "cd4c7174-61c5-4064-9e6a-da728ab82d0d"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 308
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false,
+                    "__collapse": true
+                  },
+                  "id": "96bdb18f-414a-4a46-9194-b72d23723d60"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                  "args": {
+                    "actorId": "$self$",
+                    "speed": 1,
+                    "__collapse": true
+                  },
+                  "id": "5860c4ef-3f76-4fc8-bc86-58aabf044d67"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.5
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "bdb3d8f6-5254-4e31-8463-e514c6e76486"
+                },
+                {
+                  "command": "EVENT_ACTOR_GET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "vectorX": "28",
+                    "vectorY": "29",
+                    "units": "tiles"
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigA-getpos"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "29"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "11"
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "25"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "64",
+                                "value": {
+                                  "type": "variable",
+                                  "value": "0"
+                                }
+                              },
+                              "id": "f0670067-0000-4000-8000-bmrg-trigA-capture-throw-row"
+                            },
+                            {
+                              "command": "EVENT_SWITCH",
+                              "args": {
+                                "variable": "29",
+                                "choices": 3,
+                                "value0": {
+                                  "type": "number",
+                                  "value": 13
+                                },
+                                "value1": {
+                                  "type": "number",
+                                  "value": 9
+                                },
+                                "__disableElse": false,
+                                "value2": {
+                                  "type": "number",
+                                  "value": 11
+                                }
+                              },
+                              "children": {
+                                "true0": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.5
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 30
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-throw"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.5
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 30
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-throw"
+                                  }
+                                ],
+                                "false": [],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-mid-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.5
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 30
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-mid-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-mid"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-mid-state-throw"
+                                  }
+                                ]
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA-row-switch"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigA-alive-gate"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigA-row-gate"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 388
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false
+                  },
+                  "id": "9e2e8944-4cfc-4093-922f-010b675f2e0d"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.4
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "31da83ec-d8da-4abe-a2e3-e40221a0fced"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 484
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false
+                  },
+                  "id": "fda5b525-1467-4e83-bcc4-afa3168ad66e"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.4
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "b2e14256-e243-419e-a0b8-03aec2943755"
+                },
+                {
+                  "command": "EVENT_ACTOR_GET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "vectorX": "28",
+                    "vectorY": "29",
+                    "units": "tiles"
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigB-getpos"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "29"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "11"
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "25"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "64",
+                                "value": {
+                                  "type": "variable",
+                                  "value": "0"
+                                }
+                              },
+                              "id": "f0670067-0000-4000-8000-bmrg-trigB-capture-throw-row"
+                            },
+                            {
+                              "command": "EVENT_SWITCH",
+                              "args": {
+                                "variable": "29",
+                                "choices": 3,
+                                "value0": {
+                                  "type": "number",
+                                  "value": 13
+                                },
+                                "value1": {
+                                  "type": "number",
+                                  "value": 9
+                                },
+                                "__disableElse": false,
+                                "value2": {
+                                  "type": "number",
+                                  "value": 11
+                                }
+                              },
+                              "children": {
+                                "true0": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.5
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 30
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-throw"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.5
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 30
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-throw"
+                                  }
+                                ],
+                                "false": [],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-mid-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.5
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 30
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-mid-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-mid"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-mid-state-throw"
+                                  }
+                                ]
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB-row-switch"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigB-alive-gate"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigB-row-gate"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 580
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false
+                  },
+                  "id": "d1ab6b60-5269-470b-9853-89af264e79b4"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.4
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "2e7bed90-6b20-48b9-ad1f-5ebb50f72706"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 676
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false
+                  },
+                  "id": "045fec2f-0903-4582-ba50-0906524e98ac"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.4
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "f2a98af9-a27d-4ca0-9374-2efa504cad89"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 772
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false
+                  },
+                  "id": "100d33e1-4679-4237-b857-b5f97d607cca"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.4
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "df80b23e-ab19-4a2d-ad54-c9c7d02e56d6"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 868
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "useCollisions": false
+                  },
+                  "id": "82187a6f-2eb4-4c74-941c-31f6e6f3df7c"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "61",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "f1110000-0000-4000-8000-shrimpy-first-patrol-set-done"
+                }
+              ],
+              "false": []
             },
-            "id": "5860c4ef-3f76-4fc8-bc86-58aabf044d67"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 284
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true,
-              "units": "pixels"
-            },
-            "id": "96bdb18f-414a-4a46-9194-b72d23723d60"
-          },
-          {
-            "command": "EVENT_WAIT",
-            "args": {
-              "time": {
-                "type": "number",
-                "value": 0.5
-              },
-              "frames": {
-                "type": "number",
-                "value": 1
-              },
-              "__collapse": true
-            },
-            "id": "bdb3d8f6-5254-4e31-8463-e514c6e76486"
-          },
-          {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "vectorX": "28",
-              "vectorY": "29",
-              "units": "tiles"
-            },
-            "id": "f0220022-0000-4000-8000-bmrg-trigA-getpos"
+            "id": "f1110000-0000-4000-8000-shrimpy-first-patrol-gate"
           },
           {
             "command": "EVENT_IF",
@@ -465,11 +1119,11 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "29"
+                  "value": "61"
                 },
                 "valueB": {
-                  "type": "variable",
-                  "value": "11"
+                  "type": "number",
+                  "value": 1
                 }
               },
               "__collapseElse": true
@@ -483,11 +1137,11 @@
                       "type": "eq",
                       "valueA": {
                         "type": "variable",
-                        "value": "25"
+                        "value": "62"
                       },
                       "valueB": {
                         "type": "number",
-                        "value": 3
+                        "value": 0
                       }
                     },
                     "__collapseElse": true
@@ -495,206 +1149,201 @@
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_SWITCH",
+                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
                         "args": {
-                          "variable": "29",
-                          "choices": 2,
-                          "value0": {
-                            "type": "number",
-                            "value": 13
-                          },
-                          "value1": {
-                            "type": "number",
-                            "value": 9
-                          },
-                          "__disableElse": false
+                          "actorId": "$self$",
+                          "speed": 2
                         },
-                        "children": {
-                          "true0": [
-                            {
-                              "command": "EVENT_ACTOR_SET_STATE",
-                              "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "ClawThrowTelegraph",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-telegraph"
-                            },
-                            {
-                              "command": "EVENT_WAIT",
-                              "args": {
-                                "time": {
-                                  "type": "number",
-                                  "value": 0.5
-                                },
-                                "frames": {
-                                  "type": "number",
-                                  "value": 30
-                                }
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-wait"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "27",
-                                "value": {
-                                  "type": "number",
-                                  "value": 1
-                                }
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot"
-                            },
-                            {
-                              "command": "EVENT_ACTOR_SET_STATE",
-                              "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "clawThrow",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-throw"
-                            }
-                          ],
-                          "true1": [
-                            {
-                              "command": "EVENT_ACTOR_SET_STATE",
-                              "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "ClawThrowTelegraph",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-telegraph"
-                            },
-                            {
-                              "command": "EVENT_WAIT",
-                              "args": {
-                                "time": {
-                                  "type": "number",
-                                  "value": 0.5
-                                },
-                                "frames": {
-                                  "type": "number",
-                                  "value": 30
-                                }
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-wait"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "27",
-                                "value": {
-                                  "type": "number",
-                                  "value": 1
-                                }
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top"
-                            },
-                            {
-                              "command": "EVENT_ACTOR_SET_STATE",
-                              "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "clawThrow",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-throw"
-                            }
-                          ],
-                          "false": []
+                        "id": "f1130000-0000-4000-8000-second-slash-speed-rush"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "$self$",
+                          "spriteStateId": "slashTelegraph",
+                          "loopAnim": true
                         },
-                        "id": "f0220022-0000-4000-8000-bmrg-trigA-row-switch"
+                        "id": "f1130000-0000-4000-8000-second-slash-state-telegraph"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_GET_POSITION",
+                        "args": {
+                          "actorId": "player",
+                          "vectorX": "17",
+                          "vectorY": "L0",
+                          "units": "pixels"
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-getplayer"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "17",
+                          "operation": "add",
+                          "other": "val",
+                          "vectorY": "0",
+                          "value": -16,
+                          "minValue": -32768,
+                          "maxValue": 32767
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-getplayer-offset"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "variable",
+                            "value": "17"
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-move-to-player"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                        "args": {
+                          "actorId": "$self$",
+                          "speed": 6
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-anim-speed-fast"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "$self$",
+                          "spriteStateId": "slashAttack",
+                          "loopAnim": false
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-state-attack"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                        "args": {
+                          "actorId": "$self$",
+                          "speed": 1
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-speed-pace"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 48
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "collideWith": [],
+                          "lockDirection": []
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-pace"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "$self$",
+                          "spriteStateId": "",
+                          "loopAnim": false
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-state-revert"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                        "args": {
+                          "actorId": "$self$",
+                          "speed": 15
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-anim-speed-restore"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                        "args": {
+                          "actorId": "$self$",
+                          "speed": 3
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-recovery-speed-fast"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_GET_POSITION",
+                        "args": {
+                          "actorId": "player",
+                          "vectorX": "17",
+                          "vectorY": "L0",
+                          "units": "pixels"
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-recovery-getplayer"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "17",
+                          "operation": "add",
+                          "other": "val",
+                          "vectorY": "0",
+                          "value": 80,
+                          "minValue": -32768,
+                          "maxValue": 32767
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-recovery-getplayer-offset"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "variable",
+                            "value": "17"
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-recovery-move-to-target"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                        "args": {
+                          "actorId": "$self$",
+                          "speed": 1
+                        },
+                        "id": "f1130000-0000-4000-8000-second-slash-recovery-speed-restore"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "62",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "f1110000-0000-4000-8000-shrimpy-second-slash-set-done"
                       }
                     ],
                     "false": []
                   },
-                  "id": "f0220022-0000-4000-8000-bmrg-trigA-alive-gate"
+                  "id": "f1110000-0000-4000-8000-shrimpy-second-slash-inner-gate"
                 }
               ],
               "false": []
             },
-            "id": "f0220022-0000-4000-8000-bmrg-trigA-row-gate"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 364
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true,
-              "units": "pixels"
-            },
-            "id": "9e2e8944-4cfc-4093-922f-010b675f2e0d"
-          },
-          {
-            "command": "EVENT_WAIT",
-            "args": {
-              "time": {
-                "type": "number",
-                "value": 0.4
-              },
-              "frames": {
-                "type": "number",
-                "value": 1
-              },
-              "__collapse": true
-            },
-            "id": "31da83ec-d8da-4abe-a2e3-e40221a0fced"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 460
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true,
-              "units": "pixels"
-            },
-            "id": "fda5b525-1467-4e83-bcc4-afa3168ad66e"
-          },
-          {
-            "command": "EVENT_WAIT",
-            "args": {
-              "time": {
-                "type": "number",
-                "value": 0.4
-              },
-              "frames": {
-                "type": "number",
-                "value": 1
-              },
-              "__collapse": true
-            },
-            "id": "b2e14256-e243-419e-a0b8-03aec2943755"
-          },
-          {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "vectorX": "28",
-              "vectorY": "29",
-              "units": "tiles"
-            },
-            "id": "f0220022-0000-4000-8000-bmrg-trigB-getpos"
+            "id": "f1110000-0000-4000-8000-shrimpy-second-slash-gate"
           },
           {
             "command": "EVENT_IF",
@@ -703,11 +1352,11 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "29"
+                  "value": "62"
                 },
                 "valueB": {
-                  "type": "variable",
-                  "value": "11"
+                  "type": "number",
+                  "value": 1
                 }
               },
               "__collapseElse": true
@@ -721,11 +1370,11 @@
                       "type": "eq",
                       "valueA": {
                         "type": "variable",
-                        "value": "25"
+                        "value": "63"
                       },
                       "valueB": {
                         "type": "number",
-                        "value": 3
+                        "value": 0
                       }
                     },
                     "__collapseElse": true
@@ -733,253 +1382,719 @@
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_SWITCH",
+                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
                         "args": {
-                          "variable": "29",
-                          "choices": 2,
-                          "value0": {
+                          "actorId": "$self$",
+                          "speed": 2
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-speed-2"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
                             "type": "number",
-                            "value": 13
+                            "value": 960
                           },
-                          "value1": {
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-952"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                        "args": {
+                          "actorId": "$self$",
+                          "speed": 1
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-speed-1"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
                             "type": "number",
-                            "value": 9
+                            "value": 1056
                           },
-                          "__disableElse": false
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-1048"
+                      },
+                      {
+                        "command": "EVENT_WAIT",
+                        "args": {
+                          "time": {
+                            "type": "number",
+                            "value": 0.5
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 30
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1048"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_GET_POSITION",
+                        "args": {
+                          "actorId": "$self$",
+                          "vectorX": "28",
+                          "vectorY": "29",
+                          "units": "tiles"
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigA2-getpos"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "29"
+                            },
+                            "valueB": {
+                              "type": "variable",
+                              "value": "11"
+                            }
+                          },
+                          "__collapseElse": true
                         },
                         "children": {
-                          "true0": [
+                          "true": [
                             {
-                              "command": "EVENT_ACTOR_SET_STATE",
+                              "command": "EVENT_IF",
                               "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "ClawThrowTelegraph",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-telegraph"
-                            },
-                            {
-                              "command": "EVENT_WAIT",
-                              "args": {
-                                "time": {
-                                  "type": "number",
-                                  "value": 0.5
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "25"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 3
+                                  }
                                 },
-                                "frames": {
-                                  "type": "number",
-                                  "value": 30
-                                }
+                                "__collapseElse": true
                               },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-wait"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "27",
-                                "value": {
-                                  "type": "number",
-                                  "value": 1
-                                }
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "64",
+                                      "value": {
+                                        "type": "variable",
+                                        "value": "0"
+                                      }
+                                    },
+                                    "id": "f0670067-0000-4000-8000-bmrg-trigA2-capture-throw-row"
+                                  },
+                                  {
+                                    "command": "EVENT_SWITCH",
+                                    "args": {
+                                      "variable": "29",
+                                      "choices": 3,
+                                      "value0": {
+                                        "type": "number",
+                                        "value": 13
+                                      },
+                                      "value1": {
+                                        "type": "number",
+                                        "value": 9
+                                      },
+                                      "__disableElse": false,
+                                      "value2": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "children": {
+                                      "true0": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-bot-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.5
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 30
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-bot-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-bot"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-bot-state-throw"
+                                        }
+                                      ],
+                                      "true1": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-top-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.5
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 30
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-top-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-top"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-top-state-throw"
+                                        }
+                                      ],
+                                      "true2": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-mid-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.5
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 30
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-mid-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-mid"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-mid-state-throw"
+                                        }
+                                      ]
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigA2-row-switch"
+                                  }
+                                ],
+                                "false": []
                               },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot"
-                            },
-                            {
-                              "command": "EVENT_ACTOR_SET_STATE",
-                              "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "clawThrow",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-throw"
-                            }
-                          ],
-                          "true1": [
-                            {
-                              "command": "EVENT_ACTOR_SET_STATE",
-                              "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "ClawThrowTelegraph",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-telegraph"
-                            },
-                            {
-                              "command": "EVENT_WAIT",
-                              "args": {
-                                "time": {
-                                  "type": "number",
-                                  "value": 0.5
-                                },
-                                "frames": {
-                                  "type": "number",
-                                  "value": 30
-                                }
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-wait"
-                            },
-                            {
-                              "command": "EVENT_SET_VALUE",
-                              "args": {
-                                "variable": "27",
-                                "value": {
-                                  "type": "number",
-                                  "value": 1
-                                }
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top"
-                            },
-                            {
-                              "command": "EVENT_ACTOR_SET_STATE",
-                              "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "clawThrow",
-                                "loopAnim": true
-                              },
-                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-throw"
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA2-alive-gate"
                             }
                           ],
                           "false": []
                         },
-                        "id": "f0220022-0000-4000-8000-bmrg-trigB-row-switch"
+                        "id": "f0220022-0000-4000-8000-bmrg-trigA2-row-gate"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 1152
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-1144"
+                      },
+                      {
+                        "command": "EVENT_WAIT",
+                        "args": {
+                          "time": {
+                            "type": "number",
+                            "value": 0.4
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 24
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1144"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 1248
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-1240"
+                      },
+                      {
+                        "command": "EVENT_WAIT",
+                        "args": {
+                          "time": {
+                            "type": "number",
+                            "value": 0.4
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 24
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1240"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_GET_POSITION",
+                        "args": {
+                          "actorId": "$self$",
+                          "vectorX": "28",
+                          "vectorY": "29",
+                          "units": "tiles"
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigB2-getpos"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "29"
+                            },
+                            "valueB": {
+                              "type": "variable",
+                              "value": "11"
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "25"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 3
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "64",
+                                      "value": {
+                                        "type": "variable",
+                                        "value": "0"
+                                      }
+                                    },
+                                    "id": "f0670067-0000-4000-8000-bmrg-trigB2-capture-throw-row"
+                                  },
+                                  {
+                                    "command": "EVENT_SWITCH",
+                                    "args": {
+                                      "variable": "29",
+                                      "choices": 3,
+                                      "value0": {
+                                        "type": "number",
+                                        "value": 13
+                                      },
+                                      "value1": {
+                                        "type": "number",
+                                        "value": 9
+                                      },
+                                      "__disableElse": false,
+                                      "value2": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "children": {
+                                      "true0": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-bot-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.5
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 30
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-bot-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-bot"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-bot-state-throw"
+                                        }
+                                      ],
+                                      "true1": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-top-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.5
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 30
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-top-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-top"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-top-state-throw"
+                                        }
+                                      ],
+                                      "true2": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-mid-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.5
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 30
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-mid-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-mid"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-mid-state-throw"
+                                        }
+                                      ]
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigB2-row-switch"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB2-alive-gate"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigB2-row-gate"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 1344
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-1336"
+                      },
+                      {
+                        "command": "EVENT_WAIT",
+                        "args": {
+                          "time": {
+                            "type": "number",
+                            "value": 0.4
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 24
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1336"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 1440
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-1432"
+                      },
+                      {
+                        "command": "EVENT_WAIT",
+                        "args": {
+                          "time": {
+                            "type": "number",
+                            "value": 0.4
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 24
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1432"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 1536
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-1528"
+                      },
+                      {
+                        "command": "EVENT_WAIT",
+                        "args": {
+                          "time": {
+                            "type": "number",
+                            "value": 0.4
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 24
+                          }
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1528"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 1632
+                          },
+                          "y": {
+                            "type": "variable",
+                            "value": "45"
+                          },
+                          "moveType": "horizontal",
+                          "units": "pixels",
+                          "useCollisions": false
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-move-1624"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "63",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "f1110000-0000-4000-8000-shrimpy-second-patrol-set-done"
                       }
                     ],
                     "false": []
                   },
-                  "id": "f0220022-0000-4000-8000-bmrg-trigB-alive-gate"
+                  "id": "f1110000-0000-4000-8000-shrimpy-second-patrol-inner-gate"
                 }
               ],
               "false": []
             },
-            "id": "f0220022-0000-4000-8000-bmrg-trigB-row-gate"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 556
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true,
-              "units": "pixels"
-            },
-            "id": "d1ab6b60-5269-470b-9853-89af264e79b4"
-          },
-          {
-            "command": "EVENT_WAIT",
-            "args": {
-              "time": {
-                "type": "number",
-                "value": 0.4
-              },
-              "frames": {
-                "type": "number",
-                "value": 1
-              },
-              "__collapse": true
-            },
-            "id": "2e7bed90-6b20-48b9-ad1f-5ebb50f72706"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 652
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true,
-              "units": "pixels"
-            },
-            "id": "045fec2f-0903-4582-ba50-0906524e98ac"
-          },
-          {
-            "command": "EVENT_WAIT",
-            "args": {
-              "time": {
-                "type": "number",
-                "value": 0.4
-              },
-              "frames": {
-                "type": "number",
-                "value": 1
-              },
-              "__collapse": true
-            },
-            "id": "f2a98af9-a27d-4ca0-9374-2efa504cad89"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 748
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true,
-              "units": "pixels"
-            },
-            "id": "100d33e1-4679-4237-b857-b5f97d607cca"
-          },
-          {
-            "command": "EVENT_WAIT",
-            "args": {
-              "time": {
-                "type": "number",
-                "value": 0.4
-              },
-              "frames": {
-                "type": "number",
-                "value": 1
-              },
-              "__collapse": true
-            },
-            "id": "df80b23e-ab19-4a2d-ad54-c9c7d02e56d6"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 844
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": false,
-              "units": "pixels"
-            },
-            "id": "82187a6f-2eb4-4c74-941c-31f6e6f3df7c"
+            "id": "f1110000-0000-4000-8000-shrimpy-second-patrol-gate"
           }
         ],
         "false": []
