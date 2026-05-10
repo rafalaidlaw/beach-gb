@@ -31,51 +31,6 @@
       "command": "EVENT_IF",
       "args": {
         "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "27"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": true
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "45",
-              "value": {
-                "type": "variable",
-                "value": "11"
-              }
-            },
-            "id": "f0c000c0-0000-4000-8000-shrimpy-y-sync-set"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-              "actorId": "f00518f5-62d0-449f-a94c-74618ae7b4fa",
-              "vectorX": "46",
-              "vectorY": "45",
-              "units": "tiles"
-            },
-            "id": "f0c000c0-0000-4000-8000-shrimpy-y-sync-during-flight"
-          }
-        ]
-      },
-      "id": "f0c000c0-0000-4000-8000-shrimpy-y-sync-gate"
-    },
-    {
-      "command": "EVENT_IF",
-      "args": {
-        "condition": {
           "type": "gt",
           "valueA": {
             "type": "variable",

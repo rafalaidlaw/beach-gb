@@ -40,6 +40,39 @@
   "playerSpriteSheetId": "0b63e477-945f-4820-abb3-021697289de7",
   "script": [
     {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "60",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "f1110000-0000-4000-8000-init-entrance-slash-done"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "47",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "f1500050-0050-4000-8000-recompute-targets-init-active-shrimpy"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "48",
+        "value": {
+          "type": "number",
+          "value": 300
+        }
+      },
+      "id": "f1500050-0050-4000-8000-recompute-targets-init-swap-timer"
+    },
+    {
       "command": "EVENT_SET_INPUT_SCRIPT",
       "args": {
         "input": [
@@ -561,6 +594,17 @@
           {
             "command": "EVENT_SET_VALUE",
             "args": {
+              "variable": "50",
+              "value": {
+                "type": "number",
+                "value": 11
+              }
+            },
+            "id": "f0360036-0000-4000-8000-init-targety-row0-v50"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
               "variable": "45",
               "value": {
                 "type": "number",
@@ -581,6 +625,17 @@
               }
             },
             "id": "f0360036-0000-4000-8000-init-targety-row1"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "50",
+              "value": {
+                "type": "number",
+                "value": 13
+              }
+            },
+            "id": "f0360036-0000-4000-8000-init-targety-row1-v50"
           },
           {
             "command": "EVENT_SET_VALUE",
@@ -609,6 +664,17 @@
           {
             "command": "EVENT_SET_VALUE",
             "args": {
+              "variable": "50",
+              "value": {
+                "type": "number",
+                "value": 11
+              }
+            },
+            "id": "f0360036-0000-4000-8000-init-targety-row2-v50"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
               "variable": "45",
               "value": {
                 "type": "number",
@@ -621,6 +687,14 @@
         "false": []
       },
       "id": "f0360036-0000-4000-8000-init-targety-switch"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "f1500050-0050-4000-8000-recompute-targets",
+        "__name": "Enemy/RecomputeShrimpyTargets"
+      },
+      "id": "f1500050-0050-4000-8000-recompute-targets-call-f0360036-0000-4000-8000-init-targety-switch"
     },
     {
       "command": "EVENT_SET_VALUE",
@@ -809,6 +883,17 @@
                                       }
                                     },
                                     "id": "f0370037-0000-4000-8000-down-targety-0"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "id": "f0370037-0000-4000-8000-down-targety-0-v50"
                                   }
                                 ],
                                 "false": []
@@ -845,6 +930,17 @@
                                       }
                                     },
                                     "id": "f0370037-0000-4000-8000-down-targety-1"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
+                                    },
+                                    "id": "f0370037-0000-4000-8000-down-targety-1-v50"
                                   }
                                 ],
                                 "false": []
@@ -881,6 +977,17 @@
                                       }
                                     },
                                     "id": "f0370037-0000-4000-8000-down-targety-2"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "id": "f0370037-0000-4000-8000-down-targety-2-v50"
                                   }
                                 ],
                                 "false": []
@@ -891,6 +998,14 @@
                           "false": []
                         },
                         "id": "f0370037-0000-4000-8000-down-targety-switch"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1500050-0050-4000-8000-recompute-targets",
+                          "__name": "Enemy/RecomputeShrimpyTargets"
+                        },
+                        "id": "f1500050-0050-4000-8000-recompute-targets-call-f0370037-0000-4000-8000-down-targety-switch"
                       },
                       {
                         "command": "EVENT_SET_VALUE",
@@ -1067,6 +1182,17 @@
                                             }
                                           },
                                           "id": "f1120000-0000-4000-8000-air-down-targety-0"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "50",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 11
+                                            }
+                                          },
+                                          "id": "f1120000-0000-4000-8000-air-down-targety-0-v50"
                                         }
                                       ],
                                       "false": []
@@ -1103,6 +1229,17 @@
                                             }
                                           },
                                           "id": "f1120000-0000-4000-8000-air-down-targety-1"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "50",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 13
+                                            }
+                                          },
+                                          "id": "f1120000-0000-4000-8000-air-down-targety-1-v50"
                                         }
                                       ],
                                       "false": []
@@ -1139,6 +1276,17 @@
                                             }
                                           },
                                           "id": "f1120000-0000-4000-8000-air-down-targety-2"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "50",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 11
+                                            }
+                                          },
+                                          "id": "f1120000-0000-4000-8000-air-down-targety-2-v50"
                                         }
                                       ],
                                       "false": []
@@ -1149,6 +1297,14 @@
                                 "false": []
                               },
                               "id": "f1120000-0000-4000-8000-air-down-targety-switch"
+                            },
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "f1500050-0050-4000-8000-recompute-targets",
+                                "__name": "Enemy/RecomputeShrimpyTargets"
+                              },
+                              "id": "f1500050-0050-4000-8000-recompute-targets-call-f1120000-0000-4000-8000-air-down-targety-switch"
                             },
                             {
                               "command": "EVENT_SET_VALUE",
@@ -1499,6 +1655,17 @@
                                       }
                                     },
                                     "id": "f0380038-0000-4000-8000-up-targety-0"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "id": "f0380038-0000-4000-8000-up-targety-0-v50"
                                   }
                                 ],
                                 "false": []
@@ -1535,6 +1702,17 @@
                                       }
                                     },
                                     "id": "f0380038-0000-4000-8000-up-targety-1"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
+                                    },
+                                    "id": "f0380038-0000-4000-8000-up-targety-1-v50"
                                   }
                                 ],
                                 "false": []
@@ -1571,6 +1749,17 @@
                                       }
                                     },
                                     "id": "f0380038-0000-4000-8000-up-targety-2"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
+                                    },
+                                    "id": "f0380038-0000-4000-8000-up-targety-2-v50"
                                   }
                                 ],
                                 "false": []
@@ -1581,6 +1770,14 @@
                           "false": []
                         },
                         "id": "f0380038-0000-4000-8000-up-targety-switch"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1500050-0050-4000-8000-recompute-targets",
+                          "__name": "Enemy/RecomputeShrimpyTargets"
+                        },
+                        "id": "f1500050-0050-4000-8000-recompute-targets-call-f0380038-0000-4000-8000-up-targety-switch"
                       },
                       {
                         "command": "EVENT_SET_VALUE",
@@ -1757,6 +1954,17 @@
                                             }
                                           },
                                           "id": "f1120000-0000-4000-8000-air-up-targety-0"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "50",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 11
+                                            }
+                                          },
+                                          "id": "f1120000-0000-4000-8000-air-up-targety-0-v50"
                                         }
                                       ],
                                       "false": []
@@ -1793,6 +2001,17 @@
                                             }
                                           },
                                           "id": "f1120000-0000-4000-8000-air-up-targety-1"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "50",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 13
+                                            }
+                                          },
+                                          "id": "f1120000-0000-4000-8000-air-up-targety-1-v50"
                                         }
                                       ],
                                       "false": []
@@ -1829,6 +2048,17 @@
                                             }
                                           },
                                           "id": "f1120000-0000-4000-8000-air-up-targety-2"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "50",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 11
+                                            }
+                                          },
+                                          "id": "f1120000-0000-4000-8000-air-up-targety-2-v50"
                                         }
                                       ],
                                       "false": []
@@ -1839,6 +2069,14 @@
                                 "false": []
                               },
                               "id": "f1120000-0000-4000-8000-air-up-targety-switch"
+                            },
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "f1500050-0050-4000-8000-recompute-targets",
+                                "__name": "Enemy/RecomputeShrimpyTargets"
+                              },
+                              "id": "f1500050-0050-4000-8000-recompute-targets-call-f1120000-0000-4000-8000-air-up-targety-switch"
                             },
                             {
                               "command": "EVENT_SET_VALUE",

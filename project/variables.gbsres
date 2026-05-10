@@ -224,12 +224,52 @@
     {
       "id": "45",
       "name": "shrimpyLockedY",
-      "symbol": "var_shrimpylockedy"
+      "symbol": "var_shrimpylockedy_0"
     },
     {
       "id": "46",
       "name": "shrimpyYScratch",
       "symbol": "var_shrimpy_y_scratch"
+    },
+    {
+      "id": "47",
+      "name": "activeShrimpy",
+      "symbol": "var_active_shrimpy"
+    },
+    {
+      "id": "48",
+      "name": "shrimpySwapTimer",
+      "symbol": "var_shrimpy_swap_timer"
+    },
+    {
+      "id": "49",
+      "name": "shrimpy2Target",
+      "symbol": "var_shrimpy2_target"
+    },
+    {
+      "id": "50",
+      "name": "inactiveRowY",
+      "symbol": "var_inactive_row_y"
+    },
+    {
+      "id": "51",
+      "name": "shrimpy2Health",
+      "symbol": "var_shrimpy2_health"
+    },
+    {
+      "id": "52",
+      "name": "shrimpy2X",
+      "symbol": "var_shrimpy2_x"
+    },
+    {
+      "id": "53",
+      "name": "boomerang2Active",
+      "symbol": "var_boomerang2_active"
+    },
+    {
+      "id": "60",
+      "name": "entranceSlashDone",
+      "symbol": "var_entrance_slash_done"
     },
     {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",
@@ -305,21 +345,6 @@
       "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L1",
       "name": "platform-01-Y",
       "symbol": "var_platform_y_1"
-    },
-    {
-      "id": "47",
-      "name": "shrimpyPivotMid",
-      "symbol": "var_shrimpypivotmid"
-    },
-    {
-      "id": "48",
-      "name": "shrimpyPivotBack",
-      "symbol": "var_shrimpypivotback"
-    },
-    {
-      "id": "49",
-      "name": "shrimpyPivotFore",
-      "symbol": "var_shrimpypivotfore"
     }
   ],
   "constants": []

@@ -1,0 +1,131 @@
+{
+  "_resourceType": "script",
+  "id": "f1500050-0050-4000-8000-recompute-targets",
+  "name": "Enemy/RecomputeShrimpyTargets",
+  "description": "Assigns shrimpy1.target (var_45) and shrimpy2.target (var_49) based on var_47 (active shrimpy). Active follows player (var_11); inactive parks (var_50).",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_recompute_shrimpy_ta",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "45",
+              "value": {
+                "type": "variable",
+                "value": "11"
+              }
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-s1-active-y"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "45",
+              "operation": "mul",
+              "other": "val",
+              "vectorY": "0",
+              "value": 8,
+              "minValue": -32768,
+              "maxValue": 32767
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-mul8-true-45"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "49",
+              "value": {
+                "type": "variable",
+                "value": "50"
+              }
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-s2-inactive-y"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "49",
+              "operation": "mul",
+              "other": "val",
+              "vectorY": "0",
+              "value": 8,
+              "minValue": -32768,
+              "maxValue": 32767
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-mul8-true-49"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "45",
+              "value": {
+                "type": "variable",
+                "value": "50"
+              }
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-s1-inactive-y"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "45",
+              "operation": "mul",
+              "other": "val",
+              "vectorY": "0",
+              "value": 8,
+              "minValue": -32768,
+              "maxValue": 32767
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-mul8-false-45"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "49",
+              "value": {
+                "type": "variable",
+                "value": "11"
+              }
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-s2-active-y"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "49",
+              "operation": "mul",
+              "other": "val",
+              "vectorY": "0",
+              "value": 8,
+              "minValue": -32768,
+              "maxValue": 32767
+            },
+            "id": "f1500050-0050-4000-8000-recompute-targets-mul8-false-49"
+          }
+        ]
+      },
+      "id": "f1500050-0050-4000-8000-recompute-targets-active-gate"
+    }
+  ]
+}

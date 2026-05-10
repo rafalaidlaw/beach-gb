@@ -138,7 +138,7 @@
               "actorId": "$self$",
               "speed": 3
             },
-            "id": "f0220022-0000-4000-8000-bmrg-speed"
+            "id": "f0220022-0000-4000-8000-bmrg-speed-out"
           },
           {
             "command": "EVENT_ACTOR_MOVE_RELATIVE",
@@ -162,9 +162,9 @@
             "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
             "args": {
               "actorId": "$self$",
-              "speed": 1
+              "speed": 5
             },
-            "id": "529d94e8-2af4-450b-bc0c-d1ea975689d2"
+            "id": "f0220022-0000-4000-8000-bmrg-speed-back"
           },
           {
             "command": "EVENT_ACTOR_MOVE_RELATIVE",
@@ -172,7 +172,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 8
+                "value": 30
               },
               "y": {
                 "type": "number",
@@ -180,45 +180,20 @@
               },
               "moveType": "horizontal",
               "units": "tiles",
-              "collideWith": []
+              "collideWith": [
+                "1"
+              ]
             },
             "id": "f0220022-0000-4000-8000-bmrg-leg-back"
           },
           {
-            "command": "EVENT_ACTOR_GET_POSITION",
+            "command": "EVENT_ACTOR_SET_STATE",
             "args": {
               "actorId": "f00518f5-62d0-449f-a94c-74618ae7b4fa",
-              "vectorX": "28",
-              "vectorY": "30",
-              "units": "tiles"
+              "spriteStateId": "",
+              "loopAnim": false
             },
-            "id": "f0220022-0000-4000-8000-bmrg-phase3-shrimpypos"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-            "args": {
-              "actorId": "$self$",
-              "speed": 3
-            },
-            "id": "0de5d6ba-0ec2-4391-ba03-b68c8854bb78"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "variable",
-                "value": "28"
-              },
-              "y": {
-                "type": "variable",
-                "value": "29"
-              },
-              "moveType": "horizontal",
-              "units": "tiles",
-              "collideWith": []
-            },
-            "id": "0d979dc9-b494-43d9-9963-a9a74b862162"
+            "id": "f0220022-0000-4000-8000-bmrg-revert-shrimpy"
           },
           {
             "command": "EVENT_ACTOR_HIDE",
@@ -257,5 +232,5 @@
   "coordinateType": "tiles",
   "x": 7,
   "y": 3,
-  "_index": 7
+  "_index": 6
 }

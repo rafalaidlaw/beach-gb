@@ -64,12 +64,58 @@
             "children": {
               "true": [
                 {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "command": "EVENT_IF",
                   "args": {
-                    "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-                    "__name": "Player/TakeDamage"
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "21"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": true
                   },
-                  "id": "f1500000-0000-4000-8000-shrimpy-take-damage"
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "24"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 0
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "f0b000b0-0000-4000-8000-000000000001",
+                                "__name": "Player/TakeDamage"
+                              },
+                              "id": "f1500000-0000-4000-8000-shrimpy-take-damage"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f1500000-0000-4000-8000-shrimpy-touch-swap-gate"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f1500000-0000-4000-8000-shrimpy-touch-iframe-gate"
                 }
               ],
               "false": []
@@ -130,64 +176,36 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+            "command": "EVENT_IF",
             "args": {
-              "actorId": "$self$",
-              "speed": 2,
-              "__collapse": true
-            },
-            "id": "a0ac77e8-5f97-4714-a205-447352615401"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-            "args": {
-              "actorId": "$self$",
-              "speed": 3,
-              "__collapse": true
-            },
-            "id": "595ce122-e99c-4f5e-b285-c96a8d383fa9"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 18
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "27"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
               },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true
+              "__collapseElse": true
             },
-            "id": "792dd62c-540f-4da1-9feb-18d43d481144"
-          },
-          {
-            "command": "EVENT_LAUNCH_PROJECTILE",
-            "args": {
-              "spriteSheetId": "7fc8611b-5f75-4b20-919d-df584353375c",
-              "spriteStateId": "",
-              "actorId": "$self$",
-              "x": -18,
-              "y": -2,
-              "directionType": "direction",
-              "direction": "left",
-              "speed": 0,
-              "animSpeed": 7,
-              "lifeTime": 0.25,
-              "initialOffset": 0,
-              "collisionGroup": "",
-              "collisionMask": [],
-              "loopAnim": false,
-              "destroyOnHit": false,
-              "__section": "source"
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "",
+                    "loopAnim": false
+                  },
+                  "id": "f1110000-0000-4000-8000-shrimpy-state-revert-set"
+                }
+              ],
+              "false": []
             },
-            "id": "f1130000-0000-4000-8000-shrimpy-slash-fx"
+            "id": "f1110000-0000-4000-8000-shrimpy-state-revert-gate"
           },
           {
             "command": "EVENT_IF",
@@ -196,11 +214,11 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "0"
+                  "value": "60"
                 },
                 "valueB": {
                   "type": "number",
-                  "value": 1
+                  "value": 0
                 }
               },
               "__collapseElse": true
@@ -208,115 +226,152 @@
             "children": {
               "true": [
                 {
-                  "command": "EVENT_IF",
+                  "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
                   "args": {
-                    "condition": {
-                      "type": "eq",
-                      "valueA": {
-                        "type": "variable",
-                        "value": "6"
-                      },
-                      "valueB": {
-                        "type": "number",
-                        "value": 0
-                      }
+                    "actorId": "$self$",
+                    "speed": 2,
+                    "__collapse": true
+                  },
+                  "id": "a0ac77e8-5f97-4714-a205-447352615401"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                  "args": {
+                    "actorId": "$self$",
+                    "speed": 2,
+                    "__collapse": true
+                  },
+                  "id": "595ce122-e99c-4f5e-b285-c96a8d383fa9"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "slashTelegraph",
+                    "loopAnim": true
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-telegraph-on-entry"
+                },
+                {
+                  "command": "EVENT_ACTOR_GET_POSITION",
+                  "args": {
+                    "actorId": "player",
+                    "vectorX": "17",
+                    "vectorY": "L0",
+                    "units": "pixels"
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-getplayer-on-entry"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "17",
+                    "operation": "add",
+                    "other": "val",
+                    "vectorY": "0",
+                    "value": 80,
+                    "minValue": -32768,
+                    "maxValue": 32767
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-getplayer-offset"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "variable",
+                      "value": "17"
                     },
-                    "__collapseElse": true
+                    "y": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "collideWith": [],
+                    "lockDirection": [],
+                    "moveType": "horizontal",
+                    "__collapse": true,
+                    "units": "pixels"
                   },
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_IF",
-                        "args": {
-                          "condition": {
-                            "type": "eq",
-                            "valueA": {
-                              "type": "variable",
-                              "value": "21"
-                            },
-                            "valueB": {
-                              "type": "number",
-                              "value": 0
-                            }
-                          },
-                          "__collapseElse": true
-                        },
-                        "children": {
-                          "true": [
-                            {
-                              "command": "EVENT_IF",
-                              "args": {
-                                "condition": {
-                                  "type": "eq",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "24"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
-                              },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                                    "args": {
-                                      "customEventId": "f0b000b0-0000-4000-8000-000000000001",
-                                      "__name": "Player/TakeDamage"
-                                    },
-                                    "id": "f1130000-0000-4000-8000-slash-call-takedamage"
-                                  }
-                                ],
-                                "false": []
-                              },
-                              "id": "f1130000-0000-4000-8000-slash-swap-gate"
-                            }
-                          ],
-                          "false": []
-                        },
-                        "id": "f1130000-0000-4000-8000-slash-iframe-gate"
-                      }
-                    ],
-                    "false": []
+                  "id": "792dd62c-540f-4da1-9feb-18d43d481144"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                  "args": {
+                    "actorId": "$self$",
+                    "speed": 5
                   },
-                  "id": "f1130000-0000-4000-8000-slash-grounded-gate"
+                  "id": "f1130000-0000-4000-8000-slash-anim-speed-fast"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "slashAttack",
+                    "loopAnim": false
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-attack-state"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                  "args": {
+                    "actorId": "$self$",
+                    "speed": 1
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-attack-pace-speed"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 48
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "moveType": "horizontal",
+                    "units": "pixels",
+                    "collideWith": [],
+                    "lockDirection": []
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-attack-pace"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "spriteStateId": "",
+                    "loopAnim": false
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-attack-revert"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                  "args": {
+                    "actorId": "$self$",
+                    "speed": 15
+                  },
+                  "id": "f1130000-0000-4000-8000-slash-anim-speed-restore"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "60",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "f1110000-0000-4000-8000-shrimpy-entrance-slash-set-done"
                 }
               ],
               "false": []
             },
-            "id": "f1130000-0000-4000-8000-slash-row-gate"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-            "args": {
-              "actorId": "$self$",
-              "speed": 1,
-              "__collapse": true
-            },
-            "id": "24b1d986-7a6c-47dc-830b-fb284ccf3652"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_TO",
-            "args": {
-              "__section": "movement",
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 17
-              },
-              "y": {
-                "type": "variable",
-                "value": "45"
-              },
-              "collideWith": [],
-              "lockDirection": [],
-              "moveType": "diagonal",
-              "__collapse": true
-            },
-            "id": "929afa7b-8e66-4b42-89fe-2ec8518ce2f0"
+            "id": "f1110000-0000-4000-8000-shrimpy-entrance-slash-gate"
           },
           {
             "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
@@ -334,7 +389,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 30
+                "value": 236
               },
               "y": {
                 "type": "variable",
@@ -343,7 +398,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": true
+              "__collapse": true,
+              "units": "pixels"
             },
             "id": "cd4c7174-61c5-4064-9e6a-da728ab82d0d"
           },
@@ -363,7 +419,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 36
+                "value": 284
               },
               "y": {
                 "type": "variable",
@@ -372,7 +428,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": true
+              "__collapse": true,
+              "units": "pixels"
             },
             "id": "96bdb18f-414a-4a46-9194-b72d23723d60"
           },
@@ -455,6 +512,29 @@
                         "children": {
                           "true0": [
                             {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "ClawThrowTelegraph",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-telegraph"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.5
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 30
+                                }
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-wait"
+                            },
+                            {
                               "command": "EVENT_SET_VALUE",
                               "args": {
                                 "variable": "27",
@@ -464,9 +544,41 @@
                                 }
                               },
                               "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "clawThrow",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-throw"
                             }
                           ],
                           "true1": [
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "ClawThrowTelegraph",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-telegraph"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.5
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 30
+                                }
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-wait"
+                            },
                             {
                               "command": "EVENT_SET_VALUE",
                               "args": {
@@ -477,6 +589,15 @@
                                 }
                               },
                               "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "clawThrow",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-throw"
                             }
                           ],
                           "false": []
@@ -500,7 +621,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 46
+                "value": 364
               },
               "y": {
                 "type": "variable",
@@ -509,7 +630,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": true
+              "__collapse": true,
+              "units": "pixels"
             },
             "id": "9e2e8944-4cfc-4093-922f-010b675f2e0d"
           },
@@ -535,7 +657,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 58
+                "value": 460
               },
               "y": {
                 "type": "variable",
@@ -544,7 +666,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": true
+              "__collapse": true,
+              "units": "pixels"
             },
             "id": "fda5b525-1467-4e83-bcc4-afa3168ad66e"
           },
@@ -627,6 +750,29 @@
                         "children": {
                           "true0": [
                             {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "ClawThrowTelegraph",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-telegraph"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.5
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 30
+                                }
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-wait"
+                            },
+                            {
                               "command": "EVENT_SET_VALUE",
                               "args": {
                                 "variable": "27",
@@ -636,9 +782,41 @@
                                 }
                               },
                               "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "clawThrow",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-throw"
                             }
                           ],
                           "true1": [
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "ClawThrowTelegraph",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-telegraph"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.5
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 30
+                                }
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-wait"
+                            },
                             {
                               "command": "EVENT_SET_VALUE",
                               "args": {
@@ -649,6 +827,15 @@
                                 }
                               },
                               "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "$self$",
+                                "spriteStateId": "clawThrow",
+                                "loopAnim": true
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-throw"
                             }
                           ],
                           "false": []
@@ -672,7 +859,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 70
+                "value": 556
               },
               "y": {
                 "type": "variable",
@@ -681,7 +868,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": true
+              "__collapse": true,
+              "units": "pixels"
             },
             "id": "d1ab6b60-5269-470b-9853-89af264e79b4"
           },
@@ -707,7 +895,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 82
+                "value": 652
               },
               "y": {
                 "type": "variable",
@@ -716,7 +904,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": true
+              "__collapse": true,
+              "units": "pixels"
             },
             "id": "045fec2f-0903-4582-ba50-0906524e98ac"
           },
@@ -742,7 +931,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 94
+                "value": 748
               },
               "y": {
                 "type": "variable",
@@ -751,7 +940,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": true
+              "__collapse": true,
+              "units": "pixels"
             },
             "id": "100d33e1-4679-4237-b857-b5f97d607cca"
           },
@@ -777,7 +967,7 @@
               "actorId": "$self$",
               "x": {
                 "type": "number",
-                "value": 106
+                "value": 844
               },
               "y": {
                 "type": "variable",
@@ -786,7 +976,8 @@
               "collideWith": [],
               "lockDirection": [],
               "moveType": "diagonal",
-              "__collapse": false
+              "__collapse": false,
+              "units": "pixels"
             },
             "id": "82187a6f-2eb4-4c74-941c-31f6e6f3df7c"
           }
