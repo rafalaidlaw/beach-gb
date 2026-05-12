@@ -1,0 +1,34 @@
+{
+  "_resourceType": "script",
+  "id": "f1700017-0000-4000-8000-get-visible-player-x",
+  "name": "Player/GetVisiblePlayerX",
+  "description": "Reads player.x (in pixels) and subtracts 48 to compensate for the player sprite/collision offset. Result lands in var_17 (playerX scratch). Use this anywhere distance math should be against the player's visible position, not the engine anchor.",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_get_visible_player_x",
+  "script": [
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "player",
+        "vectorX": "17",
+        "vectorY": "L0",
+        "units": "pixels"
+      },
+      "id": "f1700017-0000-4000-8000-get-visible-player-x-getpos"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "17",
+        "operation": "add",
+        "other": "val",
+        "vectorY": "0",
+        "value": -48,
+        "minValue": -32768,
+        "maxValue": 32767
+      },
+      "id": "f1700017-0000-4000-8000-get-visible-player-x-subtract"
+    }
+  ]
+}

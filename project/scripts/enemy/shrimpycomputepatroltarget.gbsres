@@ -1,0 +1,215 @@
+{
+  "_resourceType": "script",
+  "id": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+  "name": "Enemy/ShrimpyComputePatrolTarget",
+  "description": "Reads visible player x (via Player/GetVisiblePlayerX into var_17) and ShrimpyMid's current x (into var_67), then writes a MOVE_TO target x into var_68. Caller writes the in-band natural offset (e.g. 96 or 128) into var_66 first. If shrimpy is below visiblePlayer+80 the target is forced to visiblePlayer+128 (retreat). If above visiblePlayer+128 the target is forced to visiblePlayer+96 (return). Otherwise target = visiblePlayer + var_66. Finally adds +24 px lead compensation so that by the time shrimpy arrives at the target, the player (who is constantly auto-running rightward) hasn't closed the gap.",
+  "variables": {},
+  "actors": {
+    "f00518f5-62d0-449f-a94c-74618ae7b4fa": {
+      "id": "f00518f5-62d0-449f-a94c-74618ae7b4fa",
+      "name": "ShrimpyMid"
+    }
+  },
+  "symbol": "script_shrimpy_compute_patr",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "f1700017-0000-4000-8000-get-visible-player-x",
+        "__name": "Player/GetVisiblePlayerX"
+      },
+      "id": "f1800018-0000-4000-8000-patrol-target-call-visible"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "f00518f5-62d0-449f-a94c-74618ae7b4fa",
+        "vectorX": "67",
+        "vectorY": "L0",
+        "units": "pixels"
+      },
+      "id": "f1800018-0000-4000-8000-patrol-target-getshrimpyx"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "68",
+        "value": {
+          "type": "variable",
+          "value": "17"
+        }
+      },
+      "id": "f1800018-0000-4000-8000-patrol-target-init-lower-set"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "68",
+        "operation": "add",
+        "other": "val",
+        "vectorY": "0",
+        "value": 104,
+        "minValue": -32768,
+        "maxValue": 32767
+      },
+      "id": "f1800018-0000-4000-8000-patrol-target-init-lower-add"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "67"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "68"
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "68",
+              "value": {
+                "type": "variable",
+                "value": "17"
+              }
+            },
+            "id": "f1800018-0000-4000-8000-patrol-target-too-close-set"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "68",
+              "operation": "add",
+              "other": "var",
+              "vectorY": "69",
+              "value": 0,
+              "minValue": -32768,
+              "maxValue": 32767
+            },
+            "id": "f1800018-0000-4000-8000-patrol-target-too-close-add"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "68",
+              "value": {
+                "type": "variable",
+                "value": "17"
+              }
+            },
+            "id": "f1800018-0000-4000-8000-patrol-target-init-upper-set"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "68",
+              "operation": "add",
+              "other": "var",
+              "vectorY": "69",
+              "value": 0,
+              "minValue": -32768,
+              "maxValue": 32767
+            },
+            "id": "f1800018-0000-4000-8000-patrol-target-init-upper-add"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gte",
+                "valueA": {
+                  "type": "variable",
+                  "value": "67"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "68"
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "68",
+                    "value": {
+                      "type": "variable",
+                      "value": "17"
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-patrol-target-too-far-set"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "68",
+                    "operation": "add",
+                    "other": "val",
+                    "vectorY": "0",
+                    "value": 96,
+                    "minValue": -32768,
+                    "maxValue": 32767
+                  },
+                  "id": "f1800018-0000-4000-8000-patrol-target-too-far-add"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "68",
+                    "value": {
+                      "type": "variable",
+                      "value": "17"
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-patrol-target-in-band-set"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "68",
+                    "operation": "add",
+                    "other": "var",
+                    "vectorY": "66",
+                    "value": 0,
+                    "minValue": -32768,
+                    "maxValue": 32767
+                  },
+                  "id": "f1800018-0000-4000-8000-patrol-target-in-band-add"
+                }
+              ]
+            },
+            "id": "f1800018-0000-4000-8000-patrol-target-too-far-gate"
+          }
+        ]
+      },
+      "id": "f1800018-0000-4000-8000-patrol-target-too-close-gate"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "68",
+        "operation": "add",
+        "other": "val",
+        "vectorY": "0",
+        "value": 36,
+        "minValue": -32768,
+        "maxValue": 32767
+      },
+      "id": "f1800018-0000-4000-8000-patrol-target-lead-comp"
+    }
+  ]
+}

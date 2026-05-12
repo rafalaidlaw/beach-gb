@@ -3,14 +3,18 @@
   "id": "f0e0e0e0-0000-4000-8000-game0ver0000",
   "_index": 2,
   "name": "GameOver",
-  "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+  "backgroundId": "2ee82ad8-a5bd-4a16-85ea-462ccca3df78",
   "tilesetId": "",
   "width": 20,
   "height": 18,
   "type": "TOPDOWN",
   "colorModeOverride": "none",
-  "paletteIds": [],
-  "spritePaletteIds": [],
+  "paletteIds": [
+    "default-ui"
+  ],
+  "spritePaletteIds": [
+    "dmg"
+  ],
   "collisions": "",
   "autoFadeSpeed": null,
   "symbol": "scene_gameover",

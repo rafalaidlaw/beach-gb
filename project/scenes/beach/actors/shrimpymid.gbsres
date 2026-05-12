@@ -182,38 +182,6 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "27"
-                },
-                "valueB": {
-                  "type": "number",
-                  "value": 0
-                }
-              },
-              "__collapseElse": true
-            },
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_ACTOR_SET_STATE",
-                  "args": {
-                    "actorId": "$self$",
-                    "spriteStateId": "",
-                    "loopAnim": false
-                  },
-                  "id": "f1110000-0000-4000-8000-shrimpy-state-revert-set"
-                }
-              ],
-              "false": []
-            },
-            "id": "f1110000-0000-4000-8000-shrimpy-state-revert-gate"
-          },
-          {
-            "command": "EVENT_IF",
-            "args": {
-              "condition": {
-                "type": "eq",
-                "valueA": {
-                  "type": "variable",
                   "value": "60"
                 },
                 "valueB": {
@@ -327,7 +295,7 @@
                     "actorId": "$self$",
                     "x": {
                       "type": "number",
-                      "value": 48
+                      "value": 24
                     },
                     "y": {
                       "type": "number",
@@ -401,12 +369,42 @@
                   "id": "ea04710c-29ee-48c4-9c0b-a304ae9225b9"
                 },
                 {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "69",
+                    "value": {
+                      "type": "number",
+                      "value": 112
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-init-outer-bound-tight"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 128
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step1-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step1-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 260
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -419,12 +417,45 @@
                   "id": "cd4c7174-61c5-4064-9e6a-da728ab82d0d"
                 },
                 {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.5
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 30
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step1-post-retreat-wait"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 128
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step2-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step2-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 308
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -433,9 +464,20 @@
                     "moveType": "horizontal",
                     "units": "pixels",
                     "useCollisions": false,
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "id": "96bdb18f-414a-4a46-9194-b72d23723d60"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "69",
+                    "value": {
+                      "type": "number",
+                      "value": 128
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-set-outer-bound-wide"
                 },
                 {
                   "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
@@ -553,11 +595,11 @@
                                     "args": {
                                       "time": {
                                         "type": "number",
-                                        "value": 0.5
+                                        "value": 0.3
                                       },
                                       "frames": {
                                         "type": "number",
-                                        "value": 30
+                                        "value": 18
                                       }
                                     },
                                     "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-bot-state-wait"
@@ -598,11 +640,11 @@
                                     "args": {
                                       "time": {
                                         "type": "number",
-                                        "value": 0.5
+                                        "value": 0.3
                                       },
                                       "frames": {
                                         "type": "number",
-                                        "value": 30
+                                        "value": 18
                                       }
                                     },
                                     "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-top-state-wait"
@@ -644,11 +686,11 @@
                                     "args": {
                                       "time": {
                                         "type": "number",
-                                        "value": 0.5
+                                        "value": 0.3
                                       },
                                       "frames": {
                                         "type": "number",
-                                        "value": 30
+                                        "value": 18
                                       }
                                     },
                                     "id": "f0220022-0000-4000-8000-bmrg-trigA-fire-mid-state-wait"
@@ -688,12 +730,31 @@
                   "id": "f0220022-0000-4000-8000-bmrg-trigA-row-gate"
                 },
                 {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 96
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step3-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step3-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 388
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -721,12 +782,31 @@
                   "id": "31da83ec-d8da-4abe-a2e3-e40221a0fced"
                 },
                 {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 128
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step4-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step4-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 484
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -845,11 +925,11 @@
                                     "args": {
                                       "time": {
                                         "type": "number",
-                                        "value": 0.5
+                                        "value": 0.3
                                       },
                                       "frames": {
                                         "type": "number",
-                                        "value": 30
+                                        "value": 18
                                       }
                                     },
                                     "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-bot-state-wait"
@@ -890,11 +970,11 @@
                                     "args": {
                                       "time": {
                                         "type": "number",
-                                        "value": 0.5
+                                        "value": 0.3
                                       },
                                       "frames": {
                                         "type": "number",
-                                        "value": 30
+                                        "value": 18
                                       }
                                     },
                                     "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-top-state-wait"
@@ -936,11 +1016,11 @@
                                     "args": {
                                       "time": {
                                         "type": "number",
-                                        "value": 0.5
+                                        "value": 0.3
                                       },
                                       "frames": {
                                         "type": "number",
-                                        "value": 30
+                                        "value": 18
                                       }
                                     },
                                     "id": "f0220022-0000-4000-8000-bmrg-trigB-fire-mid-state-wait"
@@ -980,12 +1060,31 @@
                   "id": "f0220022-0000-4000-8000-bmrg-trigB-row-gate"
                 },
                 {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 96
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step5-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step5-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 580
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -1013,12 +1112,31 @@
                   "id": "2e7bed90-6b20-48b9-ad1f-5ebb50f72706"
                 },
                 {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 128
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step6-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step6-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 676
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -1046,12 +1164,256 @@
                   "id": "f2a98af9-a27d-4ca0-9374-2efa504cad89"
                 },
                 {
+                  "command": "EVENT_ACTOR_GET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "vectorX": "28",
+                    "vectorY": "29",
+                    "units": "tiles"
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigC-getpos"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "29"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "11"
+                      }
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "25"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "64",
+                                "value": {
+                                  "type": "variable",
+                                  "value": "0"
+                                }
+                              },
+                              "id": "f0670067-0000-4000-8000-bmrg-trigC-capture-throw-row"
+                            },
+                            {
+                              "command": "EVENT_SWITCH",
+                              "args": {
+                                "variable": "29",
+                                "choices": 3,
+                                "value0": {
+                                  "type": "number",
+                                  "value": 13
+                                },
+                                "value1": {
+                                  "type": "number",
+                                  "value": 9
+                                },
+                                "value2": {
+                                  "type": "number",
+                                  "value": 11
+                                },
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true0": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-bot-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.3
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 18
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-bot-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-bot"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-bot-state-throw"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-top-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.3
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 18
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-top-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-top"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-top-state-throw"
+                                  }
+                                ],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "ClawThrowTelegraph",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-mid-state-telegraph"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.3
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 18
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-mid-state-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "27",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-mid"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_STATE",
+                                    "args": {
+                                      "actorId": "$self$",
+                                      "spriteStateId": "clawThrow",
+                                      "loopAnim": true
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC-fire-mid-state-throw"
+                                  }
+                                ]
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigC-row-switch"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigC-alive-gate"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "f0220022-0000-4000-8000-bmrg-trigC-row-gate"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 96
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step7-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step7-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 772
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -1079,12 +1441,31 @@
                   "id": "df80b23e-ab19-4a2d-ad54-c9c7d02e56d6"
                 },
                 {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 128
+                    }
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step8-set-offset"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                    "__name": "Enemy/ShrimpyComputePatrolTarget"
+                  },
+                  "id": "f1800018-0000-4000-8000-fp-step8-call-target"
+                },
+                {
                   "command": "EVENT_ACTOR_MOVE_TO",
                   "args": {
                     "actorId": "$self$",
                     "x": {
-                      "type": "number",
-                      "value": 868
+                      "type": "variable",
+                      "value": "68"
                     },
                     "y": {
                       "type": "variable",
@@ -1166,12 +1547,10 @@
                         "id": "f1130000-0000-4000-8000-second-slash-state-telegraph"
                       },
                       {
-                        "command": "EVENT_ACTOR_GET_POSITION",
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
                         "args": {
-                          "actorId": "player",
-                          "vectorX": "17",
-                          "vectorY": "L0",
-                          "units": "pixels"
+                          "customEventId": "f1700017-0000-4000-8000-get-visible-player-x",
+                          "__name": "Player/GetVisiblePlayerX"
                         },
                         "id": "f1130000-0000-4000-8000-second-slash-getplayer"
                       },
@@ -1182,7 +1561,7 @@
                           "operation": "add",
                           "other": "val",
                           "vectorY": "0",
-                          "value": -16,
+                          "value": 24,
                           "minValue": -32768,
                           "maxValue": 32767
                         },
@@ -1237,7 +1616,7 @@
                           "actorId": "$self$",
                           "x": {
                             "type": "number",
-                            "value": 48
+                            "value": 24
                           },
                           "y": {
                             "type": "number",
@@ -1266,63 +1645,6 @@
                           "speed": 15
                         },
                         "id": "f1130000-0000-4000-8000-second-slash-anim-speed-restore"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 3
-                        },
-                        "id": "f1130000-0000-4000-8000-second-slash-recovery-speed-fast"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_GET_POSITION",
-                        "args": {
-                          "actorId": "player",
-                          "vectorX": "17",
-                          "vectorY": "L0",
-                          "units": "pixels"
-                        },
-                        "id": "f1130000-0000-4000-8000-second-slash-recovery-getplayer"
-                      },
-                      {
-                        "command": "EVENT_VARIABLE_MATH",
-                        "args": {
-                          "vectorX": "17",
-                          "operation": "add",
-                          "other": "val",
-                          "vectorY": "0",
-                          "value": 80,
-                          "minValue": -32768,
-                          "maxValue": 32767
-                        },
-                        "id": "f1130000-0000-4000-8000-second-slash-recovery-getplayer-offset"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_MOVE_TO",
-                        "args": {
-                          "actorId": "$self$",
-                          "x": {
-                            "type": "variable",
-                            "value": "17"
-                          },
-                          "y": {
-                            "type": "variable",
-                            "value": "45"
-                          },
-                          "moveType": "horizontal",
-                          "units": "pixels",
-                          "useCollisions": false
-                        },
-                        "id": "f1130000-0000-4000-8000-second-slash-recovery-move-to-target"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 1
-                        },
-                        "id": "f1130000-0000-4000-8000-second-slash-recovery-speed-restore"
                       },
                       {
                         "command": "EVENT_SET_VALUE",
@@ -1390,12 +1712,42 @@
                         "id": "f0220022-0000-4000-8000-second-patrol-speed-2"
                       },
                       {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "69",
+                          "value": {
+                            "type": "number",
+                            "value": 112
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-init-outer-bound-tight"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 104
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step1-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step1-call-target"
+                      },
+                      {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 960
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",
@@ -1408,20 +1760,45 @@
                         "id": "f0220022-0000-4000-8000-second-patrol-move-952"
                       },
                       {
-                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                        "command": "EVENT_WAIT",
                         "args": {
-                          "actorId": "$self$",
-                          "speed": 1
+                          "time": {
+                            "type": "number",
+                            "value": 0.5
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 30
+                          }
                         },
-                        "id": "f0220022-0000-4000-8000-second-patrol-speed-1"
+                        "id": "f1800018-0000-4000-8000-sp-step1-post-retreat-wait"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 128
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step2-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step2-call-target"
                       },
                       {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 1056
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",
@@ -1432,6 +1809,25 @@
                           "useCollisions": false
                         },
                         "id": "f0220022-0000-4000-8000-second-patrol-move-1048"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "69",
+                          "value": {
+                            "type": "number",
+                            "value": 128
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-set-outer-bound-wide"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                        "args": {
+                          "actorId": "$self$",
+                          "speed": 1
+                        },
+                        "id": "f0220022-0000-4000-8000-second-patrol-speed-1"
                       },
                       {
                         "command": "EVENT_WAIT",
@@ -1539,11 +1935,11 @@
                                           "args": {
                                             "time": {
                                               "type": "number",
-                                              "value": 0.5
+                                              "value": 0.3
                                             },
                                             "frames": {
                                               "type": "number",
-                                              "value": 30
+                                              "value": 18
                                             }
                                           },
                                           "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-bot-state-wait"
@@ -1584,11 +1980,11 @@
                                           "args": {
                                             "time": {
                                               "type": "number",
-                                              "value": 0.5
+                                              "value": 0.3
                                             },
                                             "frames": {
                                               "type": "number",
-                                              "value": 30
+                                              "value": 18
                                             }
                                           },
                                           "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-top-state-wait"
@@ -1629,11 +2025,11 @@
                                           "args": {
                                             "time": {
                                               "type": "number",
-                                              "value": 0.5
+                                              "value": 0.3
                                             },
                                             "frames": {
                                               "type": "number",
-                                              "value": 30
+                                              "value": 18
                                             }
                                           },
                                           "id": "f0220022-0000-4000-8000-bmrg-trigA2-fire-mid-state-wait"
@@ -1673,12 +2069,31 @@
                         "id": "f0220022-0000-4000-8000-bmrg-trigA2-row-gate"
                       },
                       {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 96
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step3-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step3-call-target"
+                      },
+                      {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 1152
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",
@@ -1705,12 +2120,31 @@
                         "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1144"
                       },
                       {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 128
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step4-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step4-call-target"
+                      },
+                      {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 1248
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",
@@ -1828,11 +2262,11 @@
                                           "args": {
                                             "time": {
                                               "type": "number",
-                                              "value": 0.5
+                                              "value": 0.3
                                             },
                                             "frames": {
                                               "type": "number",
-                                              "value": 30
+                                              "value": 18
                                             }
                                           },
                                           "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-bot-state-wait"
@@ -1873,11 +2307,11 @@
                                           "args": {
                                             "time": {
                                               "type": "number",
-                                              "value": 0.5
+                                              "value": 0.3
                                             },
                                             "frames": {
                                               "type": "number",
-                                              "value": 30
+                                              "value": 18
                                             }
                                           },
                                           "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-top-state-wait"
@@ -1918,11 +2352,11 @@
                                           "args": {
                                             "time": {
                                               "type": "number",
-                                              "value": 0.5
+                                              "value": 0.3
                                             },
                                             "frames": {
                                               "type": "number",
-                                              "value": 30
+                                              "value": 18
                                             }
                                           },
                                           "id": "f0220022-0000-4000-8000-bmrg-trigB2-fire-mid-state-wait"
@@ -1962,12 +2396,31 @@
                         "id": "f0220022-0000-4000-8000-bmrg-trigB2-row-gate"
                       },
                       {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 96
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step5-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step5-call-target"
+                      },
+                      {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 1344
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",
@@ -1994,12 +2447,31 @@
                         "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1336"
                       },
                       {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 128
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step6-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step6-call-target"
+                      },
+                      {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 1440
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",
@@ -2026,12 +2498,256 @@
                         "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1432"
                       },
                       {
+                        "command": "EVENT_ACTOR_GET_POSITION",
+                        "args": {
+                          "actorId": "$self$",
+                          "vectorX": "28",
+                          "vectorY": "29",
+                          "units": "tiles"
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigC2-getpos"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "29"
+                            },
+                            "valueB": {
+                              "type": "variable",
+                              "value": "11"
+                            }
+                          },
+                          "__collapseElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "25"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 3
+                                  }
+                                },
+                                "__collapseElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "64",
+                                      "value": {
+                                        "type": "variable",
+                                        "value": "0"
+                                      }
+                                    },
+                                    "id": "f0670067-0000-4000-8000-bmrg-trigC2-capture-throw-row"
+                                  },
+                                  {
+                                    "command": "EVENT_SWITCH",
+                                    "args": {
+                                      "variable": "29",
+                                      "choices": 3,
+                                      "value0": {
+                                        "type": "number",
+                                        "value": 13
+                                      },
+                                      "value1": {
+                                        "type": "number",
+                                        "value": 9
+                                      },
+                                      "value2": {
+                                        "type": "number",
+                                        "value": 11
+                                      },
+                                      "__disableElse": false
+                                    },
+                                    "children": {
+                                      "true0": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-bot-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.3
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 18
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-bot-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-bot"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-bot-state-throw"
+                                        }
+                                      ],
+                                      "true1": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-top-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.3
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 18
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-top-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-top"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-top-state-throw"
+                                        }
+                                      ],
+                                      "true2": [
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "ClawThrowTelegraph",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-mid-state-telegraph"
+                                        },
+                                        {
+                                          "command": "EVENT_WAIT",
+                                          "args": {
+                                            "time": {
+                                              "type": "number",
+                                              "value": 0.3
+                                            },
+                                            "frames": {
+                                              "type": "number",
+                                              "value": 18
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-mid-state-wait"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "27",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-mid"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_STATE",
+                                          "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "clawThrow",
+                                            "loopAnim": true
+                                          },
+                                          "id": "f0220022-0000-4000-8000-bmrg-trigC2-fire-mid-state-throw"
+                                        }
+                                      ]
+                                    },
+                                    "id": "f0220022-0000-4000-8000-bmrg-trigC2-row-switch"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f0220022-0000-4000-8000-bmrg-trigC2-alive-gate"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f0220022-0000-4000-8000-bmrg-trigC2-row-gate"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 96
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step7-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step7-call-target"
+                      },
+                      {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 1536
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",
@@ -2058,12 +2774,31 @@
                         "id": "f0220022-0000-4000-8000-second-patrol-wait-after-1528"
                       },
                       {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 128
+                          }
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step8-set-offset"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "f1800018-0000-4000-8000-shrimpy-patrol-target",
+                          "__name": "Enemy/ShrimpyComputePatrolTarget"
+                        },
+                        "id": "f1800018-0000-4000-8000-sp-step8-call-target"
+                      },
+                      {
                         "command": "EVENT_ACTOR_MOVE_TO",
                         "args": {
                           "actorId": "$self$",
                           "x": {
-                            "type": "number",
-                            "value": 1632
+                            "type": "variable",
+                            "value": "68"
                           },
                           "y": {
                             "type": "variable",

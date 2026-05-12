@@ -282,6 +282,51 @@
       "symbol": "var_entrance_slash_done"
     },
     {
+      "id": "61",
+      "name": "firstPatrolDone",
+      "symbol": "var_first_patrol_done"
+    },
+    {
+      "id": "62",
+      "name": "secondSlashDone",
+      "symbol": "var_second_slash_done"
+    },
+    {
+      "id": "63",
+      "name": "secondPatrolDone",
+      "symbol": "var_second_patrol_done"
+    },
+    {
+      "id": "64",
+      "name": "boomerangThrowRow",
+      "symbol": "var_boomerang_throw_row"
+    },
+    {
+      "id": "65",
+      "name": "playerRowTouch",
+      "symbol": "var_player_row_touch"
+    },
+    {
+      "id": "66",
+      "name": "shrimpyPatrolOffset",
+      "symbol": "var_shrimpy_patrol_offset"
+    },
+    {
+      "id": "67",
+      "name": "shrimpyXScratch",
+      "symbol": "var_shrimpy_x_scratch"
+    },
+    {
+      "id": "68",
+      "name": "shrimpyMoveTarget",
+      "symbol": "var_shrimpy_move_target"
+    },
+    {
+      "id": "69",
+      "name": "shrimpyOuterBound",
+      "symbol": "var_shrimpy_outer_bound"
+    },
+    {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",
       "name": "notJumping",
       "symbol": "var_notjumping_1"
@@ -355,31 +400,6 @@
       "id": "624a2c85-6a90-49d5-8fde-2147b5797a66__L1",
       "name": "platform-01-Y",
       "symbol": "var_platform_y_1"
-    },
-    {
-      "id": "61",
-      "name": "firstPatrolDone",
-      "symbol": "var_first_patrol_done"
-    },
-    {
-      "id": "62",
-      "name": "secondSlashDone",
-      "symbol": "var_second_slash_done"
-    },
-    {
-      "id": "63",
-      "name": "secondPatrolDone",
-      "symbol": "var_second_patrol_done"
-    },
-    {
-      "id": "64",
-      "name": "boomerangThrowRow",
-      "symbol": "var_boomerang_throw_row"
-    },
-    {
-      "id": "65",
-      "name": "playerRowTouch",
-      "symbol": "var_player_row_touch"
     }
   ],
   "constants": []

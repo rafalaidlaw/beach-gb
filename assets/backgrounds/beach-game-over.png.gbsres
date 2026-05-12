@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "2ee82ad8-a5bd-4a16-85ea-462ccca3df78",
+  "name": "beach-game-over",
+  "symbol": "bg_beach_game_over",
+  "tileColors": "",
+  "filename": "beach-game-over.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

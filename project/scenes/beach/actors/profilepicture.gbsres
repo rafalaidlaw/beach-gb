@@ -4,7 +4,7 @@
   "name": "ProfilePicture",
   "frame": 0,
   "animate": false,
-  "spriteSheetId": "8d29be5d-4ab7-486e-87af-85e212f2c0f6",
+  "spriteSheetId": "32109981-8a53-4c6b-a93e-7e4e91e9e18c",
   "prefabId": "",
   "direction": "down",
   "moveSpeed": 0.25,
@@ -845,7 +845,7 @@
   "hit2Script": [],
   "hit3Script": [],
   "coordinateType": "pixels",
-  "x": 3,
-  "y": 2,
+  "x": 9,
+  "y": 54,
   "_index": 1
 }

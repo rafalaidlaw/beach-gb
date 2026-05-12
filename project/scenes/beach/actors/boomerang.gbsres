@@ -219,40 +219,6 @@
             "id": "f0220022-0000-4000-8000-bmrg-revert-shrimpy"
           },
           {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-            "args": {
-              "actorId": "f00518f5-62d0-449f-a94c-74618ae7b4fa",
-              "speed": 2
-            },
-            "id": "f0660066-0000-4000-8000-bmrg-revert-shrimpy-catchup-speed"
-          },
-          {
-            "command": "EVENT_ACTOR_MOVE_RELATIVE",
-            "args": {
-              "actorId": "f00518f5-62d0-449f-a94c-74618ae7b4fa",
-              "x": {
-                "type": "number",
-                "value": 16
-              },
-              "y": {
-                "type": "number",
-                "value": 0
-              },
-              "moveType": "horizontal",
-              "units": "pixels",
-              "useCollisions": false
-            },
-            "id": "f0660066-0000-4000-8000-bmrg-revert-shrimpy-catchup-move"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-            "args": {
-              "actorId": "f00518f5-62d0-449f-a94c-74618ae7b4fa",
-              "speed": 1
-            },
-            "id": "f0660066-0000-4000-8000-bmrg-revert-shrimpy-speed-reset"
-          },
-          {
             "command": "EVENT_ACTOR_HIDE",
             "args": {
               "actorId": "$self$"

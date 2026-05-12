@@ -922,143 +922,74 @@
                         "children": {
                           "true0": [
                             {
-                              "command": "EVENT_IF",
+                              "command": "EVENT_SET_VALUE",
                               "args": {
-                                "condition": {
-                                  "type": "eq",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "27"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
+                                "variable": "11",
+                                "value": {
+                                  "type": "number",
+                                  "value": 13
+                                }
                               },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 13
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-0"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "50",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-0-v50"
-                                  }
-                                ],
-                                "false": []
+                              "id": "f0370037-0000-4000-8000-down-targety-0"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "50",
+                                "value": {
+                                  "type": "number",
+                                  "value": 11
+                                }
                               },
-                              "id": "f0370037-0000-4000-8000-down-targety-0-bmrg-gate"
+                              "id": "f0370037-0000-4000-8000-down-targety-0-v50"
                             }
                           ],
                           "true1": [
                             {
-                              "command": "EVENT_IF",
+                              "command": "EVENT_SET_VALUE",
                               "args": {
-                                "condition": {
-                                  "type": "eq",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "27"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
+                                "variable": "11",
+                                "value": {
+                                  "type": "number",
+                                  "value": 11
+                                }
                               },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-1"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "50",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 13
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-1-v50"
-                                  }
-                                ],
-                                "false": []
+                              "id": "f0370037-0000-4000-8000-down-targety-1"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "50",
+                                "value": {
+                                  "type": "number",
+                                  "value": 13
+                                }
                               },
-                              "id": "f0370037-0000-4000-8000-down-targety-1-bmrg-gate"
+                              "id": "f0370037-0000-4000-8000-down-targety-1-v50"
                             }
                           ],
                           "true2": [
                             {
-                              "command": "EVENT_IF",
+                              "command": "EVENT_SET_VALUE",
                               "args": {
-                                "condition": {
-                                  "type": "eq",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "27"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
+                                "variable": "11",
+                                "value": {
+                                  "type": "number",
+                                  "value": 9
+                                }
                               },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 9
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-2"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "50",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0370037-0000-4000-8000-down-targety-2-v50"
-                                  }
-                                ],
-                                "false": []
+                              "id": "f0370037-0000-4000-8000-down-targety-2"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "50",
+                                "value": {
+                                  "type": "number",
+                                  "value": 11
+                                }
                               },
-                              "id": "f0370037-0000-4000-8000-down-targety-2-bmrg-gate"
+                              "id": "f0370037-0000-4000-8000-down-targety-2-v50"
                             }
                           ],
                           "false": []
@@ -1221,143 +1152,74 @@
                               "children": {
                                 "true0": [
                                   {
-                                    "command": "EVENT_IF",
+                                    "command": "EVENT_SET_VALUE",
                                     "args": {
-                                      "condition": {
-                                        "type": "eq",
-                                        "valueA": {
-                                          "type": "variable",
-                                          "value": "27"
-                                        },
-                                        "valueB": {
-                                          "type": "number",
-                                          "value": 0
-                                        }
-                                      },
-                                      "__collapseElse": true
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
                                     },
-                                    "children": {
-                                      "true": [
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "11",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 13
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-targety-0"
-                                        },
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "50",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 11
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-targety-0-v50"
-                                        }
-                                      ],
-                                      "false": []
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-0"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-down-targety-0-bmrg-gate"
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-0-v50"
                                   }
                                 ],
                                 "true1": [
                                   {
-                                    "command": "EVENT_IF",
+                                    "command": "EVENT_SET_VALUE",
                                     "args": {
-                                      "condition": {
-                                        "type": "eq",
-                                        "valueA": {
-                                          "type": "variable",
-                                          "value": "27"
-                                        },
-                                        "valueB": {
-                                          "type": "number",
-                                          "value": 0
-                                        }
-                                      },
-                                      "__collapseElse": true
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
                                     },
-                                    "children": {
-                                      "true": [
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "11",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 11
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-targety-1"
-                                        },
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "50",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 13
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-targety-1-v50"
-                                        }
-                                      ],
-                                      "false": []
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-1"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-down-targety-1-bmrg-gate"
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-1-v50"
                                   }
                                 ],
                                 "true2": [
                                   {
-                                    "command": "EVENT_IF",
+                                    "command": "EVENT_SET_VALUE",
                                     "args": {
-                                      "condition": {
-                                        "type": "eq",
-                                        "valueA": {
-                                          "type": "variable",
-                                          "value": "27"
-                                        },
-                                        "valueB": {
-                                          "type": "number",
-                                          "value": 0
-                                        }
-                                      },
-                                      "__collapseElse": true
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 9
+                                      }
                                     },
-                                    "children": {
-                                      "true": [
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "11",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 9
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-targety-2"
-                                        },
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "50",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 11
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-down-targety-2-v50"
-                                        }
-                                      ],
-                                      "false": []
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-2"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-down-targety-2-bmrg-gate"
+                                    "id": "f1120000-0000-4000-8000-air-down-targety-2-v50"
                                   }
                                 ],
                                 "false": []
@@ -1694,143 +1556,74 @@
                         "children": {
                           "true0": [
                             {
-                              "command": "EVENT_IF",
+                              "command": "EVENT_SET_VALUE",
                               "args": {
-                                "condition": {
-                                  "type": "eq",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "27"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
+                                "variable": "11",
+                                "value": {
+                                  "type": "number",
+                                  "value": 13
+                                }
                               },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 13
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-0"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "50",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-0-v50"
-                                  }
-                                ],
-                                "false": []
+                              "id": "f0380038-0000-4000-8000-up-targety-0"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "50",
+                                "value": {
+                                  "type": "number",
+                                  "value": 11
+                                }
                               },
-                              "id": "f0380038-0000-4000-8000-up-targety-0-bmrg-gate"
+                              "id": "f0380038-0000-4000-8000-up-targety-0-v50"
                             }
                           ],
                           "true1": [
                             {
-                              "command": "EVENT_IF",
+                              "command": "EVENT_SET_VALUE",
                               "args": {
-                                "condition": {
-                                  "type": "eq",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "27"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
+                                "variable": "11",
+                                "value": {
+                                  "type": "number",
+                                  "value": 11
+                                }
                               },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-1"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "50",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 13
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-1-v50"
-                                  }
-                                ],
-                                "false": []
+                              "id": "f0380038-0000-4000-8000-up-targety-1"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "50",
+                                "value": {
+                                  "type": "number",
+                                  "value": 13
+                                }
                               },
-                              "id": "f0380038-0000-4000-8000-up-targety-1-bmrg-gate"
+                              "id": "f0380038-0000-4000-8000-up-targety-1-v50"
                             }
                           ],
                           "true2": [
                             {
-                              "command": "EVENT_IF",
+                              "command": "EVENT_SET_VALUE",
                               "args": {
-                                "condition": {
-                                  "type": "eq",
-                                  "valueA": {
-                                    "type": "variable",
-                                    "value": "27"
-                                  },
-                                  "valueB": {
-                                    "type": "number",
-                                    "value": 0
-                                  }
-                                },
-                                "__collapseElse": true
+                                "variable": "11",
+                                "value": {
+                                  "type": "number",
+                                  "value": 9
+                                }
                               },
-                              "children": {
-                                "true": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "11",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 9
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-2"
-                                  },
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "50",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 11
-                                      }
-                                    },
-                                    "id": "f0380038-0000-4000-8000-up-targety-2-v50"
-                                  }
-                                ],
-                                "false": []
+                              "id": "f0380038-0000-4000-8000-up-targety-2"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "50",
+                                "value": {
+                                  "type": "number",
+                                  "value": 11
+                                }
                               },
-                              "id": "f0380038-0000-4000-8000-up-targety-2-bmrg-gate"
+                              "id": "f0380038-0000-4000-8000-up-targety-2-v50"
                             }
                           ],
                           "false": []
@@ -1993,143 +1786,74 @@
                               "children": {
                                 "true0": [
                                   {
-                                    "command": "EVENT_IF",
+                                    "command": "EVENT_SET_VALUE",
                                     "args": {
-                                      "condition": {
-                                        "type": "eq",
-                                        "valueA": {
-                                          "type": "variable",
-                                          "value": "27"
-                                        },
-                                        "valueB": {
-                                          "type": "number",
-                                          "value": 0
-                                        }
-                                      },
-                                      "__collapseElse": true
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
                                     },
-                                    "children": {
-                                      "true": [
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "11",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 13
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-targety-0"
-                                        },
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "50",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 11
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-targety-0-v50"
-                                        }
-                                      ],
-                                      "false": []
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-0"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-up-targety-0-bmrg-gate"
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-0-v50"
                                   }
                                 ],
                                 "true1": [
                                   {
-                                    "command": "EVENT_IF",
+                                    "command": "EVENT_SET_VALUE",
                                     "args": {
-                                      "condition": {
-                                        "type": "eq",
-                                        "valueA": {
-                                          "type": "variable",
-                                          "value": "27"
-                                        },
-                                        "valueB": {
-                                          "type": "number",
-                                          "value": 0
-                                        }
-                                      },
-                                      "__collapseElse": true
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
                                     },
-                                    "children": {
-                                      "true": [
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "11",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 11
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-targety-1"
-                                        },
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "50",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 13
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-targety-1-v50"
-                                        }
-                                      ],
-                                      "false": []
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-1"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 13
+                                      }
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-up-targety-1-bmrg-gate"
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-1-v50"
                                   }
                                 ],
                                 "true2": [
                                   {
-                                    "command": "EVENT_IF",
+                                    "command": "EVENT_SET_VALUE",
                                     "args": {
-                                      "condition": {
-                                        "type": "eq",
-                                        "valueA": {
-                                          "type": "variable",
-                                          "value": "27"
-                                        },
-                                        "valueB": {
-                                          "type": "number",
-                                          "value": 0
-                                        }
-                                      },
-                                      "__collapseElse": true
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 9
+                                      }
                                     },
-                                    "children": {
-                                      "true": [
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "11",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 9
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-targety-2"
-                                        },
-                                        {
-                                          "command": "EVENT_SET_VALUE",
-                                          "args": {
-                                            "variable": "50",
-                                            "value": {
-                                              "type": "number",
-                                              "value": 11
-                                            }
-                                          },
-                                          "id": "f1120000-0000-4000-8000-air-up-targety-2-v50"
-                                        }
-                                      ],
-                                      "false": []
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-2"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 11
+                                      }
                                     },
-                                    "id": "f1120000-0000-4000-8000-air-up-targety-2-bmrg-gate"
+                                    "id": "f1120000-0000-4000-8000-air-up-targety-2-v50"
                                   }
                                 ],
                                 "false": []
