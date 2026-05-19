@@ -327,6 +327,16 @@
       "symbol": "var_shrimpy_outer_bound"
     },
     {
+      "id": "71",
+      "name": "shrimpyInSlash",
+      "symbol": "var_shrimpy_in_slash"
+    },
+    {
+      "id": "72",
+      "name": "shrimpyBlocking",
+      "symbol": "var_shrimpy_blocking"
+    },
+    {
       "id": "4d158b24-41b5-469e-ae65-c5e3fb09d5bc__L0",
       "name": "notJumping",
       "symbol": "var_notjumping_1"

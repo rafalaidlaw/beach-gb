@@ -839,7 +839,7 @@
                           "collisionGroup": "3",
                           "collisionMask": [],
                           "loopAnim": true,
-                          "destroyOnHit": false,
+                          "destroyOnHit": true,
                           "__section": "source"
                         },
                         "id": "f0f000f0-0000-4000-8000-down-fx-poof"
@@ -1091,7 +1091,7 @@
                                 "collisionGroup": "3",
                                 "collisionMask": [],
                                 "loopAnim": true,
-                                "destroyOnHit": false,
+                                "destroyOnHit": true,
                                 "__section": "source"
                               },
                               "id": "f1220000-0000-4000-8000-air-down-fx-poof"
@@ -1472,7 +1472,7 @@
                           "collisionGroup": "3",
                           "collisionMask": [],
                           "loopAnim": true,
-                          "destroyOnHit": false,
+                          "destroyOnHit": true,
                           "__collapse": false,
                           "__section": "source"
                         },
@@ -1725,7 +1725,7 @@
                                 "collisionGroup": "3",
                                 "collisionMask": [],
                                 "loopAnim": true,
-                                "destroyOnHit": false,
+                                "destroyOnHit": true,
                                 "__section": "source"
                               },
                               "id": "f1220000-0000-4000-8000-air-up-fx-poof"
@@ -2364,7 +2364,7 @@
                                             "y": 0,
                                             "directionType": "direction",
                                             "direction": "right",
-                                            "speed": 4,
+                                            "speed": 6,
                                             "animSpeed": 15,
                                             "lifeTime": 0.6,
                                             "initialOffset": 0,
@@ -2429,7 +2429,7 @@
                                                   "y": 0,
                                                   "directionType": "direction",
                                                   "direction": "right",
-                                                  "speed": 4,
+                                                  "speed": 6,
                                                   "animSpeed": 15,
                                                   "lifeTime": 0.6,
                                                   "initialOffset": 0,
@@ -2494,7 +2494,7 @@
                                                         "y": 0,
                                                         "directionType": "direction",
                                                         "direction": "right",
-                                                        "speed": 4,
+                                                        "speed": 6,
                                                         "animSpeed": 15,
                                                         "lifeTime": 0.6,
                                                         "initialOffset": 0,
